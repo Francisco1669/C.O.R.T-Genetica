@@ -154,7 +154,7 @@ const CatalogoTourosPage = () => {
                             <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">3</div>
                                 <div className="text-green-100 text-sm">Selos de Qualidade</div>
-                            </div>
+                            </div>    
                         </div>
                     </motion.div>
                 </div>

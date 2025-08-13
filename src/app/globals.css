@@ -60,6 +60,22 @@ h5,
 h6 {
   line-height: 1.2;
   font-weight: 600;
+  color: var(--foreground);
+}
+
+/* Headings em seções com fundo escuro */
+.section-dark h1,
+.section-dark h2,
+.section-dark h3,
+.section-dark h4,
+.section-dark h5,
+.section-dark h6,
+.bg-green-800 h1,
+.bg-green-800 h2,
+.bg-green-800 h3,
+.bg-green-800 h4,
+.bg-green-800 h5,
+.bg-green-800 h6 {
   color: white;
 }
 
