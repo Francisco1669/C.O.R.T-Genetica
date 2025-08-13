@@ -6,7 +6,7 @@ import { ChevronDown } from 'lucide-react';
 
 const HeroSection = () => {
     return (
-        <section className="relative min-h-screen flex items-center justify-center bg-green-50 overflow-hidden">
+        <section className="relative min-h-screen flex items-center justify-center bg-red-50 overflow-hidden">
             {/* Background pattern */}
             <div className="absolute inset-0 opacity-5">
                 <div className="absolute inset-0" style={{
@@ -28,7 +28,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="inline-block"
                     >
-                        <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-green-50 text-green-900 border border-green-300 mb-6">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-red-50 text-red-900 border border-red-300 mb-6">
                             🏆 Pioneira em Genética Bovina no Brasil
                         </span>
                     </motion.div>
@@ -40,7 +40,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
                     >
-                        <span className="text-green-800">Genética</span> de{' '}
+                        <span className="text-red-800">Genética</span> de{' '}
                         <span className="block md:inline">Excelência</span>
                     </motion.h1>
 
@@ -84,15 +84,15 @@ const HeroSection = () => {
                         className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto"
                     >
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-green-800 mb-2">100%</div>
+                            <div className="text-3xl font-bold text-red-800 mb-2">100%</div>
                             <div className="text-gray-600">Marcadores Moleculares</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-green-800 mb-2">TTR</div>
+                            <div className="text-3xl font-bold text-red-800 mb-2">TTR</div>
                             <div className="text-gray-600">Teste de Qualidade</div>
                         </div>
                         <div className="text-center">
-                            <div className="text-3xl font-bold text-green-800 mb-2">3</div>
+                            <div className="text-3xl font-bold text-red-800 mb-2">3</div>
                             <div className="text-gray-600">Selos de Qualidade</div>
                         </div>
                     </motion.div>

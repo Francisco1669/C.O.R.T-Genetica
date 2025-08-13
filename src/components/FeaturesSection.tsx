@@ -20,9 +20,9 @@ const FeaturesSection = () => {
             title: 'Teste TTR',
             description: 'Teste de Termo Resistência Rápido aplicado a todas as partidas de sêmen, correlacionando-se com os resultados de campo e garantindo qualidade.',
             link: '/tecnologia/teste-ttr',
-            color: 'text-green-800',
-            bgColor: 'bg-green-100',
-            hoverBg: 'hover:bg-green-50'
+            color: 'text-red-800',
+            bgColor: 'bg-red-100',
+            hoverBg: 'hover:bg-red-50'
         },
         {
             icon: Award,
@@ -70,7 +70,7 @@ const FeaturesSection = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Nossos <span className="text-green-800">Diferenciais</span>
+                        Nossos <span className="text-red-800">Diferenciais</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Três pilares tecnológicos que nos posicionam como referência em genética bovina no Brasil
@@ -127,7 +127,7 @@ const FeaturesSection = () => {
                     viewport={{ once: true }}
                     className="text-center mt-16"
                 >
-                    <div className="bg-gradient-to-r from-green-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
+                    <div className="bg-gradient-to-r from-red-50 to-blue-50 rounded-2xl p-8 max-w-4xl mx-auto">
                         <h3 className="text-2xl font-bold text-gray-900 mb-4">
                             Pronto para conhecer nossa tecnologia?
                         </h3>

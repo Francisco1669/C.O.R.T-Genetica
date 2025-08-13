@@ -11,7 +11,7 @@ const Footer = () => {
                     {/* Informações da empresa */}
                     <div className="space-y-4">
                         <div className="flex items-center space-x-2">
-                            <div className="w-10 h-10 bg-green-800 rounded-full flex items-center justify-center">
+                            <div className="w-10 h-10 bg-red-800 rounded-full flex items-center justify-center">
                                 <span className="text-white font-bold">CG</span>
                             </div>
                             <div>
@@ -84,7 +84,7 @@ const Footer = () => {
                         <h4 className="text-lg font-semibold mb-4">Contato</h4>
                         <div className="space-y-3">
                             <div className="flex items-start space-x-3">
-                                <MapPin size={18} className="text-green-400 mt-1 flex-shrink-0" />
+                                <MapPin size={18} className="text-red-400 mt-1 flex-shrink-0" />
                                 <div>
                                     <p className="text-gray-400 text-sm">
                                         BR 472 - KM 581<br />
@@ -94,7 +94,7 @@ const Footer = () => {
                             </div>
 
                             <div className="flex items-center space-x-3">
-                                <Phone size={18} className="text-green-400 flex-shrink-0" />
+                                <Phone size={18} className="text-red-400 flex-shrink-0" />
                                 <div className="text-gray-400 text-sm">
                                     <p>(55) 3414-0164</p>
                                     <p>(55) 3414-0198</p>
@@ -102,7 +102,7 @@ const Footer = () => {
                             </div>
 
                             <div className="flex items-center space-x-3">
-                                <Mail size={18} className="text-green-400 flex-shrink-0" />
+                                <Mail size={18} className="text-red-400 flex-shrink-0" />
                                 <p className="text-gray-400 text-sm">
                                     atendimento@cortgeneticabrasil.com
                                 </p>
@@ -115,21 +115,21 @@ const Footer = () => {
                             <div className="flex space-x-3">
                                 <a
                                     href="#"
-                                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-800 transition-colors duration-200"
+                                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-200"
                                     aria-label="Facebook"
                                 >
                                     <Facebook size={16} />
                                 </a>
                                 <a
                                     href="#"
-                                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-800 transition-colors duration-200"
+                                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-200"
                                     aria-label="Instagram"
                                 >
                                     <Instagram size={16} />
                                 </a>
                                 <a
                                     href="#"
-                                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-green-800 transition-colors duration-200"
+                                    className="w-8 h-8 bg-gray-800 rounded-full flex items-center justify-center hover:bg-red-800 transition-colors duration-200"
                                     aria-label="YouTube"
                                 >
                                     <Youtube size={16} />

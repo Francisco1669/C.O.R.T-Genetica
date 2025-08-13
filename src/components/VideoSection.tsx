@@ -51,7 +51,7 @@ const VideoSection = () => {
                     className="text-center mb-16"
                 >
                     <h2 className="text-4xl md:text-5xl font-bold text-gray-900 mb-4">
-                        Conheça Nossa <span className="text-green-800">Operação</span>
+                        Conheça Nossa <span className="text-red-800">Operação</span>
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
                         Veja de perto como trabalhamos com excelência em genética bovina
@@ -74,7 +74,7 @@ const VideoSection = () => {
                                 <motion.button
                                     whileHover={{ scale: 1.1 }}
                                     whileTap={{ scale: 0.95 }}
-                                    className="w-20 h-20 bg-green-800 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-green-700 transition-colors duration-200"
+                                    className="w-20 h-20 bg-red-800 rounded-full flex items-center justify-center text-white shadow-lg hover:bg-red-700 transition-colors duration-200"
                                 >
                                     <Play className="w-8 h-8 ml-1" fill="currentColor" />
                                 </motion.button>
@@ -95,12 +95,12 @@ const VideoSection = () => {
                                     initial={{ opacity: 0, x: 20 }}
                                     animate={{ opacity: 1, x: 0 }}
                                     transition={{ duration: 0.5 }}
-                                    className="absolute inset-0 bg-green-800"
+                                    className="absolute inset-0 bg-red-800"
                                 >
-                                    <div className="absolute inset-0 bg-green-800 bg-opacity-80 flex items-center justify-center text-white">
+                                    <div className="absolute inset-0 bg-red-800 bg-opacity-80 flex items-center justify-center text-white">
                                         <div className="text-center">
                                             <h4 className="text-xl font-bold mb-2">{images[currentSlide].title}</h4>
-                                            <p className="text-green-100">{images[currentSlide].alt}</p>
+                                            <p className="text-red-100">{images[currentSlide].alt}</p>
                                         </div>
                                     </div>
                                 </motion.div>
@@ -127,7 +127,7 @@ const VideoSection = () => {
                                         key={index}
                                         onClick={() => setCurrentSlide(index)}
                                         className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentSlide
-                                            ? 'bg-green-800 scale-125'
+                                            ? 'bg-red-800 scale-125'
                                             : 'bg-gray-300 hover:bg-gray-400'
                                             }`}
                                     />
@@ -146,7 +146,7 @@ const VideoSection = () => {
                     >
                         <div>
                             <h3 className="text-3xl font-bold text-gray-900 mb-4">
-                                Excelência em <span className="text-green-800">Cada Detalhe</span>
+                                Excelência em <span className="text-red-800">Cada Detalhe</span>
                             </h3>
                             <p className="text-lg text-gray-600 leading-relaxed">
                                 Nossa operação combina tradição e inovação para entregar resultados
@@ -157,8 +157,8 @@ const VideoSection = () => {
 
                         <div className="space-y-6">
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <div className="w-3 h-3 bg-green-800 rounded-full"></div>
+                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <div className="w-3 h-3 bg-red-800 rounded-full"></div>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900 mb-1">Seleção Rigorosa</h4>
@@ -167,8 +167,8 @@ const VideoSection = () => {
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <div className="w-3 h-3 bg-green-800 rounded-full"></div>
+                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <div className="w-3 h-3 bg-red-800 rounded-full"></div>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900 mb-1">Controle de Qualidade</h4>
@@ -177,8 +177,8 @@ const VideoSection = () => {
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
-                                    <div className="w-3 h-3 bg-green-800 rounded-full"></div>
+                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                    <div className="w-3 h-3 bg-red-800 rounded-full"></div>
                                 </div>
                                 <div>
                                     <h4 className="font-semibold text-gray-900 mb-1">Assistência Técnica</h4>

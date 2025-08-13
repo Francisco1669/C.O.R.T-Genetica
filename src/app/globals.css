@@ -1,12 +1,12 @@
 @import "tailwindcss";
 
 :root {
-  /* Paleta de cores unificada - Verde */
-  --primary-green: #15803d;
-  --primary-dark-green: #14532d;
-  --secondary-green: #166534;
-  --accent-green: #052e16;
-  --light-green: #dcfce7;
+  /* Paleta de cores unificada - Vermelho */
+  --primary-red: #8f3030;
+  --primary-dark-red: #6b2424;
+  --secondary-red: #a73a3a;
+  --accent-red: #4a1a1a;
+  --light-red: #fceaea;
   --accent-brown: #92400e;
   --accent-light-brown: #d97706;
   --neutral-beige: #f5f5dc;
@@ -23,11 +23,11 @@
   --font-mono: var(--font-geist-mono);
 
   /* Cores customizadas para agronegócio */
-  --color-primary: var(--primary-green);
-  --color-primary-dark: var(--primary-dark-green);
-  --color-secondary: var(--secondary-green);
-  --color-accent: var(--accent-green);
-  --color-light: var(--light-green);
+  --color-primary: var(--primary-red);
+  --color-primary-dark: var(--primary-dark-red);
+  --color-secondary: var(--secondary-red);
+  --color-accent: var(--accent-red);
+  --color-light: var(--light-red);
   --color-accent-brown: var(--accent-brown);
   --color-accent-light: var(--accent-light-brown);
   --color-neutral: var(--neutral-beige);
@@ -70,17 +70,17 @@ h6 {
 .section-dark h4,
 .section-dark h5,
 .section-dark h6,
-.bg-green-800 h1,
-.bg-green-800 h2,
-.bg-green-800 h3,
-.bg-green-800 h4,
-.bg-green-800 h5,
-.bg-green-800 h6 {
+.bg-red-800 h1,
+.bg-red-800 h2,
+.bg-red-800 h3,
+.bg-red-800 h4,
+.bg-red-800 h5,
+.bg-red-800 h6 {
   color: white;
 }
 
 .btn-primary {
-  background: var(--primary-green);
+  background: var(--primary-red);
   color: white;
   padding: 12px 24px;
   border-radius: 8px;
@@ -91,15 +91,15 @@ h6 {
 }
 
 .btn-primary:hover {
-  background: var(--primary-dark-green);
+  background: var(--primary-dark-red);
   transform: translateY(-1px);
 }
 
 .btn-secondary {
   background: transparent;
-  color: var(--primary-green);
+  color: var(--primary-red);
   padding: 12px 24px;
-  border: 2px solid var(--primary-green);
+  border: 2px solid var(--primary-red);
   border-radius: 8px;
   font-weight: 600;
   transition: all 0.2s ease;
@@ -107,58 +107,58 @@ h6 {
 }
 
 .btn-secondary:hover {
-  background: var(--primary-green);
+  background: var(--primary-red);
   color: white;
 }
 
 /* Classes customizadas para seções */
 .section-primary {
-  background: var(--primary-green);
+  background: var(--primary-red);
   color: white;
 }
 
 .section-dark {
-  background: var(--primary-dark-green);
+  background: var(--primary-dark-red);
   color: white;
 }
 
 .section-light {
-  background: var(--light-green);
+  background: var(--light-red);
   color: var(--foreground);
 }
 
 .section-accent {
-  background: var(--accent-green);
+  background: var(--accent-red);
   color: white;
 }
 
 .card-tech {
-  background: var(--secondary-green);
+  background: var(--secondary-red);
   color: white;
 }
 
-.text-primary-green {
-  color: var(--primary-green);
+.text-primary-red {
+  color: var(--primary-red);
 }
 
-.text-dark-green {
-  color: var(--primary-dark-green);
+.text-dark-red {
+  color: var(--primary-dark-red);
 }
 
-.bg-primary-green {
-  background: var(--primary-green);
+.bg-primary-red {
+  background: var(--primary-red);
 }
 
-.bg-dark-green {
-  background: var(--primary-dark-green);
+.bg-dark-red {
+  background: var(--primary-dark-red);
 }
 
-.bg-light-green {
-  background: var(--light-green);
+.bg-light-red {
+  background: var(--light-red);
 }
 
-.border-primary-green {
-  border-color: var(--primary-green);
+.border-primary-red {
+  border-color: var(--primary-red);
 }
 
 /* Sistema de Abas Padronizado */
@@ -186,8 +186,8 @@ h6 {
 }
 
 .tab-button.active {
-  color: var(--primary-green);
-  border-bottom-color: var(--primary-green);
+  color: var(--primary-red);
+  border-bottom-color: var(--primary-red);
   background: white;
 }
 
@@ -218,10 +218,29 @@ h6 {
   border: 1px solid transparent;
 }
 
+/* Carousel infinito de parceiros */
+@keyframes scroll-partners {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.partners-scroll {
+  animation: scroll-partners 30s linear infinite;
+}
+
+.partners-scroll:hover {
+  animation-play-state: paused;
+}
+
 .filter-badge.active {
-  background: var(--light-green);
-  color: var(--primary-dark-green);
-  border-color: var(--primary-green);
+  background: var(--light-red);
+  color: var(--primary-dark-red);
+  border-color: var(--primary-red);
 }
 
 .filter-badge:not(.active) {

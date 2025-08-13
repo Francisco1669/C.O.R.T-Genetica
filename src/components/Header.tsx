@@ -2,6 +2,7 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { Menu, X, Phone, Mail } from 'lucide-react';
 
 const Header = () => {
@@ -28,7 +29,7 @@ const Header = () => {
     return (
         <header className="bg-white shadow-lg sticky top-0 z-50">
             {/* Barra de contato superior */}
-            <div className="bg-green-800 text-white py-2">
+            <div className="bg-red-800 text-white py-2">
                 <div className="container mx-auto px-4 flex justify-between items-center text-sm">
                     <div className="flex items-center space-x-4">
                         <div className="flex items-center space-x-1">
@@ -50,9 +51,15 @@ const Header = () => {
             <nav className="container mx-auto px-4 py-4">
                 <div className="flex justify-between items-center">
                     {/* Logo */}
-                    <Link href="/" className="flex items-center space-x-2">
-                        <div className="w-12 h-12 bg-green-800 rounded-full flex items-center justify-center">
-                            <span className="text-white font-bold text-xl">CG</span>
+                    <Link href="/" className="flex items-center space-x-3">
+                        <div className="w-12 h-12 flex items-center justify-center">
+                            <Image
+                                src="/CORTlogo.png"
+                                alt="Logo Cort Genética Brasil"
+                                width={48}
+                                height={48}
+                                className="object-contain"
+                            />
                         </div>
                         <div>
                             <h1 className="text-xl font-bold text-gray-800">Cort Genética</h1>
@@ -66,7 +73,7 @@ const Header = () => {
                             <div key={index} className="relative group">
                                 <Link
                                     href={item.href}
-                                    className="text-gray-700 hover:text-green-800 font-medium transition-colors duration-200"
+                                    className="text-gray-700 hover:text-red-800 font-medium transition-colors duration-200"
                                 >
                                     {item.label}
                                 </Link>
@@ -76,7 +83,7 @@ const Header = () => {
                                             <Link
                                                 key={subIndex}
                                                 href={subItem.href}
-                                                className="block px-4 py-2 text-gray-700 hover:bg-green-50 hover:text-green-800 transition-colors duration-200"
+                                                className="block px-4 py-2 text-gray-700 hover:bg-red-50 hover:text-red-800 transition-colors duration-200"
                                             >
                                                 {subItem.label}
                                             </Link>
@@ -100,7 +107,7 @@ const Header = () => {
                     {/* Menu Mobile Button */}
                     <button
                         onClick={() => setIsMenuOpen(!isMenuOpen)}
-                        className="lg:hidden p-2 text-gray-700 hover:text-green-800"
+                        className="lg:hidden p-2 text-gray-700 hover:text-red-800"
                         aria-label="Toggle menu"
                     >
                         {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
@@ -115,7 +122,7 @@ const Header = () => {
                                 <div key={index}>
                                     <Link
                                         href={item.href}
-                                        className="block text-gray-700 hover:text-green-800 font-medium transition-colors duration-200"
+                                        className="block text-gray-700 hover:text-red-800 font-medium transition-colors duration-200"
                                         onClick={() => setIsMenuOpen(false)}
                                     >
                                         {item.label}
@@ -126,7 +133,7 @@ const Header = () => {
                                                 <Link
                                                     key={subIndex}
                                                     href={subItem.href}
-                                                    className="block text-sm text-gray-600 hover:text-green-800 transition-colors duration-200"
+                                                    className="block text-sm text-gray-600 hover:text-red-800 transition-colors duration-200"
                                                     onClick={() => setIsMenuOpen(false)}
                                                 >
                                                     {subItem.label}
