@@ -73,12 +73,12 @@ const TesteTTRPage = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <div className="flex justify-center mb-6">
-                            <div className="w-20 h-20 bg-green-800 rounded-2xl flex items-center justify-center">
+                            <div className="w-20 h-20 bg-red-800 rounded-2xl flex items-center justify-center">
                                 <FlaskConical className="w-10 h-10 text-white" />
                             </div>
                         </div>
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                            Teste <span className="text-green-800">TTR</span>
+                            Teste <span className="text-earth-brown">TTR</span>
                         </h1>
                         <div className="text-xl text-gray-600 mb-4">
                             <strong>Termo Resistência Rápido</strong>
@@ -88,8 +88,8 @@ const TesteTTRPage = () => {
                             garantindo alta correlação com a fertilidade de campo e qualidade superior
                             em todas as partidas comercializadas.
                         </p>
-                        <div className="bg-green-100 border border-green-200 rounded-lg p-4 inline-block">
-                            <span className="text-green-800 font-semibold">
+                        <div className="bg-red-100border border-green-200 rounded-lg p-4 inline-block">
+                            <span className="text-earth-brown font-semibold">
                                 🧪 100% das partidas são submetidas ao Teste TTR
                             </span>
                         </div>
@@ -108,7 +108,7 @@ const TesteTTRPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Como Funciona o <span className="text-green-800">Teste TTR</span>
+                            Como Funciona o <span className="text-earth-brown">Teste TTR</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Metodologia científica rigorosa que simula condições de estresse para avaliar a qualidade do sêmen
@@ -133,9 +133,9 @@ const TesteTTRPage = () => {
                                     )}
 
                                     <div className="relative z-10">
-                                        <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4 relative">
-                                            <IconComponent className="w-8 h-8 text-green-800" />
-                                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-green-800 rounded-full flex items-center justify-center">
+                                        <div className="w-16 h-16 bg-red-100rounded-full flex items-center justify-center mx-auto mb-4 relative">
+                                            <IconComponent className="w-8 h-8 text-earth-brown" />
+                                            <div className="absolute -top-2 -right-2 w-8 h-8 bg-red-800 rounded-full flex items-center justify-center">
                                                 <span className="text-white text-sm font-bold">{step.step}</span>
                                             </div>
                                         </div>
@@ -160,7 +160,7 @@ const TesteTTRPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Correlação com <span className="text-green-800">Resultados de Campo</span>
+                            Correlação com <span className="text-earth-brown">Resultados de Campo</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Alta correlação entre resultados do TTR e taxa de prenhez observada no campo
@@ -204,7 +204,7 @@ const TesteTTRPage = () => {
                                                         {data.quality === 'Descartada' ? (
                                                             <span className="text-red-600 font-medium">❌ Rejeitada</span>
                                                         ) : (
-                                                            <span className="text-green-600 font-medium">✅ Aprovada</span>
+                                                            <span className="text-earth-brown font-medium">✅ Aprovada</span>
                                                         )}
                                                     </td>
                                                 </motion.tr>
@@ -229,7 +229,7 @@ const TesteTTRPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Vantagens do <span className="text-green-800">Teste TTR</span>
+                            Vantagens do <span className="text-earth-brown">Teste TTR</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Benefícios comprovados que garantem maior eficiência reprodutiva
@@ -248,13 +248,13 @@ const TesteTTRPage = () => {
                                     viewport={{ once: true }}
                                     className="bg-white border-2 border-gray-100 rounded-2xl p-8 hover:border-green-200 hover:shadow-lg transition-all duration-300"
                                 >
-                                    <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mb-6">
-                                        <IconComponent className="w-8 h-8 text-green-800" />
+                                    <div className="w-16 h-16 bg-red-100rounded-2xl flex items-center justify-center mb-6">
+                                        <IconComponent className="w-8 h-8 text-earth-brown" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>
                                     <p className="text-gray-600 leading-relaxed mb-4">{benefit.description}</p>
                                     <div className="bg-green-50 border border-green-200 rounded-lg p-3">
-                                        <span className="text-green-800 text-sm font-semibold">{benefit.stats}</span>
+                                        <span className="text-earth-brown text-sm font-semibold">{benefit.stats}</span>
                                     </div>
                                 </motion.div>
                             );
@@ -264,7 +264,7 @@ const TesteTTRPage = () => {
             </section>
 
             {/* Diferencial Técnico */}
-            <section className="py-20 bg-green-800">
+            <section className="py-20 bg-red-800">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -300,7 +300,7 @@ const TesteTTRPage = () => {
                             </div>
                         </div>
 
-                        <div className="bg-green-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
+                        <div className="bg-red-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
                             <h3 className="text-xl font-bold text-white mb-4">Protocolo Exclusivo</h3>
                             <p className="text-green-100 leading-relaxed">
                                 Nosso protocolo TTR foi desenvolvido internamente através de extensivos
@@ -331,14 +331,14 @@ const TesteTTRPage = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/catalogo-touros"
-                                className="bg-green-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 inline-flex items-center justify-center"
+                                className="bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 inline-flex items-center justify-center"
                             >
                                 Ver Touros Testados
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                             <Link
                                 href="/tecnologia"
-                                className="bg-transparent border-2 border-green-800 text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-800 hover:text-white transition-colors duration-200"
+                                className="bg-transparent border-2 border-earth-brown text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-red-800 hover:text-white transition-colors duration-200"
                             >
                                 Outras Tecnologias
                             </Link>

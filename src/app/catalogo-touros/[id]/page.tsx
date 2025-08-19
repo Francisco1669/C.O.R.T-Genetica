@@ -128,7 +128,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
             <div className="min-h-screen flex items-center justify-center">
                 <div className="text-center">
                     <h1 className="text-2xl font-bold text-gray-900 mb-4">Touro não encontrado</h1>
-                    <Link href="/catalogo-touros" className="text-green-800 hover:underline">
+                    <Link href="/catalogo-touros" className="text-earth-brown hover:underline">
                         Voltar ao catálogo
                     </Link>
                 </div>
@@ -138,7 +138,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
 
     const selosInfo = [
         { id: 'pelagem', nome: 'Homozigose de Pelagem', icon: Palette, color: 'bg-purple-100 text-purple-800' },
-        { id: 'maciez', nome: 'Maciez da Carne', icon: Beef, color: 'bg-red-100 text-red-800' },
+        { id: 'maciez', nome: 'Maciez da Carne', icon: Beef, color: 'bg-red-200 text-red-800' },
         { id: 'iatf', nome: 'IATF Assistida', icon: Heart, color: 'bg-pink-100 text-pink-800' }
     ];
 
@@ -156,7 +156,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                 <div className="container mx-auto px-4 py-6">
                     <Link
                         href="/catalogo-touros"
-                        className="inline-flex items-center text-green-800 hover:text-green-600 mb-4"
+                        className="inline-flex items-center text-earth-brown hover:text-earth-brown-dark mb-4"
                     >
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Voltar ao Catálogo
@@ -177,7 +177,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                         </div>
 
                         <div className="mt-4 lg:mt-0 flex flex-col sm:flex-row gap-3">
-                            <span className="text-2xl font-bold text-green-800">{touro.preco}</span>
+                            <span className="text-2xl font-bold text-earth-brown">{touro.preco}</span>
                             <div className="flex gap-2">
                                 <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
                                     <Share2 className="w-5 h-5 text-gray-600" />
@@ -208,8 +208,8 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                 {/* Imagem */}
                                 <div className="relative h-80 bg-green-100">
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center text-green-800">
-                                            <div className="w-24 h-24 bg-green-800 rounded-full flex items-center justify-center mx-auto mb-4">
+                                        <div className="text-center text-earth-brown">
+                                            <div className="w-24 h-24 bg-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
                                                 <span className="text-white font-bold text-3xl">🐂</span>
                                             </div>
                                             <div className="text-xl font-semibold">{touro.nome}</div>
@@ -219,7 +219,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
 
                                     {/* Status */}
                                     <div className="absolute top-4 right-4">
-                                        <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full text-sm font-medium">
+                                        <span className="bg-red-100 text-earth-brown px-4 py-2 rounded-full text-sm font-medium">
                                             {touro.disponibilidade}
                                         </span>
                                     </div>
@@ -334,7 +334,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                                             <div className="border-t pt-2 mt-3">
                                                                 <div className="flex justify-between">
                                                                     <span className="font-bold text-gray-900">Resultado:</span>
-                                                                    <span className="font-bold text-green-800">{value.resultado}</span>
+                                                                    <span className="font-bold text-earth-brown">{value.resultado}</span>
                                                                 </div>
                                                             </div>
                                                         </div>
@@ -347,15 +347,15 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                                 <div className="bg-green-50 border border-green-200 rounded-lg p-4">
                                                     <div className="grid grid-cols-3 gap-4 text-center">
                                                         <div>
-                                                            <div className="text-2xl font-bold text-green-800">{touro.testeTTR.resultado}</div>
+                                                            <div className="text-2xl font-bold text-earth-brown">{touro.testeTTR.resultado}</div>
                                                             <div className="text-sm text-gray-600">Resultado TTR</div>
                                                         </div>
                                                         <div>
-                                                            <div className="text-2xl font-bold text-green-800">{touro.testeTTR.classificacao}</div>
+                                                            <div className="text-2xl font-bold text-earth-brown">{touro.testeTTR.classificacao}</div>
                                                             <div className="text-sm text-gray-600">Classificação</div>
                                                         </div>
                                                         <div>
-                                                            <div className="text-2xl font-bold text-green-800">{touro.testeTTR.correlacaoCampo}</div>
+                                                            <div className="text-2xl font-bold text-earth-brown">{touro.testeTTR.correlacaoCampo}</div>
                                                             <div className="text-sm text-gray-600">Correlação Campo</div>
                                                         </div>
                                                     </div>
@@ -417,7 +417,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                 <div className="space-y-4">
                                     <div className="flex justify-between">
                                         <span className="text-gray-600">Doses Disponíveis:</span>
-                                        <span className="font-bold text-green-800">{touro.dosesDisponiveis}</span>
+                                        <span className="font-bold text-earth-brown">{touro.dosesDisponiveis}</span>
                                     </div>
                                     <div className="flex justify-between">
                                         <span className="text-gray-600">Doses Reservadas:</span>
@@ -430,10 +430,10 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                 </div>
 
                                 <div className="mt-6 space-y-3">
-                                    <button className="w-full bg-green-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200">
+                                    <button className="w-full bg-red-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200">
                                         Solicitar Orçamento
                                     </button>
-                                    <button className="w-full border-2 border-green-800 text-green-800 py-3 px-4 rounded-lg font-semibold hover:bg-green-50 transition-colors duration-200">
+                                    <button className="w-full border-2 border-earth-brown text-earth-brown py-3 px-4 rounded-lg font-semibold hover:bg-amber-50 transition-colors duration-200">
                                         Reservar Doses
                                     </button>
                                 </div>
@@ -456,7 +456,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                         href="tel:+5535414-0164"
                                         className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                                     >
-                                        <Phone className="w-5 h-5 text-green-800 mr-3" />
+                                        <Phone className="w-5 h-5 text-earth-brown mr-3" />
                                         <div>
                                             <div className="font-medium text-gray-900">(55) 3414-0164</div>
                                             <div className="text-sm text-gray-600">Ligar agora</div>
@@ -467,7 +467,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                         href="mailto:atendimento@cortgeneticabrasil.com"
                                         className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
                                     >
-                                        <Mail className="w-5 h-5 text-green-800 mr-3" />
+                                        <Mail className="w-5 h-5 text-earth-brown mr-3" />
                                         <div>
                                             <div className="font-medium text-gray-900">Enviar E-mail</div>
                                             <div className="text-sm text-gray-600">Resposta em 24h</div>
@@ -495,7 +495,7 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                                     <div className="text-center py-4">
                                         <Link
                                             href="/catalogo-touros"
-                                            className="text-green-800 hover:underline text-sm font-medium"
+                                            className="text-earth-brown hover:underline text-sm font-medium"
                                         >
                                             Ver todos os touros →
                                         </Link>

@@ -91,7 +91,7 @@ export default function BlogPage() {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-green-800 py-20">
+            <section className="bg-red-800 py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -108,15 +108,15 @@ export default function BlogPage() {
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">50+</div>
                                 <div className="text-green-100 text-sm">Artigos Técnicos</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">25+</div>
                                 <div className="text-green-100 text-sm">Especialistas</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">1000+</div>
                                 <div className="text-green-100 text-sm">Leitores Mensais</div>
                             </div>
@@ -135,7 +135,7 @@ export default function BlogPage() {
                             <input
                                 type="text"
                                 placeholder="Buscar artigos..."
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                             />
                         </div>
 
@@ -145,8 +145,8 @@ export default function BlogPage() {
                                 <button
                                     key={category}
                                     className={`px-4 py-2 rounded-full text-sm font-medium transition-colors duration-200 ${category === 'Todos'
-                                            ? 'bg-green-800 text-white'
-                                            : 'bg-gray-100 text-gray-600 hover:bg-green-100 hover:text-green-800'
+                                        ? 'bg-red-800 text-white'
+                                        : 'bg-gray-100 text-gray-600 hover:bg-red-100 hover:text-earth-brown'
                                         }`}
                                 >
                                     {category}
@@ -173,12 +173,12 @@ export default function BlogPage() {
                                     key={post.id}
                                     className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                                 >
-                                    <div className="h-64 bg-green-100 relative">
-                                        <div className="absolute inset-0 bg-green-800 bg-opacity-20 flex items-center justify-center">
-                                            <Tag className="w-16 h-16 text-green-800" />
+                                    <div className="h-64 bg-red-100 relative">
+                                        <div className="absolute inset-0 bg-red-800 bg-opacity-20 flex items-center justify-center">
+                                            <Tag className="w-16 h-16 text-earth-brown" />
                                         </div>
                                         <div className="absolute top-4 left-4">
-                                            <span className="bg-green-800 text-white px-3 py-1 rounded-full text-sm font-medium">
+                                            <span className="bg-red-800 text-white px-3 py-1 rounded-full text-sm font-medium">
                                                 {post.category}
                                             </span>
                                         </div>
@@ -195,7 +195,7 @@ export default function BlogPage() {
                                             </div>
                                             <span>{post.readTime}</span>
                                         </div>
-                                        <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-green-800 transition-colors">
+                                        <h3 className="text-xl font-bold text-gray-900 mb-3 hover:text-earth-brown transition-colors">
                                             <Link href={`/blog/${post.slug}`}>
                                                 {post.title}
                                             </Link>
@@ -215,7 +215,7 @@ export default function BlogPage() {
                                         </div>
                                         <Link
                                             href={`/blog/${post.slug}`}
-                                            className="inline-flex items-center gap-2 text-green-800 font-medium hover:text-green-600 transition-colors"
+                                            className="inline-flex items-center gap-2 text-earth-brown font-medium hover:text-earth-brown-dark transition-colors"
                                         >
                                             Ler mais
                                             <ArrowRight className="w-4 h-4" />
@@ -244,12 +244,12 @@ export default function BlogPage() {
                                     key={post.id}
                                     className="bg-gray-50 rounded-xl overflow-hidden hover:shadow-lg transition-shadow duration-300"
                                 >
-                                    <div className="h-48 bg-green-100 relative">
-                                        <div className="absolute inset-0 bg-green-800 bg-opacity-20 flex items-center justify-center">
-                                            <Tag className="w-12 h-12 text-green-800" />
+                                    <div className="h-48 bg-red-100 relative">
+                                        <div className="absolute inset-0 bg-red-800 bg-opacity-20 flex items-center justify-center">
+                                            <Tag className="w-12 h-12 text-earth-brown" />
                                         </div>
                                         <div className="absolute top-3 left-3">
-                                            <span className="bg-green-800 text-white px-2 py-1 rounded-full text-xs font-medium">
+                                            <span className="bg-red-800 text-white px-2 py-1 rounded-full text-xs font-medium">
                                                 {post.category}
                                             </span>
                                         </div>
@@ -262,7 +262,7 @@ export default function BlogPage() {
                                             </div>
                                             <span>{post.readTime}</span>
                                         </div>
-                                        <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-green-800 transition-colors">
+                                        <h3 className="text-lg font-bold text-gray-900 mb-2 hover:text-earth-brown transition-colors">
                                             <Link href={`/blog/${post.slug}`}>
                                                 {post.title}
                                             </Link>
@@ -272,7 +272,7 @@ export default function BlogPage() {
                                         </p>
                                         <Link
                                             href={`/blog/${post.slug}`}
-                                            className="inline-flex items-center gap-2 text-green-800 font-medium text-sm hover:text-green-600 transition-colors"
+                                            className="inline-flex items-center gap-2 text-earth-brown font-medium text-sm hover:text-earth-brown-dark transition-colors"
                                         >
                                             Ler mais
                                             <ArrowRight className="w-3 h-3" />
@@ -286,7 +286,7 @@ export default function BlogPage() {
             </section>
 
             {/* Newsletter */}
-            <section className="py-16 bg-green-800">
+            <section className="py-16 bg-red-800">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -303,9 +303,9 @@ export default function BlogPage() {
                             <input
                                 type="email"
                                 placeholder="Seu e-mail"
-                                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-green-300"
+                                className="flex-1 px-4 py-3 rounded-lg border-0 focus:ring-2 focus:ring-red-300"
                             />
-                            <button className="bg-white text-green-800 px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
+                            <button className="bg-white text-earth-brown px-6 py-3 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200">
                                 Inscrever-se
                             </button>
                         </div>

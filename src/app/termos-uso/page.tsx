@@ -7,7 +7,7 @@ export default function TermosUsoPage() {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-green-800 py-20">
+            <section className="bg-red-800 py-20">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -39,21 +39,21 @@ export default function TermosUsoPage() {
                     >
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                             <div className="text-center">
-                                <Scale className="w-12 h-12 text-green-800 mx-auto mb-4" />
+                                <Scale className="w-12 h-12 text-earth-brown mx-auto mb-4" />
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Termos Justos</h3>
                                 <p className="text-gray-600 text-sm">
                                     Condições equilibradas e transparentes para todos os usuários
                                 </p>
                             </div>
                             <div className="text-center">
-                                <AlertTriangle className="w-12 h-12 text-green-800 mx-auto mb-4" />
+                                <AlertTriangle className="w-12 h-12 text-earth-brown mx-auto mb-4" />
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Responsabilidades</h3>
                                 <p className="text-gray-600 text-sm">
                                     Definição clara das obrigações de ambas as partes
                                 </p>
                             </div>
                             <div className="text-center">
-                                <CheckCircle className="w-12 h-12 text-green-800 mx-auto mb-4" />
+                                <CheckCircle className="w-12 h-12 text-earth-brown mx-auto mb-4" />
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Uso Adequado</h3>
                                 <p className="text-gray-600 text-sm">
                                     Diretrizes para o uso correto dos nossos serviços
@@ -84,7 +84,7 @@ export default function TermosUsoPage() {
                             </p>
 
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Informações da Empresa</h2>
-                            <div className="bg-green-50 border-l-4 border-green-800 p-6 mb-8">
+                            <div className="bg-amber-50 border-l-4 border-earth-brown p-6 mb-8">
                                 <p className="text-gray-700 mb-2"><strong>Razão Social:</strong> Cort Genética Brasil Ltda.</p>
                                 <p className="text-gray-700 mb-2"><strong>CNPJ:</strong> XX.XXX.XXX/0001-XX</p>
                                 <p className="text-gray-700 mb-2"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
@@ -243,7 +243,7 @@ export default function TermosUsoPage() {
                             <p className="text-gray-700 mb-4">
                                 Para questões sobre estes Termos de Uso, entre em contato:
                             </p>
-                            <div className="bg-green-50 border-l-4 border-green-800 p-6">
+                            <div className="bg-amber-50 border-l-4 border-earth-brown p-6">
                                 <p className="text-gray-700 mb-2"><strong>E-mail:</strong> juridico@cortgeneticabrasil.com</p>
                                 <p className="text-gray-700 mb-2"><strong>Telefone:</strong> (55) 3414-0164</p>
                                 <p className="text-gray-700"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
@@ -254,7 +254,7 @@ export default function TermosUsoPage() {
             </section>
 
             {/* CTA */}
-            <section className="py-16 bg-green-800">
+            <section className="py-16 bg-red-800">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -269,7 +269,7 @@ export default function TermosUsoPage() {
                         </p>
                         <a
                             href="/contato"
-                            className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                            className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                         >
                             Entre em Contato
                         </a>

@@ -100,7 +100,7 @@ const SelosQualidadePage = () => {
                                 <Palette className="w-4 h-4 mr-2" />
                                 Homozigose de Pelagem
                             </span>
-                            <span className="bg-red-100 text-red-800 px-4 py-2 rounded-full flex items-center">
+                            <span className="bg-red-200text-red-800 px-4 py-2 rounded-full flex items-center">
                                 <Beef className="w-4 h-4 mr-2" />
                                 Maciez da Carne
                             </span>
@@ -293,21 +293,21 @@ const SelosQualidadePage = () => {
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
-                            <div className="bg-green-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
                                 <div className="text-3xl font-bold text-white mb-2">1</div>
                                 <h3 className="text-lg font-bold text-white mb-2">Análise Genética</h3>
                                 <p className="text-green-100 text-sm">
                                     Sequenciamento completo do DNA para identificar genes específicos
                                 </p>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
                                 <div className="text-3xl font-bold text-white mb-2">2</div>
                                 <h3 className="text-lg font-bold text-white mb-2">Validação</h3>
                                 <p className="text-green-100 text-sm">
                                     Verificação por geneticistas especializados e controle de qualidade
                                 </p>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-2xl p-6 backdrop-blur-sm">
                                 <div className="text-3xl font-bold text-white mb-2">3</div>
                                 <h3 className="text-lg font-bold text-white mb-2">Certificação</h3>
                                 <p className="text-green-100 text-sm">

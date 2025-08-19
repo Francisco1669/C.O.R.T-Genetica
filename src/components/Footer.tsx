@@ -15,7 +15,7 @@ const Footer = () => {
                                 <span className="text-white font-bold">CG</span>
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold">Cort Genética</h3>
+                                <h3 className="text-lg font-bold text-white">Cort Genética</h3>
                                 <p className="text-sm text-gray-400">Brasil</p>
                             </div>
                         </div>
@@ -27,7 +27,7 @@ const Footer = () => {
 
                     {/* Links rápidos */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4">Links Rápidos</h4>
+                        <h4 className="text-lg font-semibold mb-4 text-white">Links Rápidos</h4>
                         <ul className="space-y-2">
                             <li>
                                 <Link href="/sobre" className="text-gray-400 hover:text-white transition-colors duration-200">
@@ -59,7 +59,7 @@ const Footer = () => {
 
                     {/* Tecnologias */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4">Nossas Tecnologias</h4>
+                        <h4 className="text-lg font-semibold mb-4 text-white">Nossas Tecnologias</h4>
                         <ul className="space-y-2">
                             <li>
                                 <Link href="/tecnologia/marcadores-moleculares" className="text-gray-400 hover:text-white transition-colors duration-200">
@@ -81,7 +81,7 @@ const Footer = () => {
 
                     {/* Contato */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4">Contato</h4>
+                        <h4 className="text-lg font-semibold mb-4 text-white">Contato</h4>
                         <div className="space-y-3">
                             <div className="flex items-start space-x-3">
                                 <MapPin size={18} className="text-red-400 mt-1 flex-shrink-0" />
@@ -111,7 +111,7 @@ const Footer = () => {
 
                         {/* Redes Sociais */}
                         <div className="mt-6">
-                            <h5 className="text-sm font-semibold mb-3">Siga-nos</h5>
+                            <h5 className="text-sm font-semibold mb-3 text-white">Siga-nos</h5>
                             <div className="flex space-x-3">
                                 <a
                                     href="#"

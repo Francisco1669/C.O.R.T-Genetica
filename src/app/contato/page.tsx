@@ -53,7 +53,7 @@ export default function ContatoPage() {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-green-800 py-20">
+            <section className="bg-red-800 py-20">
                 <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -70,15 +70,15 @@ export default function ContatoPage() {
                         </p>
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">25+</div>
                                 <div className="text-green-100 text-sm">Anos de Experiência</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">24/7</div>
                                 <div className="text-green-100 text-sm">Suporte Técnico</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">1000+</div>
                                 <div className="text-green-100 text-sm">Clientes Atendidos</div>
                             </div>
@@ -105,18 +105,18 @@ export default function ContatoPage() {
                             <div className="space-y-6">
                                 {/* Telefones */}
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-green-100 p-3 rounded-lg">
-                                        <Phone className="w-6 h-6 text-green-800" />
+                                    <div className="bg-red-100 p-3 rounded-lg">
+                                        <Phone className="w-6 h-6 text-earth-brown" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-2">Telefones</h3>
                                         <p className="text-gray-600">
-                                            <a href="tel:+555534140164" className="hover:text-green-800 transition-colors">
+                                            <a href="tel:+555534140164" className="hover:text-earth-brown transition-colors">
                                                 (55) 3414-0164
                                             </a>
                                         </p>
                                         <p className="text-gray-600">
-                                            <a href="tel:+555534140198" className="hover:text-green-800 transition-colors">
+                                            <a href="tel:+555534140198" className="hover:text-earth-brown transition-colors">
                                                 (55) 3414-0198
                                             </a>
                                         </p>
@@ -125,13 +125,13 @@ export default function ContatoPage() {
 
                                 {/* Email */}
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-green-100 p-3 rounded-lg">
-                                        <Mail className="w-6 h-6 text-green-800" />
+                                    <div className="bg-red-100 p-3 rounded-lg">
+                                        <Mail className="w-6 h-6 text-earth-brown" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-2">E-mail</h3>
                                         <p className="text-gray-600">
-                                            <a href="mailto:atendimento@cortgeneticabrasil.com" className="hover:text-green-800 transition-colors">
+                                            <a href="mailto:atendimento@cortgeneticabrasil.com" className="hover:text-earth-brown transition-colors">
                                                 atendimento@cortgeneticabrasil.com
                                             </a>
                                         </p>
@@ -140,8 +140,8 @@ export default function ContatoPage() {
 
                                 {/* Endereço */}
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-green-100 p-3 rounded-lg">
-                                        <MapPin className="w-6 h-6 text-green-800" />
+                                    <div className="bg-red-100 p-3 rounded-lg">
+                                        <MapPin className="w-6 h-6 text-earth-brown" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-2">Endereço</h3>
@@ -153,8 +153,8 @@ export default function ContatoPage() {
                                     </div>
                                 </div>
                                 <div className="flex items-start gap-4">
-                                    <div className="bg-green-100 p-3 rounded-lg">
-                                        <Clock className="w-6 h-6 text-green-800" />
+                                    <div className="bg-red-100 p-3 rounded-lg">
+                                        <Clock className="w-6 h-6 text-earth-brown" />
                                     </div>
                                     <div>
                                         <h3 className="font-semibold mb-2">Horário de Funcionamento</h3>
@@ -163,7 +163,7 @@ export default function ContatoPage() {
                                             Sábado: 8h às 12h<br />
                                             Domingo: Fechado
                                         </p>
-                                        <p className="text-sm text-green-800 mt-2">
+                                        <p className="text-sm text-earth-brown mt-2">
                                             *Suporte técnico 24/7 para emergências
                                         </p>
                                     </div>
@@ -175,28 +175,28 @@ export default function ContatoPage() {
                                     <div className="flex gap-4">
                                         <a
                                             href="#"
-                                            className="bg-green-800 p-3 rounded-lg text-white hover:bg-green-700 transition-colors"
+                                            className="bg-red-800 p-3 rounded-lg text-white hover:bg-red-700 transition-colors"
                                             aria-label="Facebook"
                                         >
                                             <Facebook className="w-5 h-5" />
                                         </a>
                                         <a
                                             href="#"
-                                            className="bg-green-800 p-3 rounded-lg text-white hover:bg-green-700 transition-colors"
+                                            className="bg-red-800 p-3 rounded-lg text-white hover:bg-red-700 transition-colors"
                                             aria-label="Instagram"
                                         >
                                             <Instagram className="w-5 h-5" />
                                         </a>
                                         <a
                                             href="#"
-                                            className="bg-green-800 p-3 rounded-lg text-white hover:bg-green-700 transition-colors"
+                                            className="bg-red-800 p-3 rounded-lg text-white hover:bg-red-700 transition-colors"
                                             aria-label="YouTube"
                                         >
                                             <Youtube className="w-5 h-5" />
                                         </a>
                                         <a
                                             href="#"
-                                            className="bg-green-800 p-3 rounded-lg text-white hover:bg-green-700 transition-colors"
+                                            className="bg-red-800 p-3 rounded-lg text-white hover:bg-red-700 transition-colors"
                                             aria-label="LinkedIn"
                                         >
                                             <Linkedin className="w-5 h-5" />
@@ -214,7 +214,7 @@ export default function ContatoPage() {
                         >
                             <div className="bg-white rounded-2xl shadow-lg p-8">
                                 <div className="flex items-center gap-3 mb-6">
-                                    <MessageSquare className="w-6 h-6 text-green-800" />
+                                    <MessageSquare className="w-6 h-6 text-earth-brown" />
                                     <h2 className="text-2xl font-bold">
                                         Envie sua Mensagem
                                     </h2>
@@ -233,7 +233,7 @@ export default function ContatoPage() {
                                                 value={formData.nome}
                                                 onChange={handleChange}
                                                 required
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                                                 placeholder="Seu nome completo"
                                             />
                                         </div>
@@ -247,7 +247,7 @@ export default function ContatoPage() {
                                                 name="telefone"
                                                 value={formData.telefone}
                                                 onChange={handleChange}
-                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                                className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                                                 placeholder="(00) 00000-0000"
                                             />
                                         </div>
@@ -264,7 +264,7 @@ export default function ContatoPage() {
                                             value={formData.email}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                                             placeholder="seu.email@exemplo.com"
                                         />
                                     </div>
@@ -279,7 +279,7 @@ export default function ContatoPage() {
                                             value={formData.assunto}
                                             onChange={handleChange}
                                             required
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors"
                                         >
                                             <option value="">Selecione um assunto</option>
                                             <option value="catalogo-touros">Catálogo de Touros</option>
@@ -304,7 +304,7 @@ export default function ContatoPage() {
                                             onChange={handleChange}
                                             required
                                             rows={6}
-                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent transition-colors resize-none"
+                                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent transition-colors resize-none"
                                             placeholder="Descreva sua dúvida, necessidade ou sugestão..."
                                         />
                                     </div>
@@ -312,7 +312,7 @@ export default function ContatoPage() {
                                     <button
                                         type="submit"
                                         disabled={isSubmitting}
-                                        className="w-full bg-green-800 text-white py-4 px-6 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
+                                        className="w-full bg-red-800 text-white py-4 px-6 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 flex items-center justify-center gap-2 disabled:opacity-50 disabled:cursor-not-allowed"
                                     >
                                         {isSubmitting ? (
                                             <>
@@ -362,17 +362,17 @@ export default function ContatoPage() {
                     >
                         <div className="h-96 bg-gray-200 relative">
                             {/* Placeholder para mapa - em produção, usar Google Maps ou similar */}
-                            <div className="absolute inset-0 flex items-center justify-center bg-green-100">
+                            <div className="absolute inset-0 flex items-center justify-center bg-amber-100">
                                 <div className="text-center">
-                                    <MapPin className="w-16 h-16 text-green-800 mx-auto mb-4" />
-                                    <h3 className="text-xl font-bold text-green-800 mb-2">
+                                    <MapPin className="w-16 h-16 text-earth-brown mx-auto mb-4" />
+                                    <h3 className="text-xl font-bold text-earth-brown mb-2">
                                         Cort Genética Brasil
                                     </h3>
-                                    <p className="text-green-700">
+                                    <p className="text-earth-brown-dark">
                                         BR 472 - KM 581<br />
                                         Uruguaiana - RS - Brasil
                                     </p>
-                                    <button className="mt-4 bg-green-800 text-white px-6 py-2 rounded-lg hover:bg-green-700 transition-colors">
+                                    <button className="mt-4 bg-red-800 text-white px-6 py-2 rounded-lg hover:bg-red-700 transition-colors">
                                         Ver no Google Maps
                                     </button>
                                 </div>
@@ -383,7 +383,7 @@ export default function ContatoPage() {
             </section>
 
             {/* CTA Section */}
-            <section className="py-16 bg-green-800">
+            <section className="py-16 bg-red-800">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -400,14 +400,14 @@ export default function ContatoPage() {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <a
                                 href="tel:+555534140164"
-                                className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center gap-2"
+                                className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center gap-2"
                             >
                                 <Phone className="w-5 h-5" />
                                 Ligar Agora
                             </a>
                             <a
                                 href="/catalogo-touros"
-                                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-800 transition-colors duration-200"
+                                className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-earth-brown transition-colors duration-200"
                             >
                                 Ver Catálogo de Touros
                             </a>

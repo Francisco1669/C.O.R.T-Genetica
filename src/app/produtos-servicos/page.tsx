@@ -34,7 +34,7 @@ const ProdutosServicosPage = () => {
                 'Acessórios e peças de reposição'
             ],
             categoria: 'equipamentos',
-            cor: 'from-green-600 to-green-800'
+            cor: 'from-amber-600 to-amber-800'
         },
         {
             icon: Shield,
@@ -119,7 +119,7 @@ const ProdutosServicosPage = () => {
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
-            <section className="relative py-20 bg-green-800">
+            <section className="relative py-20 bg-red-800">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -135,15 +135,15 @@ const ProdutosServicosPage = () => {
                             Tudo que você precisa para maximizar os resultados do seu rebanho.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">500+</div>
                                 <div className="text-green-100 text-sm">Produtos Disponíveis</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">25+</div>
                                 <div className="text-green-100 text-sm">Anos de Experiência</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">24/7</div>
                                 <div className="text-green-100 text-sm">Suporte Técnico</div>
                             </div>
@@ -163,7 +163,7 @@ const ProdutosServicosPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Nossos <span className="text-green-800">Produtos</span>
+                            Nossos <span className="text-earth-brown">Produtos</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Linha completa de produtos para atender todas as necessidades da pecuária moderna
@@ -188,7 +188,7 @@ const ProdutosServicosPage = () => {
                                     {/* Content */}
                                     <div className={isEven ? '' : 'lg:col-start-2'}>
                                         <div className="flex items-center mb-6">
-                                            <div className={`w-16 h-16 ${produto.cor === 'from-blue-600 to-blue-800' ? 'bg-blue-800' : produto.cor === 'from-green-600 to-green-800' ? 'bg-green-800' : produto.cor === 'from-purple-600 to-purple-800' ? 'bg-purple-800' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-amber-800' : 'bg-red-800'} rounded-2xl flex items-center justify-center mr-4`}>
+                                            <div className={`w-16 h-16 ${produto.cor === 'from-blue-600 to-blue-800' ? 'bg-blue-800' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-red-800' : produto.cor === 'from-purple-600 to-purple-800' ? 'bg-purple-800' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-amber-800' : 'bg-red-800'} rounded-2xl flex items-center justify-center mr-4`}>
                                                 <IconComponent className="w-8 h-8 text-white" />
                                             </div>
                                             <div>
@@ -204,13 +204,13 @@ const ProdutosServicosPage = () => {
                                         <div className="space-y-3 mb-8">
                                             {produto.items.map((item, itemIndex) => (
                                                 <div key={itemIndex} className="flex items-start space-x-3">
-                                                    <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                                    <CheckCircle className="w-5 h-5 text-earth-brown flex-shrink-0 mt-0.5" />
                                                     <span className="text-gray-700">{item}</span>
                                                 </div>
                                             ))}
                                         </div>
 
-                                        <button className={`inline-flex items-center px-6 py-3 ${produto.cor === 'from-blue-600 to-blue-800' ? 'bg-blue-800 hover:bg-blue-700' : produto.cor === 'from-green-600 to-green-800' ? 'bg-green-800 hover:bg-green-700' : produto.cor === 'from-purple-600 to-purple-800' ? 'bg-purple-800 hover:bg-purple-700' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-amber-800 hover:bg-amber-700' : 'bg-red-800 hover:bg-red-700'} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 hover:scale-105`}>
+                                        <button className={`inline-flex items-center px-6 py-3 ${produto.cor === 'from-blue-600 to-blue-800' ? 'bg-blue-800 hover:bg-blue-700' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-red-800 hover:bg-red-700' : produto.cor === 'from-purple-600 to-purple-800' ? 'bg-purple-800 hover:bg-purple-700' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-amber-800 hover:bg-amber-700' : 'bg-red-800 hover:bg-red-700'} text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 hover:scale-105`}>
                                             Solicitar Orçamento
                                             <ArrowRight className="w-5 h-5 ml-2" />
                                         </button>
@@ -218,7 +218,7 @@ const ProdutosServicosPage = () => {
 
                                     {/* Visual Card */}
                                     <div className={isEven ? 'lg:col-start-2' : ''}>
-                                        <div className={`${produto.cor === 'from-blue-600 to-blue-800' ? 'bg-blue-800' : produto.cor === 'from-green-600 to-green-800' ? 'bg-green-800' : produto.cor === 'from-purple-600 to-purple-800' ? 'bg-purple-800' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-amber-800' : 'bg-red-800'} rounded-2xl p-8 text-white relative overflow-hidden`}>
+                                        <div className={`${produto.cor === 'from-blue-600 to-blue-800' ? 'bg-blue-800' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-red-800' : produto.cor === 'from-purple-600 to-purple-800' ? 'bg-purple-800' : produto.cor === 'from-amber-600 to-amber-800' ? 'bg-amber-800' : 'bg-red-800'} rounded-2xl p-8 text-white relative overflow-hidden`}>
                                             <div className="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 rounded-full transform translate-x-8 -translate-y-8"></div>
                                             <div className="absolute bottom-0 left-0 w-24 h-24 bg-white bg-opacity-5 rounded-full transform -translate-x-4 translate-y-4"></div>
 
@@ -260,7 +260,7 @@ const ProdutosServicosPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Nossos <span className="text-green-800">Serviços</span>
+                            Nossos <span className="text-earth-brown">Serviços</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Suporte técnico especializado para garantir o sucesso dos seus projetos
@@ -283,7 +283,7 @@ const ProdutosServicosPage = () => {
                                 <div className="space-y-3">
                                     {servico.beneficios.map((beneficio, beneficioIndex) => (
                                         <div key={beneficioIndex} className="flex items-start space-x-3">
-                                            <CheckCircle className="w-5 h-5 text-green-600 flex-shrink-0 mt-0.5" />
+                                            <CheckCircle className="w-5 h-5 text-earth-brown flex-shrink-0 mt-0.5" />
                                             <span className="text-gray-700 text-sm">{beneficio}</span>
                                         </div>
                                     ))}
@@ -371,14 +371,14 @@ const ProdutosServicosPage = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/contato"
-                                className="bg-green-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 inline-flex items-center justify-center"
+                                className="bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 inline-flex items-center justify-center"
                             >
                                 Solicitar Orçamento
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                             <Link
                                 href="/catalogo-touros"
-                                className="bg-transparent border-2 border-green-800 text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-green-800 hover:text-white transition-colors duration-200"
+                                className="bg-transparent border-2 border-earth-brown text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-red-800 hover:text-white transition-colors duration-200"
                             >
                                 Ver Catálogo
                             </Link>

@@ -79,7 +79,7 @@ const MarcadoresMolecularesPage = () => {
                             Tecnologia de ponta que revoluciona a seleção genética através da análise direta do DNA,
                             identificando com precisão características de importância econômica.
                         </p>
-                        <div className="bg-green-100 border border-green-200 rounded-lg p-4 inline-block">
+                        <div className="bg-red-100border border-green-200 rounded-lg p-4 inline-block">
                             <span className="text-dark-green font-semibold">
                                 🧬 100% dos nossos touros são testados com marcadores moleculares
                             </span>
@@ -114,7 +114,7 @@ const MarcadoresMolecularesPage = () => {
                             viewport={{ once: true }}
                             className="text-center"
                         >
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 bg-red-100rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-2xl font-bold text-dark-green">1</span>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Coleta de Amostra</h3>
@@ -130,7 +130,7 @@ const MarcadoresMolecularesPage = () => {
                             viewport={{ once: true }}
                             className="text-center"
                         >
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 bg-red-100rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-2xl font-bold text-dark-green">2</span>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Análise Laboratorial</h3>
@@ -146,7 +146,7 @@ const MarcadoresMolecularesPage = () => {
                             viewport={{ once: true }}
                             className="text-center"
                         >
-                            <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                            <div className="w-16 h-16 bg-red-100rounded-full flex items-center justify-center mx-auto mb-4">
                                 <span className="text-2xl font-bold text-dark-green">3</span>
                             </div>
                             <h3 className="text-xl font-bold text-gray-900 mb-3">Interpretação</h3>
@@ -230,7 +230,7 @@ const MarcadoresMolecularesPage = () => {
                                     viewport={{ once: true }}
                                     className="text-center"
                                 >
-                                    <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                                    <div className="w-16 h-16 bg-red-100rounded-2xl flex items-center justify-center mx-auto mb-6">
                                         <IconComponent className="w-8 h-8 text-dark-green" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-4">{benefit.title}</h3>

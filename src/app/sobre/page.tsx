@@ -68,7 +68,7 @@ const SobrePage = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                            Sobre a <span className="text-green-800">Cort Genética</span>
+                            Sobre a <span className="text-earth-brown">Cort Genética</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
                             Pioneira em genética bovina no Brasil, combinando tradição, inovação e tecnologia
@@ -89,7 +89,7 @@ const SobrePage = () => {
                             viewport={{ once: true }}
                         >
                             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                                Nossa <span className="text-green-800">História</span>
+                                Nossa <span className="text-earth-brown">História</span>
                             </h2>
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
@@ -116,7 +116,7 @@ const SobrePage = () => {
                             viewport={{ once: true }}
                             className="relative"
                         >
-                            <div className="bg-green-800 rounded-2xl p-8 text-white">
+                            <div className="bg-red-800 rounded-2xl p-8 text-white">
                                 <h3 className="text-2xl font-bold mb-6">Nossa Missão</h3>
                                 <p className="text-lg leading-relaxed mb-6">
                                     Fornecer genética bovina de excelência através de tecnologias inovadoras,
@@ -149,7 +149,7 @@ const SobrePage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Nossa <span className="text-green-800">Jornada</span>
+                            Nossa <span className="text-earth-brown">Jornada</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Marcos importantes que definiram nossa trajetória de inovação e liderança
@@ -166,7 +166,7 @@ const SobrePage = () => {
                                 viewport={{ once: true }}
                                 className="flex items-center mb-12 last:mb-0"
                             >
-                                <div className="flex-shrink-0 w-24 h-24 bg-green-800 rounded-full flex items-center justify-center text-white font-bold text-lg mr-8">
+                                <div className="flex-shrink-0 w-24 h-24 bg-red-800 rounded-full flex items-center justify-center text-white font-bold text-lg mr-8">
                                     {item.year}
                                 </div>
                                 <div className="flex-1">
@@ -190,7 +190,7 @@ const SobrePage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Nossos <span className="text-green-800">Valores</span>
+                            Nossos <span className="text-earth-brown">Valores</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Princípios que guiam cada decisão e ação em nossa empresa
@@ -209,8 +209,8 @@ const SobrePage = () => {
                                     viewport={{ once: true }}
                                     className="text-center group"
                                 >
-                                    <div className="w-16 h-16 bg-green-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-green-800 transition-colors duration-300">
-                                        <IconComponent className="w-8 h-8 text-green-800 group-hover:text-white transition-colors duration-300" />
+                                    <div className="w-16 h-16 bg-red-100 rounded-2xl flex items-center justify-center mx-auto mb-4 group-hover:bg-red-800 transition-colors duration-300">
+                                        <IconComponent className="w-8 h-8 text-earth-brown group-hover:text-white transition-colors duration-300" />
                                     </div>
                                     <h3 className="text-xl font-bold text-gray-900 mb-3">{value.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{value.description}</p>
@@ -222,7 +222,7 @@ const SobrePage = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-green-800">
+            <section className="py-20 bg-red-800">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -240,14 +240,14 @@ const SobrePage = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/tecnologia"
-                                className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
+                                className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
                             >
                                 Explorar Tecnologias
                                 <ChevronRight className="w-5 h-5 ml-2" />
                             </Link>
                             <Link
                                 href="/contato"
-                                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-800 transition-colors duration-200"
+                                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-earth-brown transition-colors duration-200"
                             >
                                 Falar Conosco
                             </Link>

@@ -19,7 +19,7 @@ const TecnologiaPage = () => {
             ],
             link: '/tecnologia/marcadores-moleculares',
             color: 'green',
-            bgClass: 'bg-dark-green'
+            bgClass: 'bg-red-800'
         },
         {
             icon: FlaskConical,
@@ -34,7 +34,7 @@ const TecnologiaPage = () => {
             ],
             link: '/tecnologia/teste-ttr',
             color: 'green',
-            bgClass: 'bg-primary-green'
+            bgClass: 'bg-primary-red'
         },
         {
             icon: Award,
@@ -49,7 +49,7 @@ const TecnologiaPage = () => {
             ],
             link: '/tecnologia/selos-qualidade',
             color: 'green',
-            bgClass: 'bg-green-800'
+            bgClass: 'bg-red-800'
         }
     ];
 
@@ -65,14 +65,14 @@ const TecnologiaPage = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                            <span className="text-green-800">Tecnologia</span> e Inovação
+                            <span className="text-earth-brown">Tecnologia</span> e Inovação
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed mb-8">
                             Três pilares tecnológicos que revolucionaram a genética bovina brasileira,
                             garantindo resultados superiores e previsibilidade genética incomparável.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 text-sm font-medium">
-                            <span className="bg-green-100 text-green-800 px-4 py-2 rounded-full">
+                            <span className="bg-red-100 text-earth-brown px-4 py-2 rounded-full">
                                 100% Marcadores Moleculares
                             </span>
                             <span className="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">
@@ -123,7 +123,7 @@ const TecnologiaPage = () => {
                                         <div className="space-y-4 mb-8">
                                             {tech.benefits.map((benefit, benefitIndex) => (
                                                 <div key={benefitIndex} className="flex items-start space-x-3">
-                                                    <CheckCircle className="w-6 h-6 text-green-600 flex-shrink-0 mt-0.5" />
+                                                    <CheckCircle className="w-6 h-6 text-earth-brown flex-shrink-0 mt-0.5" />
                                                     <span className="text-gray-700">{benefit}</span>
                                                 </div>
                                             ))}
@@ -131,7 +131,7 @@ const TecnologiaPage = () => {
 
                                         <Link
                                             href={tech.link}
-                                            className={`inline-flex items-center px-6 py-3 ${tech.bgClass} hover:bg-green-700 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 hover:scale-105`}
+                                            className={`inline-flex items-center px-6 py-3 ${tech.bgClass} hover:bg-red-700 text-white font-semibold rounded-lg hover:shadow-lg transition-all duration-200 hover:scale-105`}
                                         >
                                             Saiba Mais
                                             <ArrowRight className="w-5 h-5 ml-2" />
@@ -141,7 +141,7 @@ const TecnologiaPage = () => {
                                     {/* Visual/Stats */}
                                     <div className={isEven ? 'lg:col-start-2' : ''}>
                                         <div className={`${tech.bgClass} rounded-2xl p-8 text-white`}>
-                                            <h3 className="text-2xl font-bold mb-6">Resultados Comprovados</h3>
+                                            <h3 className="text-2xl font-bold mb-6 text-white">Resultados Comprovados</h3>
                                             <div className="grid grid-cols-2 gap-6">
                                                 <div className="text-center">
                                                     <div className="text-3xl font-bold text-white mb-2">100%</div>
@@ -180,7 +180,7 @@ const TecnologiaPage = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            O Diferencial da <span className="text-green-800">Cort Genética</span>
+                            O Diferencial da <span className="text-earth-brown">Cort Genética</span>
                         </h2>
                         <p className="text-xl text-gray-600 leading-relaxed mb-12">
                             Somos os únicos no Brasil a combinar essas três tecnologias de forma integrada,
@@ -189,8 +189,8 @@ const TecnologiaPage = () => {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                             <div className="bg-white p-6 rounded-xl shadow-lg">
-                                <div className="w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-4">
-                                    <Dna className="w-6 h-6 text-green-800" />
+                                <div className="w-12 h-12 bg-red-100 rounded-lg flex items-center justify-center mx-auto mb-4">
+                                    <Dna className="w-6 h-6 text-earth-brown" />
                                 </div>
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Integração Total</h3>
                                 <p className="text-gray-600">Todas as tecnologias trabalham em conjunto para máxima eficiência</p>
@@ -217,7 +217,7 @@ const TecnologiaPage = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-green-800">
+            <section className="py-20 bg-red-800">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -235,14 +235,14 @@ const TecnologiaPage = () => {
                         <div className="flex flex-col sm:flex-row gap-4 justify-center">
                             <Link
                                 href="/catalogo-touros"
-                                className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
+                                className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
                             >
                                 Ver Catálogo de Touros
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                             <Link
                                 href="/contato"
-                                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-green-800 transition-colors duration-200"
+                                className="bg-transparent border-2 border-white text-white px-8 py-4 rounded-lg font-semibold hover:bg-white hover:text-earth-brown transition-colors duration-200"
                             >
                                 Falar com Especialista
                             </Link>

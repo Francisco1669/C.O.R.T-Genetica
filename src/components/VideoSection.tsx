@@ -157,7 +157,7 @@ const VideoSection = () => {
 
                         <div className="space-y-6">
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div className="w-8 h-8 bg-red-200rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <div className="w-3 h-3 bg-red-800 rounded-full"></div>
                                 </div>
                                 <div>
@@ -167,7 +167,7 @@ const VideoSection = () => {
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div className="w-8 h-8 bg-red-200rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <div className="w-3 h-3 bg-red-800 rounded-full"></div>
                                 </div>
                                 <div>
@@ -177,7 +177,7 @@ const VideoSection = () => {
                             </div>
 
                             <div className="flex items-start space-x-4">
-                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0 mt-1">
+                                <div className="w-8 h-8 bg-red-200rounded-full flex items-center justify-center flex-shrink-0 mt-1">
                                     <div className="w-3 h-3 bg-red-800 rounded-full"></div>
                                 </div>
                                 <div>

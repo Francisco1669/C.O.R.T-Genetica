@@ -3,15 +3,14 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
+import Image from 'next/image';
 
 const HeroSection = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-red-50 overflow-hidden">
             {/* Background pattern */}
-            <div className="absolute inset-0 opacity-5">
-                <div className="absolute inset-0" style={{
-                    backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23059669' fill-opacity='0.4'%3E%3Ccircle cx='10' cy='10' r='2'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-                }} />
+            <div className="absolute inset-0 opacity-10">
+                <Image src="/hero.png" alt="Background" fill />
             </div>
 
             <div className="container mx-auto px-4 text-center relative z-10">
@@ -29,7 +28,7 @@ const HeroSection = () => {
                         className="inline-block"
                     >
                         <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-red-50 text-red-900 border border-red-300 mb-6">
-                            🏆 Pioneira em Genética Bovina no Brasil
+                            Pioneira em Genética Bovina no Brasil
                         </span>
                     </motion.div>
 

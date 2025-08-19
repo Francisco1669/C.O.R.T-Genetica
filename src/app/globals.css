@@ -9,6 +9,8 @@
   --light-red: #fceaea;
   --accent-brown: #92400e;
   --accent-light-brown: #d97706;
+  --earth-brown: #8b4513;
+  --earth-brown-dark: #654321;
   --neutral-beige: #f5f5dc;
   --background: #ffffff;
   --foreground: #1f2937;
@@ -30,6 +32,8 @@
   --color-light: var(--light-red);
   --color-accent-brown: var(--accent-brown);
   --color-accent-light: var(--accent-light-brown);
+  --color-earth-brown: var(--earth-brown);
+  --color-earth-brown-dark: var(--earth-brown-dark);
   --color-neutral: var(--neutral-beige);
   --color-text-secondary: var(--text-secondary);
   --color-border: var(--border);
@@ -60,7 +64,7 @@ h5,
 h6 {
   line-height: 1.2;
   font-weight: 600;
-  color: var(--foreground);
+  /* color: var(--foreground); */
 }
 
 /* Headings em seções com fundo escuro */
@@ -159,6 +163,22 @@ h6 {
 
 .border-primary-red {
   border-color: var(--primary-red);
+}
+
+.text-earth-brown {
+  color: var(--earth-brown);
+}
+
+.text-earth-brown-dark {
+  color: var(--earth-brown-dark);
+}
+
+.bg-earth-brown {
+  background: var(--earth-brown);
+}
+
+.border-earth-brown {
+  border-color: var(--earth-brown);
 }
 
 /* Sistema de Abas Padronizado */

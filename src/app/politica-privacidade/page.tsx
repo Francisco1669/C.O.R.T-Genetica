@@ -7,7 +7,7 @@ export default function PoliticaPrivacidadePage() {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="bg-green-800 py-20">
+            <section className="bg-red-800 py-20">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -39,21 +39,21 @@ export default function PoliticaPrivacidadePage() {
                     >
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
                             <div className="text-center">
-                                <Lock className="w-12 h-12 text-green-800 mx-auto mb-4" />
+                                <Lock className="w-12 h-12 text-earth-brown mx-auto mb-4" />
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Proteção Total</h3>
                                 <p className="text-gray-600 text-sm">
                                     Seus dados são protegidos com a mais alta tecnologia de segurança
                                 </p>
                             </div>
                             <div className="text-center">
-                                <Eye className="w-12 h-12 text-green-800 mx-auto mb-4" />
+                                <Eye className="w-12 h-12 text-earth-brown mx-auto mb-4" />
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Transparência</h3>
                                 <p className="text-gray-600 text-sm">
                                     Você sabe exatamente como seus dados são coletados e utilizados
                                 </p>
                             </div>
                             <div className="text-center">
-                                <Users className="w-12 h-12 text-green-800 mx-auto mb-4" />
+                                <Users className="w-12 h-12 text-earth-brown mx-auto mb-4" />
                                 <h3 className="text-lg font-bold text-gray-900 mb-2">Controle</h3>
                                 <p className="text-gray-600 text-sm">
                                     Você tem total controle sobre seus dados pessoais
@@ -203,7 +203,7 @@ export default function PoliticaPrivacidadePage() {
                             <p className="text-gray-700 mb-4">
                                 Para exercer seus direitos ou esclarecer dúvidas sobre esta política, entre em contato conosco:
                             </p>
-                            <div className="bg-green-50 border-l-4 border-green-800 p-6 mb-8">
+                            <div className="bg-amber-50 border-l-4 border-earth-brown p-6 mb-8">
                                 <p className="text-gray-700 mb-2"><strong>E-mail:</strong> privacidade@cortgeneticabrasil.com</p>
                                 <p className="text-gray-700 mb-2"><strong>Telefone:</strong> (55) 3414-0164</p>
                                 <p className="text-gray-700 mb-2"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
@@ -224,7 +224,7 @@ export default function PoliticaPrivacidadePage() {
             </section>
 
             {/* CTA */}
-            <section className="py-16 bg-green-800">
+            <section className="py-16 bg-red-800">
                 <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
@@ -239,7 +239,7 @@ export default function PoliticaPrivacidadePage() {
                         </p>
                         <a
                             href="/contato"
-                            className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
+                            className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200"
                         >
                             Entre em Contato
                         </a>

@@ -118,7 +118,7 @@ const CatalogoTourosPage = () => {
         const seal = selosInfo.find(s => s.id === sealId);
         switch (seal?.color) {
             case 'purple': return 'bg-purple-100 text-purple-800';
-            case 'red': return 'bg-red-100 text-red-800';
+            case 'red': return 'bg-red-200 text-red-800';
             case 'pink': return 'bg-pink-100 text-pink-800';
             default: return 'bg-gray-100 text-gray-800';
         }
@@ -127,7 +127,7 @@ const CatalogoTourosPage = () => {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section */}
-            <section className="relative py-20 bg-green-800">
+            <section className="relative py-20 bg-red-800">
                 <div className="container mx-auto px-4">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -143,18 +143,18 @@ const CatalogoTourosPage = () => {
                             teste TTR e selos de qualidade garantidos.
                         </p>
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">100%</div>
                                 <div className="text-green-100 text-sm">Marcadores Moleculares</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">50+</div>
                                 <div className="text-green-100 text-sm">Touros Disponíveis</div>
                             </div>
-                            <div className="bg-green-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
+                            <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
                                 <div className="text-2xl font-bold text-white mb-1">3</div>
                                 <div className="text-green-100 text-sm">Selos de Qualidade</div>
-                            </div>    
+                            </div>
                         </div>
                     </motion.div>
                 </div>
@@ -172,7 +172,7 @@ const CatalogoTourosPage = () => {
                                 placeholder="Buscar por nome ou raça..."
                                 value={searchTerm}
                                 onChange={(e) => setSearchTerm(e.target.value)}
-                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                                className="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                             />
                         </div>
 
@@ -180,7 +180,7 @@ const CatalogoTourosPage = () => {
                         <select
                             value={selectedCategory}
                             onChange={(e) => setSelectedCategory(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                         >
                             <option value="todos">Todas as Categorias</option>
                             <option value="corte">Gado de Corte</option>
@@ -191,7 +191,7 @@ const CatalogoTourosPage = () => {
                         <select
                             value={selectedRace}
                             onChange={(e) => setSelectedRace(e.target.value)}
-                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-green-500 focus:border-transparent"
+                            className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-red-500 focus:border-transparent"
                         >
                             <option value="todas">Todas as Raças</option>
                             {racas.map(raca => (
@@ -231,7 +231,7 @@ const CatalogoTourosPage = () => {
                                     setSelectedRace('todas');
                                     setSelectedSeals([]);
                                 }}
-                                className="text-green-800 hover:text-green-600 font-medium"
+                                className="text-earth-brown hover:text-earth-brown-dark font-medium"
                             >
                                 Limpar Filtros
                             </button>
@@ -258,10 +258,10 @@ const CatalogoTourosPage = () => {
                                 className="bg-white rounded-2xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow duration-300"
                             >
                                 {/* Imagem */}
-                                <div className="relative h-48 bg-green-100">
+                                <div className="relative h-48 bg-amber-100">
                                     <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center text-green-800">
-                                            <div className="w-16 h-16 bg-green-800 rounded-full flex items-center justify-center mx-auto mb-2">
+                                        <div className="text-center text-earth-brown">
+                                            <div className="w-16 h-16 bg-red-800 rounded-full flex items-center justify-center mx-auto mb-2">
                                                 <span className="text-white font-bold text-xl">🐂</span>
                                             </div>
                                             <div className="font-semibold">{touro.nome}</div>
@@ -271,7 +271,7 @@ const CatalogoTourosPage = () => {
                                     {/* Status de disponibilidade */}
                                     <div className="absolute top-4 right-4">
                                         <span className={`px-3 py-1 rounded-full text-xs font-medium ${touro.disponibilidade === 'Disponível'
-                                            ? 'bg-green-100 text-green-800'
+                                            ? 'bg-red-100 text-earth-brown'
                                             : 'bg-yellow-100 text-yellow-800'
                                             }`}>
                                             {touro.disponibilidade}
@@ -299,7 +299,7 @@ const CatalogoTourosPage = () => {
                                 <div className="p-6">
                                     <div className="flex justify-between items-start mb-3">
                                         <h3 className="text-xl font-bold text-gray-900">{touro.nome}</h3>
-                                        <span className="text-lg font-bold text-green-800">{touro.preco}</span>
+                                        <span className="text-lg font-bold text-earth-brown">{touro.preco}</span>
                                     </div>
 
                                     <div className="space-y-2 mb-4">
@@ -320,7 +320,7 @@ const CatalogoTourosPage = () => {
 
                                     <Link
                                         href={`/catalogo-touros/${touro.id}`}
-                                        className="w-full bg-green-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200 flex items-center justify-center"
+                                        className="w-full bg-red-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200 flex items-center justify-center"
                                     >
                                         <Eye className="w-5 h-5 mr-2" />
                                         Ver Detalhes
@@ -351,7 +351,7 @@ const CatalogoTourosPage = () => {
                                     setSelectedRace('todas');
                                     setSelectedSeals([]);
                                 }}
-                                className="bg-green-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-green-700 transition-colors duration-200"
+                                className="bg-red-800 text-white px-6 py-3 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200"
                             >
                                 Limpar Todos os Filtros
                             </button>
@@ -361,7 +361,7 @@ const CatalogoTourosPage = () => {
             </section>
 
             {/* CTA Section */}
-            <section className="py-20 bg-green-800">
+            <section className="py-20 bg-red-800">
                 <div className="container mx-auto px-4 text-center">
                     <motion.div
                         initial={{ opacity: 0, y: 30 }}
@@ -378,7 +378,7 @@ const CatalogoTourosPage = () => {
                         </p>
                         <Link
                             href="/contato"
-                            className="bg-white text-green-800 px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
+                            className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center"
                         >
                             Falar com Especialista
                             <ArrowRight className="w-5 h-5 ml-2" />
