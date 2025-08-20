@@ -191,8 +191,8 @@ const CatalogoTourosPage = () => {
                                 onClick={handleDownload}
                                 disabled={isDownloading}
                                 className={`inline-flex items-center px-12 py-6 rounded-xl font-bold text-xl transition-all duration-300 shadow-2xl ${isDownloading
-                                        ? 'bg-gray-500 cursor-not-allowed'
-                                        : 'bg-green-600 hover:bg-green-700 hover:shadow-green-500/25 hover:scale-105'
+                                    ? 'bg-gray-500 cursor-not-allowed'
+                                    : 'bg-green-600 hover:bg-green-700 hover:shadow-green-500/25 hover:scale-105'
                                     } text-white`}
                             >
                                 {isDownloading ? (
@@ -342,8 +342,8 @@ const CatalogoTourosPage = () => {
                                 onClick={handleDownload}
                                 disabled={isDownloading}
                                 className={`inline-flex items-center px-8 py-4 rounded-lg font-semibold transition-colors duration-200 ${isDownloading
-                                        ? 'bg-gray-500 cursor-not-allowed'
-                                        : 'bg-red-800 hover:bg-red-700'
+                                    ? 'bg-gray-500 cursor-not-allowed'
+                                    : 'bg-red-800 hover:bg-red-700'
                                     } text-white`}
                             >
                                 {isDownloading ? (
