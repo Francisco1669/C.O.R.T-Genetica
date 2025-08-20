@@ -22,7 +22,7 @@ const Header = () => {
         },
         { href: '/catalogo-touros', label: 'Catálogo de Touros' },
         { href: '/produtos-servicos', label: 'Produtos e Serviços' },
-        { href: '/blog', label: 'Notícias' },
+        // { href: '/blog', label: 'Notícias' },    
         { href: '/contato', label: 'Contato' }
     ];
 
