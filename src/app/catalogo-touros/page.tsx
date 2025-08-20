@@ -145,8 +145,6 @@ const CatalogoTourosPage = () => {
             await new Promise(resolve => setTimeout(resolve, step.delay));
             setDownloadProgress(step.progress);
         }
-
-        // Inicia o download real
         const link = document.createElement('a');
         link.href = '/Catalogo_CORT_2023.pdf';
         link.download = 'Catalogo_CORT_2023.pdf';

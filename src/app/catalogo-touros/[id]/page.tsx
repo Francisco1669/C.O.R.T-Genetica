@@ -1,503 +1,250 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import { useState, use } from 'react';
+import Image from 'next/image';
 import Link from 'next/link';
-import { ArrowLeft, Award, Palette, Beef, Heart, Download, Share2, Phone, Mail } from 'lucide-react';
+import { Award, ArrowLeft, Phone, Mail } from 'lucide-react';
+import { notFound } from 'next/navigation';
 
-// Dados mockados do touro (em produção viria de uma API)
-const getTourosData = (id: string) => {
-    const tourosData: { [key: string]: any } = {
-        '001': {
-            id: '001',
-            nome: 'Forte CG',
-            raca: 'Angus',
-            categoria: 'corte',
-            registro: 'ANG001-2024',
-            nascimento: '2020-03-15',
-            peso: '850 kg',
-            altura: '145 cm',
-            imagem: '/api/placeholder/600/400',
-            selos: ['pelagem', 'maciez'],
-            disponibilidade: 'Disponível',
-            preco: 'R$ 45,00',
-            pedigree: {
-                pai: 'Champion CG',
-                registroPai: 'ANG789-2018',
-                mae: 'Elite CG',
-                registroMae: 'ANG456-2017'
-            },
-            indices: {
-                dep: '+12.5',
-                dmg: '+8.2',
-                dmp: '+15.7',
-                facilidadeParto: '95%',
-                habilidadeMaterna: '+6.8'
-            },
-            marcadoresMoleculares: {
-                maciez: {
-                    calpaina: 'CC (Favorável)',
-                    calpastatina: 'GG (Favorável)',
-                    resultado: 'Carne Extra Macia'
-                },
-                pelagem: {
-                    mc1r: 'AA (Preto Homozigoto)',
-                    resultado: '100% Pelagem Preta'
-                }
-            },
-            testeTTR: {
-                resultado: '92%',
-                classificacao: 'Excelente',
-                correlacaoCampo: '94%'
-            },
-            historico: [
-                { data: '2024-01-15', evento: 'Coleta de sêmen', resultado: 'Aprovado TTR 92%' },
-                { data: '2024-01-10', evento: 'Exame andrológico', resultado: 'Apto para reprodução' },
-                { data: '2023-12-20', evento: 'Análise genética', resultado: 'Marcadores confirmados' }
-            ],
-            dosesDisponiveis: 150,
-            dosesReservadas: 23
-        },
-        '002': {
-            id: '002',
-            nome: 'Campeão CG',
-            raca: 'Nelore',
-            categoria: 'corte',
-            registro: 'NEL002-2024',
-            nascimento: '2019-08-22',
-            peso: '920 kg',
-            altura: '155 cm',
-            imagem: '/api/placeholder/600/400',
-            selos: ['pelagem', 'iatf'],
-            disponibilidade: 'Disponível',
-            preco: 'R$ 38,00',
-            pedigree: {
-                pai: 'Líder CG',
-                registroPai: 'NEL123-2017',
-                mae: 'Suprema CG',
-                registroMae: 'NEL456-2016'
-            },
-            indices: {
-                dep: '+18.3',
-                dmg: '+12.1',
-                dmp: '+22.4',
-                facilidadeParto: '98%',
-                habilidadeMaterna: '+8.9'
-            },
-            marcadoresMoleculares: {
-                adaptacao: {
-                    slick: 'AA (Favorável)',
-                    tolloid: 'GG (Favorável)',
-                    resultado: 'Alta Adaptação Tropical'
-                },
-                pelagem: {
-                    mc1r: 'GG (Vermelho Homozigoto)',
-                    resultado: '100% Pelagem Vermelha'
-                }
-            },
-            testeTTR: {
-                resultado: '89%',
-                classificacao: 'Excelente',
-                correlacaoCampo: '91%'
-            },
-            historico: [
-                { data: '2024-01-12', evento: 'Coleta de sêmen', resultado: 'Aprovado TTR 89%' },
-                { data: '2024-01-08', evento: 'Exame andrológico', resultado: 'Apto para reprodução' },
-                { data: '2023-12-15', evento: 'Análise genética', resultado: 'Marcadores confirmados' }
-            ],
-            dosesDisponiveis: 200,
-            dosesReservadas: 45
-        }
-    };
+// Tipagem para os touros
+interface Bull {
+    id: string;
+    nome: string;
+    raca: string;
+    categoria: 'corte' | 'leite';
+    imagem: string;
+    selos: string[];
+    destaque: string;
+    descricao?: string;
+    caracteristicas?: string[];
+}
 
-    return tourosData[id] || null;
+// Base de dados dos touros
+const bulls: Bull[] = [
+    {
+        id: 'dynamo',
+        nome: 'Dynamo',
+        raca: 'Angus',
+        categoria: 'corte',
+        imagem: '/stories/angus/dynamo0.jpg',
+        selos: ['pelagem', 'maciez'],
+        destaque: 'Linhagem superior Angus'
+    },
+    {
+        id: 'milionario',
+        nome: 'Milionário',
+        raca: 'Braford',
+        categoria: 'corte',
+        imagem: '/stories/braford/milionario.jpg',
+        selos: ['pelagem', 'iatf'],
+        destaque: 'Cruzamento de elite'
+    },
+    {
+        id: 'nostradamus',
+        nome: 'Nostradamus',
+        raca: 'Red Angus',
+        categoria: 'corte',
+        imagem: '/stories/red_angus/nostradamus.jpg',
+        selos: ['maciez', 'iatf'],
+        destaque: 'Genética excepcional'
+    },
+    {
+        id: 'tornado',
+        nome: 'Tornado',
+        raca: 'Brangus',
+        categoria: 'corte',
+        imagem: '/stories/brangus/tornado.jpg',
+        selos: ['pelagem', 'maciez', 'iatf'],
+        destaque: 'Força e adaptabilidade'
+    },
+    {
+        id: 'fogonazo',
+        nome: 'Fogonazo',
+        raca: 'Angus',
+        categoria: 'corte',
+        imagem: '/stories/angus/fogonazo0.jpg',
+        selos: ['pelagem', 'maciez'],
+        destaque: 'Tradição e qualidade'
+    },
+    {
+        id: 'marlim',
+        nome: 'Marlim',
+        raca: 'Brahman',
+        categoria: 'corte',
+        imagem: '/stories/brahman/marlim.jpg',
+        selos: ['iatf'],
+        destaque: 'Adaptação tropical',
+        descricao: 'Reprodutor Brahman com excelente adaptação ao clima tropical brasileiro, oferecendo rusticidade e resistência para sistemas extensivos.',
+        caracteristicas: [
+            'Máxima adaptação tropical',
+            'Resistência a doenças',
+            'Tolerância ao calor',
+            'Eficiência em pastagens'
+        ]
+    }
+];
+
+const selosInfo = {
+    pelagem: { nome: 'Homozigose de Pelagem', color: 'bg-purple-100 text-purple-800' },
+    maciez: { nome: 'Maciez da Carne', color: 'bg-red-100 text-red-800' },
+    iatf: { nome: 'IATF Assistida', color: 'bg-pink-100 text-pink-800' }
 };
 
 interface PageProps {
-    params: Promise<{ id: string }>;
+    params: {
+        id: string;
+    };
 }
 
-const TourosDetalhePage = ({ params }: PageProps) => {
-    const resolvedParams = use(params);
-    const [activeTab, setActiveTab] = useState('geral');
+export default function BullDetailPage({ params }: PageProps) {
+    const bull = bulls.find(b => b.id === params.id);
 
-    const touro = getTourosData(resolvedParams.id);
-
-    if (!touro) {
-        return (
-            <div className="min-h-screen flex items-center justify-center">
-                <div className="text-center">
-                    <h1 className="text-2xl font-bold text-gray-900 mb-4">Touro não encontrado</h1>
-                    <Link href="/catalogo-touros" className="text-earth-brown hover:underline">
-                        Voltar ao catálogo
-                    </Link>
-                </div>
-            </div>
-        );
+    if (!bull) {
+        notFound();
     }
-
-    const selosInfo = [
-        { id: 'pelagem', nome: 'Homozigose de Pelagem', icon: Palette, color: 'bg-purple-100 text-purple-800' },
-        { id: 'maciez', nome: 'Maciez da Carne', icon: Beef, color: 'bg-red-200 text-red-800' },
-        { id: 'iatf', nome: 'IATF Assistida', icon: Heart, color: 'bg-pink-100 text-pink-800' }
-    ];
-
-    const tabs = [
-        { id: 'geral', label: 'Informações Gerais' },
-        { id: 'genetica', label: 'Análise Genética' },
-        { id: 'indices', label: 'Índices Zootécnicos' },
-        { id: 'historico', label: 'Histórico' }
-    ];
 
     return (
         <div className="min-h-screen bg-gray-50">
-            {/* Header */}
-            <section className="bg-white shadow-sm">
-                <div className="container mx-auto px-4 py-6">
+            {/* Hero Section com imagem em tamanho completo */}
+            <section className="relative h-[80vh] min-h-[600px] max-h-[800px]">
+                <Image
+                    src={bull.imagem}
+                    alt={`Touro ${bull.nome} da raça ${bull.raca}`}
+                    fill
+                    className="object-contain object-center"
+                    priority
+                />
+
+                {/* Overlay gradient */}
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+
+                {/* Botão voltar */}
+                <div className="absolute top-8 left-8 z-10">
                     <Link
                         href="/catalogo-touros"
-                        className="inline-flex items-center text-earth-brown hover:text-earth-brown-dark mb-4"
+                        className="inline-flex items-center bg-white/20 backdrop-blur-sm hover:bg-white/30 text-white px-4 py-2 rounded-lg transition-colors duration-200"
                     >
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Voltar ao Catálogo
                     </Link>
+                </div>
 
-                    <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
-                        <div>
-                            <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">
-                                {touro.nome}
+                {/* Conteúdo sobreposto */}
+                <div className="absolute bottom-0 left-0 right-0 p-8">
+                    <div className="container mx-auto">
+                        <motion.div
+                            initial={{ opacity: 0, y: 30 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="max-w-4xl"
+                        >
+                            {/* Badge de categoria */}
+                            <div className="mb-4">
+                                <span className={`px-4 py-2 rounded-full text-sm font-semibold ${bull.categoria === 'corte'
+                                    ? 'bg-red-600 text-white'
+                                    : 'bg-blue-600 text-white'
+                                    }`}>
+                                    {bull.categoria.charAt(0).toUpperCase() + bull.categoria.slice(1)}
+                                </span>
+                            </div>
+
+                            <h1 className="text-4xl md:text-6xl font-bold text-white mb-4">
+                                {bull.nome}
                             </h1>
-                            <div className="flex flex-wrap items-center gap-4 text-gray-600">
-                                <span>Registro: {touro.registro}</span>
-                                <span>•</span>
-                                <span>Raça: {touro.raca}</span>
-                                <span>•</span>
-                                <span className="capitalize">Categoria: {touro.categoria}</span>
-                            </div>
-                        </div>
+                            <p className="text-xl md:text-2xl text-green-200 mb-4">
+                                {bull.raca}
+                            </p>
+                            <p className="text-lg text-white/90 max-w-2xl">
+                                {bull.destaque}
+                            </p>
 
-                        <div className="mt-4 lg:mt-0 flex flex-col sm:flex-row gap-3">
-                            <span className="text-2xl font-bold text-earth-brown">{touro.preco}</span>
-                            <div className="flex gap-2">
-                                <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                                    <Share2 className="w-5 h-5 text-gray-600" />
-                                </button>
-                                <button className="p-2 border border-gray-300 rounded-lg hover:bg-gray-50">
-                                    <Download className="w-5 h-5 text-gray-600" />
-                                </button>
-                            </div>
-                        </div>
+                            {/* Selos */}
+                            {bull.selos.length > 0 && (
+                                <div className="flex flex-wrap gap-3 mt-6">
+                                    {bull.selos.map((selo) => (
+                                        <span
+                                            key={selo}
+                                            className={`px-3 py-2 rounded-lg text-sm font-medium backdrop-blur-sm ${selosInfo[selo as keyof typeof selosInfo]?.color || 'bg-gray-100 text-gray-800'
+                                                } bg-opacity-90`}
+                                        >
+                                            <Award className="w-4 h-4 inline mr-2" />
+                                            {selosInfo[selo as keyof typeof selosInfo]?.nome || selo}
+                                        </span>
+                                    ))}
+                                </div>
+                            )}
+                        </motion.div>
                     </div>
                 </div>
             </section>
 
-            {/* Conteúdo Principal */}
-            <section className="py-8">
+            {/* Seção de informações detalhadas */}
+            <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
-
-                        {/* Coluna Principal */}
-                        <div className="lg:col-span-2 space-y-8">
-
-                            {/* Imagem e Selos */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                className="bg-white rounded-2xl shadow-lg overflow-hidden"
-                            >
-                                {/* Imagem */}
-                                <div className="relative h-80 bg-green-100">
-                                    <div className="absolute inset-0 flex items-center justify-center">
-                                        <div className="text-center text-earth-brown">
-                                            <div className="w-24 h-24 bg-red-800 rounded-full flex items-center justify-center mx-auto mb-4">
-                                                <span className="text-white font-bold text-3xl">🐂</span>
-                                            </div>
-                                            <div className="text-xl font-semibold">{touro.nome}</div>
-                                            <div className="text-green-600">{touro.raca}</div>
-                                        </div>
-                                    </div>
-
-                                    {/* Status */}
-                                    <div className="absolute top-4 right-4">
-                                        <span className="bg-red-100 text-earth-brown px-4 py-2 rounded-full text-sm font-medium">
-                                            {touro.disponibilidade}
-                                        </span>
-                                    </div>
-                                </div>
-
-                                {/* Selos */}
-                                <div className="p-6">
-                                    <h3 className="text-lg font-bold text-gray-900 mb-4">Selos de Qualidade</h3>
-                                    <div className="flex flex-wrap gap-3">
-                                        {touro.selos.map((selo: string) => {
-                                            const seloInfo = selosInfo.find(s => s.id === selo);
-                                            if (!seloInfo) return null;
-                                            const IconComponent = seloInfo.icon;
-                                            return (
-                                                <div
-                                                    key={selo}
-                                                    className={`flex items-center px-4 py-2 rounded-lg ${seloInfo.color}`}
-                                                >
-                                                    <IconComponent className="w-5 h-5 mr-2" />
-                                                    <span className="font-medium">{seloInfo.nome}</span>
-                                                </div>
-                                            );
-                                        })}
-                                    </div>
-                                </div>
-                            </motion.div>
-
-                            {/* Tabs */}
-                            <motion.div
-                                initial={{ opacity: 0, y: 20 }}
-                                animate={{ opacity: 1, y: 0 }}
-                                transition={{ delay: 0.1 }}
-                                className="tabs-container"
-                            >
-                                {/* Tab Headers */}
-                                <div className="tabs-header">
-                                    <div className="flex flex-wrap">
-                                        {tabs.map(tab => (
-                                            <button
-                                                key={tab.id}
-                                                onClick={() => setActiveTab(tab.id)}
-                                                className={`tab-button ${activeTab === tab.id ? 'active' : ''}`}
-                                            >
-                                                {tab.label}
-                                            </button>
-                                        ))}
-                                    </div>
-                                </div>
-
-                                {/* Tab Content */}
-                                <div className="tab-content">
-                                    {activeTab === 'geral' && (
-                                        <div className="space-y-6">
-                                            <div>
-                                                <h4 className="text-lg font-bold text-gray-900 mb-4">Dados Físicos</h4>
-                                                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                                                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                                                        <div className="text-2xl font-bold text-gray-900">{touro.peso}</div>
-                                                        <div className="text-sm text-gray-600">Peso</div>
-                                                    </div>
-                                                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                                                        <div className="text-2xl font-bold text-gray-900">{touro.altura}</div>
-                                                        <div className="text-sm text-gray-600">Altura</div>
-                                                    </div>
-                                                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                                                        <div className="text-2xl font-bold text-gray-900">{touro.nascimento.split('-')[0]}</div>
-                                                        <div className="text-sm text-gray-600">Nascimento</div>
-                                                    </div>
-                                                    <div className="text-center p-4 bg-gray-50 rounded-lg">
-                                                        <div className="text-2xl font-bold text-gray-900">{touro.testeTTR.resultado}</div>
-                                                        <div className="text-sm text-gray-600">TTR</div>
-                                                    </div>
-                                                </div>
-                                            </div>
-
-                                            <div>
-                                                <h4 className="text-lg font-bold text-gray-900 mb-4">Pedigree</h4>
-                                                <div className="bg-gray-50 rounded-lg p-4">
-                                                    <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                        <div>
-                                                            <div className="text-sm text-gray-600 mb-1">Pai</div>
-                                                            <div className="font-bold text-gray-900">{touro.pedigree.pai}</div>
-                                                            <div className="text-sm text-gray-500">{touro.pedigree.registroPai}</div>
-                                                        </div>
-                                                        <div>
-                                                            <div className="text-sm text-gray-600 mb-1">Mãe</div>
-                                                            <div className="font-bold text-gray-900">{touro.pedigree.mae}</div>
-                                                            <div className="text-sm text-gray-500">{touro.pedigree.registroMae}</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                    <div className="max-w-6xl mx-auto">
+                        <div className={`${(bull.descricao || bull.caracteristicas) ? 'grid grid-cols-1 lg:grid-cols-2 gap-12' : 'flex justify-center'}`}>
+                            {/* Descrição e características */}
+                            {(bull.descricao || bull.caracteristicas) && (
+                                <motion.div
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.8 }}
+                                    viewport={{ once: true }}
+                                >
+                                    {bull.descricao && (
+                                        <>
+                                            <h2 className="text-3xl font-bold text-gray-900 mb-6">Sobre o {bull.nome}</h2>
+                                            <p className="text-lg text-gray-600 mb-8 leading-relaxed">
+                                                {bull.descricao}
+                                            </p>
+                                        </>
                                     )}
 
-                                    {activeTab === 'genetica' && (
-                                        <div className="space-y-6">
-                                            <div>
-                                                <h4 className="text-lg font-bold text-gray-900 mb-4">Marcadores Moleculares</h4>
-                                                {Object.entries(touro.marcadoresMoleculares).map(([key, value]: [string, any]) => (
-                                                    <div key={key} className="bg-gray-50 rounded-lg p-4 mb-4">
-                                                        <h5 className="font-bold text-gray-900 mb-3 capitalize">{key}</h5>
-                                                        <div className="space-y-2">
-                                                            {Object.entries(value).map(([marker, result]: [string, any]) => (
-                                                                marker !== 'resultado' && (
-                                                                    <div key={marker} className="flex justify-between">
-                                                                        <span className="text-gray-600 capitalize">{marker}:</span>
-                                                                        <span className="font-medium text-gray-900">{result}</span>
-                                                                    </div>
-                                                                )
-                                                            ))}
-                                                            <div className="border-t pt-2 mt-3">
-                                                                <div className="flex justify-between">
-                                                                    <span className="font-bold text-gray-900">Resultado:</span>
-                                                                    <span className="font-bold text-earth-brown">{value.resultado}</span>
-                                                                </div>
-                                                            </div>
-                                                        </div>
-                                                    </div>
+                                    {bull.caracteristicas && bull.caracteristicas.length > 0 && (
+                                        <>
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Características</h3>
+                                            <ul className="space-y-3">
+                                                {bull.caracteristicas.map((caracteristica, index) => (
+                                                    <li key={index} className="flex items-start">
+                                                        <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0" />
+                                                        <span className="text-gray-700">{caracteristica}</span>
+                                                    </li>
                                                 ))}
-                                            </div>
-
-                                            <div>
-                                                <h4 className="text-lg font-bold text-gray-900 mb-4">Teste TTR</h4>
-                                                <div className="bg-green-50 border border-green-200 rounded-lg p-4">
-                                                    <div className="grid grid-cols-3 gap-4 text-center">
-                                                        <div>
-                                                            <div className="text-2xl font-bold text-earth-brown">{touro.testeTTR.resultado}</div>
-                                                            <div className="text-sm text-gray-600">Resultado TTR</div>
-                                                        </div>
-                                                        <div>
-                                                            <div className="text-2xl font-bold text-earth-brown">{touro.testeTTR.classificacao}</div>
-                                                            <div className="text-sm text-gray-600">Classificação</div>
-                                                        </div>
-                                                        <div>
-                                                            <div className="text-2xl font-bold text-earth-brown">{touro.testeTTR.correlacaoCampo}</div>
-                                                            <div className="text-sm text-gray-600">Correlação Campo</div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
+                                            </ul>
+                                        </>
                                     )}
+                                </motion.div>
+                            )}
 
-                                    {activeTab === 'indices' && (
-                                        <div>
-                                            <h4 className="text-lg font-bold text-gray-900 mb-4">Índices Zootécnicos</h4>
-                                            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                                {Object.entries(touro.indices).map(([key, value]: [string, any]) => (
-                                                    <div key={key} className="bg-gray-50 rounded-lg p-4">
-                                                        <div className="text-center">
-                                                            <div className="text-2xl font-bold text-gray-900">{value}</div>
-                                                            <div className="text-sm text-gray-600 capitalize">
-                                                                {key.replace(/([A-Z])/g, ' $1').trim()}
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-
-                                    {activeTab === 'historico' && (
-                                        <div>
-                                            <h4 className="text-lg font-bold text-gray-900 mb-4">Histórico Reprodutivo</h4>
-                                            <div className="space-y-4">
-                                                {touro.historico.map((evento: any, index: number) => (
-                                                    <div key={index} className="border-l-4 border-green-600 pl-4 py-2">
-                                                        <div className="flex justify-between items-start">
-                                                            <div>
-                                                                <div className="font-medium text-gray-900">{evento.evento}</div>
-                                                                <div className="text-sm text-gray-600">{evento.resultado}</div>
-                                                            </div>
-                                                            <div className="text-sm text-gray-500">{evento.data}</div>
-                                                        </div>
-                                                    </div>
-                                                ))}
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-                            </motion.div>
-                        </div>
-
-                        {/* Sidebar */}
-                        <div className="space-y-6">
-
-                            {/* Disponibilidade */}
+                            {/* Card de contato */}
                             <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                className="bg-white rounded-2xl shadow-lg p-6"
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.8, delay: 0.2 }}
+                                viewport={{ once: true }}
+                                className={`space-y-8 ${!(bull.descricao || bull.caracteristicas) ? 'max-w-md' : ''}`}
                             >
-                                <h3 className="text-lg font-bold text-gray-900 mb-4">Disponibilidade</h3>
-                                <div className="space-y-4">
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Doses Disponíveis:</span>
-                                        <span className="font-bold text-earth-brown">{touro.dosesDisponiveis}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Doses Reservadas:</span>
-                                        <span className="font-medium text-gray-900">{touro.dosesReservadas}</span>
-                                    </div>
-                                    <div className="flex justify-between">
-                                        <span className="text-gray-600">Preço por Dose:</span>
-                                        <span className="text-xl font-bold text-gray-900">{touro.preco}</span>
-                                    </div>
-                                </div>
+                                <div className="bg-red-50 rounded-xl p-6 border border-red-100">
+                                    <h3 className="text-2xl font-bold text-red-800 mb-4">Interessado?</h3>
+                                    <p className="text-gray-600 mb-6">
+                                        Entre em contato conosco para mais informações sobre preços e disponibilidade.
+                                    </p>
 
-                                <div className="mt-6 space-y-3">
-                                    <button className="w-full bg-red-800 text-white py-3 px-4 rounded-lg font-semibold hover:bg-red-700 transition-colors duration-200">
-                                        Solicitar Orçamento
-                                    </button>
-                                    <button className="w-full border-2 border-earth-brown text-earth-brown py-3 px-4 rounded-lg font-semibold hover:bg-amber-50 transition-colors duration-200">
-                                        Reservar Doses
-                                    </button>
-                                </div>
-                            </motion.div>
-
-                            {/* Contato */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.1 }}
-                                className="bg-white rounded-2xl shadow-lg p-6"
-                            >
-                                <h3 className="text-lg font-bold text-gray-900 mb-4">Precisa de Ajuda?</h3>
-                                <p className="text-gray-600 mb-4 text-sm">
-                                    Nossa equipe técnica está pronta para esclarecer dúvidas sobre este touro.
-                                </p>
-
-                                <div className="space-y-3">
-                                    <a
-                                        href="tel:+5535414-0164"
-                                        className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        <Phone className="w-5 h-5 text-earth-brown mr-3" />
-                                        <div>
-                                            <div className="font-medium text-gray-900">(55) 3414-0164</div>
-                                            <div className="text-sm text-gray-600">Ligar agora</div>
-                                        </div>
-                                    </a>
-
-                                    <a
-                                        href="mailto:atendimento@cortgeneticabrasil.com"
-                                        className="flex items-center p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        <Mail className="w-5 h-5 text-earth-brown mr-3" />
-                                        <div>
-                                            <div className="font-medium text-gray-900">Enviar E-mail</div>
-                                            <div className="text-sm text-gray-600">Resposta em 24h</div>
-                                        </div>
-                                    </a>
-                                </div>
-                            </motion.div>
-
-                            {/* Touros Relacionados */}
-                            <motion.div
-                                initial={{ opacity: 0, x: 20 }}
-                                animate={{ opacity: 1, x: 0 }}
-                                transition={{ delay: 0.2 }}
-                                className="bg-white rounded-2xl shadow-lg p-6"
-                            >
-                                <h3 className="text-lg font-bold text-gray-900 mb-4">Touros Similares</h3>
-                                <div className="space-y-3">
-                                    <Link
-                                        href="/catalogo-touros/002"
-                                        className="block p-3 border border-gray-200 rounded-lg hover:bg-gray-50 transition-colors duration-200"
-                                    >
-                                        <div className="font-medium text-gray-900">Campeão CG</div>
-                                        <div className="text-sm text-gray-600">Nelore • R$ 38,00</div>
-                                    </Link>
-                                    <div className="text-center py-4">
+                                    <div className="space-y-3">
                                         <Link
-                                            href="/catalogo-touros"
-                                            className="text-earth-brown hover:underline text-sm font-medium"
+                                            href="/contato"
+                                            className="inline-flex items-center w-full bg-red-800 hover:bg-red-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
                                         >
-                                            Ver todos os touros →
+                                            <Phone className="w-5 h-5 mr-3" />
+                                            Entrar em Contato
+                                        </Link>
+
+                                        <Link
+                                            href="mailto:contato@cortgenetica.com.br"
+                                            className="inline-flex items-center w-full bg-white hover:bg-gray-50 text-red-800 border-2 border-red-800 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                                        >
+                                            <Mail className="w-5 h-5 mr-3" />
+                                            Enviar Email
                                         </Link>
                                     </div>
                                 </div>
@@ -506,8 +253,60 @@ const TourosDetalhePage = ({ params }: PageProps) => {
                     </div>
                 </div>
             </section>
+
+            {/* Seção de touros relacionados */}
+            <section className="py-20 bg-gray-50">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+                            Outros Touros em Destaque
+                        </h2>
+                        <p className="text-xl text-gray-600">
+                            Conheça outros reprodutores de nossa seleção
+                        </p>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {bulls
+                            .filter(b => b.id !== bull.id)
+                            .slice(0, 3)
+                            .map((otherBull, index) => (
+                                <motion.div
+                                    key={otherBull.id}
+                                    initial={{ opacity: 0, y: 30 }}
+                                    whileInView={{ opacity: 1, y: 0 }}
+                                    transition={{ duration: 0.6, delay: index * 0.1 }}
+                                    viewport={{ once: true }}
+                                >
+                                    <Link href={`/catalogo-touros/${otherBull.id}`}>
+                                        <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 overflow-hidden hover:scale-105 cursor-pointer">
+                                            <div className="relative h-48 overflow-hidden">
+                                                <Image
+                                                    src={otherBull.imagem}
+                                                    alt={`Touro ${otherBull.nome}`}
+                                                    fill
+                                                    className="object-cover object-top hover:scale-110 transition-transform duration-300"
+                                                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                                                />
+                                            </div>
+                                            <div className="p-6">
+                                                <h3 className="text-xl font-bold text-gray-900 mb-2">{otherBull.nome}</h3>
+                                                <p className="text-gray-600 mb-2">{otherBull.raca}</p>
+                                                <p className="text-sm text-gray-500">{otherBull.destaque}</p>
+                                            </div>
+                                        </div>
+                                    </Link>
+                                </motion.div>
+                            ))}
+                    </div>
+                </div>
+            </section>
         </div>
     );
-};
-
-export default TourosDetalhePage;
+}
