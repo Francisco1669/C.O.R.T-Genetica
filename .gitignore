@@ -10,6 +10,9 @@
 !.yarn/releases
 !.yarn/versions
 
+# pdf
+/public/Catalogo_CORT_2023.pdf
+
 # testing
 /coverage
 
