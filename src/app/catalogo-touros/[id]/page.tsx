@@ -91,13 +91,14 @@ const selosInfo = {
 };
 
 interface PageProps {
-    params: {
+    params: Promise<{
         id: string;
-    };
+    }>;
 }
 
-export default function BullDetailPage({ params }: PageProps) {
-    const bull = bulls.find(b => b.id === params.id);
+export default async function BullDetailPage({ params }: PageProps) {
+    const { id } = await params;
+    const bull = bulls.find(b => b.id === id);
 
     if (!bull) {
         notFound();
