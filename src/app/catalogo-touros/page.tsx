@@ -143,8 +143,9 @@ const CatalogoTourosPage = () => {
         ];
 
         for (const step of steps) {
-            await new Promise(resolve => setTimeout(resolve, step.delay));
-            setDownloadProgress(step.progress);
+            setTimeout(() => {
+                setDownloadProgress(step.progress);
+            }, step.delay);
         }
         const link = document.createElement('a');
         link.href = '/Catalogo_CORT_2023.pdf';

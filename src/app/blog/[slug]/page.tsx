@@ -1,5 +1,6 @@
 import { notFound } from 'next/navigation';
 import BlogPostClient from '@/components/BlogPostClient';
+import { use } from 'react';
 
 // Dados de exemplo para posts
 const blogPosts = [
@@ -192,8 +193,8 @@ interface BlogPostPageProps {
     }>;
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
-    const { slug } = await params;
+export default function BlogPostPage({ params }: BlogPostPageProps) {
+    const { slug } = use(params);
     const post = blogPosts.find(p => p.slug === slug);
 
     if (!post) {

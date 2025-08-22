@@ -30,7 +30,9 @@ export default function ContatoPage() {
         setIsSubmitting(true);
 
         // Simular envio do formulário
-        await new Promise(resolve => setTimeout(resolve, 2000));
+        setTimeout(() => {
+            setIsSubmitting(false);
+        }, 2000);
 
         alert('Mensagem enviada com sucesso! Entraremos em contato em breve.');
         setFormData({
@@ -112,7 +114,7 @@ export default function ContatoPage() {
                                         <h3 className="font-semibold mb-2">Telefones</h3>
                                         <p className="text-gray-600">
                                             <a href="tel:+555534140164" className="hover:text-earth-brown transition-colors">
-                                                (55) 3414-0164
+                                                (55) 3414-0198
                                             </a>
                                         </p>
                                         <p className="text-gray-600">

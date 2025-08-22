@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Award, ArrowLeft, Phone, Mail } from 'lucide-react';
 import { notFound } from 'next/navigation';
+import { use } from 'react';
 
 // Tipagem para os touros
 interface Bull {
@@ -134,8 +135,8 @@ interface PageProps {
     }>;
 }
 
-export default async function BullDetailPage({ params }: PageProps) {
-    const { id } = await params;
+export default function BullDetailPage({ params }: PageProps) {
+    const { id } = use(params);
     const bull = bulls.find(b => b.id === id);
 
     if (!bull) {

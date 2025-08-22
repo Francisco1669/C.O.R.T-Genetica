@@ -205,7 +205,7 @@ export default function PoliticaPrivacidadePage() {
                             </p>
                             <div className="bg-amber-50 border-l-4 border-earth-brown p-6 mb-8">
                                 <p className="text-gray-700 mb-2"><strong>E-mail:</strong> privacidade@cortgeneticabrasil.com</p>
-                                <p className="text-gray-700 mb-2"><strong>Telefone:</strong> (55) 3414-0164</p>
+                                <p className="text-gray-700 mb-2"><strong>Telefone:</strong> (55) 3414-0198</p>
                                 <p className="text-gray-700 mb-2"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
                                 <p className="text-gray-700"><strong>Encarregado de Dados:</strong> Dr. Carlos Silva</p>
                             </div>
