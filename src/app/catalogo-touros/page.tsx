@@ -21,7 +21,7 @@ const CatalogoTourosPage = () => {
             raca: 'Angus',
             categoria: 'corte',
             imagem: '/api/placeholder/300/200',
-            selos: ['pelagem', 'maciez'],
+            selos: ['homozigoto_preto', 'maciez'],
             pedigree: 'PAI: Champion CG x MÃE: Elite CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 45,00'
@@ -76,17 +76,18 @@ const CatalogoTourosPage = () => {
             raca: 'Angus',
             categoria: 'corte',
             imagem: '/api/placeholder/300/200',
-            selos: ['pelagem', 'iatf'],
+            selos: ['homozigoto_preto', 'iatf'],
             pedigree: 'PAI: Power CG x MÃE: Victory CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 50,00'
         }
     ];
 
-    const racas = ['Angus', 'Nelore', 'Brahman', 'Holandês', 'Jersey', 'Limousin'];
 
     const selosInfo = [
         { id: 'pelagem', nome: 'Homozigose de Pelagem', icon: Palette, color: 'purple' },
+        { id: 'homozigoto_preto', nome: 'Homozigoto Preto', icon: Palette, color: 'black' },
+        { id: 'homozigoto_vermelho', nome: 'Homozigoto Vermelho', icon: Palette, color: 'red' },
         { id: 'maciez', nome: 'Maciez da Carne', icon: Beef, color: 'red' },
         { id: 'iatf', nome: 'IATF Assistida', icon: Heart, color: 'pink' }
     ];

@@ -2,38 +2,89 @@
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
+import { Palette, Beef, Heart, FlaskConical, Dna } from 'lucide-react';
 
 const PartnersSection = () => {
     const partners = [
         {
             name: 'Cort Genética',
             logo: '/CORTlogo.png',
-            alt: 'Logo Cort Genética'
+            alt: 'Logo Cort Genética',
+            website: 'https://cortgenetica.com.br'
         },
         {
             name: 'Banco do Brasil',
             logo: '/bancobrasilogo.png',
-            alt: 'Logo Banco do Brasil'
+            alt: 'Logo Banco do Brasil',
+            website: 'https://www.bb.com.br'
         },
         {
             name: 'Sicredi',
             logo: '/sicredilogo.png',
-            alt: 'Logo Sicredi'
+            alt: 'Logo Sicredi',
+            website: 'https://www.sicredi.com.br'
         },
         {
             name: 'Tecnoforte',
             logo: '/tecnoforte.png',
-            alt: 'Logo Tecnoforte'
+            alt: 'Logo Tecnoforte',
+            website: 'https://tecnoforte.com.br'
         },
         {
             name: 'WTA',
             logo: '/wtalogo.png',
-            alt: 'Logo WTA'
+            alt: 'Logo WTA',
+            website: 'https://www.lojawtavet.com.br'
         },
         {
             name: 'DIUB Turin',
             logo: '/diubturinlog.png',
-            alt: 'Logo DIUB Turin'
+            alt: 'Logo DIUB Turin',
+            website: 'https://diubturin.com.br'
+        }
+    ];
+
+    // Nossos 5 pilares tecnológicos (3 selos + TTR + Marcadores Moleculares)
+    const technologyPillars = [
+        {
+            name: 'Selo de Homozigose para Pelagem',
+            icon: Palette,
+            description: 'Garantia de transmissão de cor',
+            color: 'from-purple-600 to-purple-800',
+            bgColor: 'bg-purple-100',
+            link: '/tecnologia/selos-qualidade'
+        },
+        {
+            name: 'Selo de Maciez da Carne',
+            icon: Beef,
+            description: 'Qualidade superior da carne',
+            color: 'from-red-600 to-red-800',
+            bgColor: 'bg-red-100',
+            link: '/tecnologia/selos-qualidade'
+        },
+        {
+            name: 'Selo IATF',
+            icon: Heart,
+            description: 'Inseminação artificial em tempo fixo',
+            color: 'from-pink-600 to-pink-800',
+            bgColor: 'bg-pink-100',
+            link: '/tecnologia/selos-qualidade'
+        },
+        {
+            name: 'Teste TTR',
+            icon: FlaskConical,
+            description: 'Termo Resistência Rápido',
+            color: 'from-green-600 to-green-800',
+            bgColor: 'bg-green-100',
+            link: '/tecnologia/teste-ttr'
+        },
+        {
+            name: 'Marcadores Moleculares',
+            icon: Dna,
+            description: 'Análise genética avançada',
+            color: 'from-blue-600 to-blue-800',
+            bgColor: 'bg-blue-100',
+            link: '/tecnologia/marcadores-moleculares'
         }
     ];
 
@@ -87,7 +138,12 @@ const PartnersSection = () => {
                             className="flex items-center justify-center flex-shrink-0"
                             style={{ width: '200px', height: '120px' }}
                         >
-                            <div className="relative w-full h-full flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group">
+                            <a
+                                href={partner.website}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="relative w-full h-full flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+                            >
                                 <Image
                                     src={partner.logo}
                                     alt={partner.alt}
@@ -101,11 +157,13 @@ const PartnersSection = () => {
                                         maxHeight: '100%'
                                     }}
                                 />
-                            </div>
+                            </a>
                         </div>
                     ))}
                 </motion.div>
             </div>
+
+
 
             {/* Estatísticas dos Parceiros */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-20">

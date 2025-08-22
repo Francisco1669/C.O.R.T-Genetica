@@ -28,7 +28,14 @@ const bulls: Bull[] = [
         categoria: 'corte',
         imagem: '/stories/angus/dynamo0.jpg',
         selos: ['pelagem', 'maciez'],
-        destaque: 'Linhagem superior Angus'
+        destaque: 'Linhagem superior Angus',
+        descricao: 'Reprodutor Angus voltado para cortes de alta qualidade, com excelente desempenho e valorização no mercado de carne premium.',
+        caracteristicas: [
+            'Carne macia e marmorizada',
+            'Alta eficiência alimentar',
+            'Facilidade de adaptação ao Sul do Brasil',
+            'Precocidade reprodutiva'
+        ]
     },
     {
         id: 'milionario',
@@ -36,8 +43,15 @@ const bulls: Bull[] = [
         raca: 'Braford',
         categoria: 'corte',
         imagem: '/stories/braford/milionario.jpg',
-        selos: ['pelagem', 'iatf'],
-        destaque: 'Cruzamento de elite'
+        selos: ['homozigoto_vermelho', 'iatf'],
+        destaque: 'Cruzamento de elite',
+        descricao: 'Reprodutor Braford que une rusticidade e qualidade de carne, ideal para cruzamentos em sistemas de corte no Sul do Brasil.',
+        caracteristicas: [
+            'Rusticidade e resistência',
+            'Bom desempenho em cruzamentos',
+            'Adaptado a pastagens naturais',
+            'Produção de carne com bom rendimento'
+        ]
     },
     {
         id: 'nostradamus',
@@ -45,8 +59,15 @@ const bulls: Bull[] = [
         raca: 'Red Angus',
         categoria: 'corte',
         imagem: '/stories/red_angus/nostradamus.jpg',
-        selos: ['maciez', 'iatf'],
-        destaque: 'Genética excepcional'
+        selos: ['homozigoto_vermelho', 'maciez', 'iatf'],
+        destaque: 'Genética excepcional',
+        descricao: 'Reprodutor Red Angus com excelente qualidade genética, mantendo as características do Angus com foco em rusticidade e fertilidade.',
+        caracteristicas: [
+            'Carne de alta maciez',
+            'Ótimo desempenho em sistemas de pasto',
+            'Fertilidade elevada',
+            'Adaptabilidade ao clima do Sul do Brasil'
+        ]
     },
     {
         id: 'tornado',
@@ -55,7 +76,14 @@ const bulls: Bull[] = [
         categoria: 'corte',
         imagem: '/stories/brangus/tornado.jpg',
         selos: ['pelagem', 'maciez', 'iatf'],
-        destaque: 'Força e adaptabilidade'
+        destaque: 'Força e adaptabilidade',
+        descricao: 'Reprodutor Brangus que combina o melhor do Brahman e do Angus, garantindo rusticidade com qualidade de carne.',
+        caracteristicas: [
+            'Alta adaptabilidade climática',
+            'Boa conversão alimentar',
+            'Carne de qualidade superior',
+            'Resistência e rusticidade'
+        ]
     },
     {
         id: 'fogonazo',
@@ -63,8 +91,15 @@ const bulls: Bull[] = [
         raca: 'Angus',
         categoria: 'corte',
         imagem: '/stories/angus/fogonazo0.jpg',
-        selos: ['pelagem', 'maciez'],
-        destaque: 'Tradição e qualidade'
+        selos: ['homozigoto_preto', 'maciez'],
+        destaque: 'Tradição e qualidade',
+        descricao: 'Angus de destaque, referência em qualidade de carne e performance, voltado para produtores que buscam tradição e confiança.',
+        caracteristicas: [
+            'Carne marmorizada e valorizada',
+            'Alta taxa de prenhez em IATF',
+            'Precocidade sexual e de acabamento',
+            'Excelente desempenho a pasto'
+        ]
     },
     {
         id: 'marlim',
@@ -84,8 +119,11 @@ const bulls: Bull[] = [
     }
 ];
 
+
 const selosInfo = {
     pelagem: { nome: 'Homozigose de Pelagem', color: 'bg-purple-100 text-purple-800' },
+    homozigoto_preto: { nome: 'Homozigoto Preto', color: 'bg-gray-900 text-white' },
+    homozigoto_vermelho: { nome: 'Homozigoto Vermelho', color: 'bg-red-600 text-white' },
     maciez: { nome: 'Maciez da Carne', color: 'bg-red-100 text-red-800' },
     iatf: { nome: 'IATF Assistida', color: 'bg-pink-100 text-pink-800' }
 };
