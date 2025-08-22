@@ -24,7 +24,7 @@ const featuredBulls: FeaturedBull[] = [
         raca: 'Angus',
         categoria: 'corte',
         imagem: '/stories/angus/dynamo0.jpg',
-        selos: ['pelagem', 'maciez'],
+        selos: ['homozigoto_preto', 'maciez'],
         destaque: 'Linhagem superior Angus'
     },
     {
@@ -33,7 +33,7 @@ const featuredBulls: FeaturedBull[] = [
         raca: 'Braford',
         categoria: 'corte',
         imagem: '/stories/braford/milionario.jpg',
-        selos: ['pelagem', 'iatf'],
+        selos: ['homozigoto_vermelho', 'iatf'],
         destaque: 'Cruzamento de elite'
     },
     {
@@ -42,7 +42,7 @@ const featuredBulls: FeaturedBull[] = [
         raca: 'Red Angus',
         categoria: 'corte',
         imagem: '/stories/red_angus/nostradamus.jpg',
-        selos: ['maciez', 'iatf'],
+        selos: ['homozigoto_vermelho', 'maciez', 'iatf'],
         destaque: 'Genética excepcional'
     },
     {
@@ -51,7 +51,7 @@ const featuredBulls: FeaturedBull[] = [
         raca: 'Brangus',
         categoria: 'corte',
         imagem: '/stories/brangus/tornado.jpg',
-        selos: ['pelagem', 'maciez', 'iatf'],
+        selos: ['homozigoto_preto', 'maciez', 'iatf'],
         destaque: 'Força e adaptabilidade'
     },
     {
@@ -60,7 +60,7 @@ const featuredBulls: FeaturedBull[] = [
         raca: 'Angus',
         categoria: 'corte',
         imagem: '/stories/angus/fogonazo0.jpg',
-        selos: ['pelagem', 'maciez'],
+        selos: ['homozigoto_preto', 'maciez'],
         destaque: 'Tradição e qualidade'
     },
     {
@@ -76,6 +76,8 @@ const featuredBulls: FeaturedBull[] = [
 
 const selosInfo = {
     pelagem: { nome: 'Homozigose de Pelagem', color: 'bg-purple-100 text-purple-800' },
+    homozigoto_preto: { nome: 'Homozigoto Preto', color: 'bg-gray-900 text-white' },
+    homozigoto_vermelho: { nome: 'Homozigoto Vermelho', color: 'bg-red-600 text-white' },
     maciez: { nome: 'Maciez da Carne', color: 'bg-red-100 text-red-800' },
     iatf: { nome: 'IATF Assistida', color: 'bg-pink-100 text-pink-800' }
 };
