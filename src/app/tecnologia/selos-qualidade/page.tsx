@@ -266,7 +266,7 @@ const SelosQualidadePage = () => {
                                 <div className="text-gray-600">Valorização do Rebanho</div>
                             </div>
                             <div>
-                                <div className="text-4xl font-bold text-amber-800 mb-2">1000+</div>
+                                <div className="text-4xl font-bold text-amber-800 mb-2">100+</div>
                                 <div className="text-gray-600">Touros Certificados</div>
                             </div>
                         </div>

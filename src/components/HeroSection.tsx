@@ -3,15 +3,12 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import Image from 'next/image';
 
 const HeroSection = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-red-50 overflow-hidden">
-            {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-                <Image src="/hero.png" alt="Background" fill />
-            </div>
+            {/* Background pattern - Gradiente profissional */}
+            <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 opacity-30"></div>
 
             <div className="container mx-auto px-4 text-center relative z-10">
                 <motion.div
@@ -39,8 +36,8 @@ const HeroSection = () => {
                         transition={{ duration: 0.8, delay: 0.3 }}
                         className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
                     >
-                        <span className="text-red-800">Genética</span> de{' '}
-                        <span className="block md:inline">Excelência</span>
+                        Excelência em <br />
+                        <span className="text-red-800">Genética Bovina</span>
                     </motion.h1>
 
                     {/* Subtitle */}
@@ -48,15 +45,15 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-xl md:text-2xl text-gray-600 mb-8 leading-relaxed max-w-3xl mx-auto"
+                        className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
                     >
-                        Marcadores moleculares em <strong>100% dos touros</strong> de nossa bateria.
-                        Tecnologia TTR, selos de qualidade e resultados comprovados no campo.
+                        Somos especialistas em melhoramento genético de bovinos,
+                        oferecendo as melhores soluções para seu rebanho
                     </motion.p>
 
                     {/* CTA Buttons */}
                     <motion.div
-                        initial={{ opacity: 0, y: 20 }}
+                        initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
@@ -95,7 +92,7 @@ const HeroSection = () => {
                                     </svg>
                                 </div>
                                 <h4 className="text-lg font-bold text-gray-900 mb-2">GENÔMICA 100% PURA</h4>
-                                <p className="text-sm text-gray-600">Selos aplicados em 100% da bateria de touros</p>
+                                <p className="text-sm text-gray-600">Genética testada e validada com rigor científico</p>
                             </div>
 
                             {/* TTR IATF */}
@@ -123,7 +120,21 @@ const HeroSection = () => {
                     </motion.div>
                 </motion.div>
 
-
+                {/* Scroll indicator */}
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    transition={{ duration: 0.8, delay: 0.8 }}
+                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2"
+                >
+                    <motion.div
+                        animate={{ y: [0, 10, 0] }}
+                        transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+                        className="text-gray-400"
+                    >
+                        <ChevronDown size={24} />
+                    </motion.div>
+                </motion.div>
             </div>
         </section>
     );
