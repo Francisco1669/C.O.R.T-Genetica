@@ -89,7 +89,7 @@ export default function TermosUsoPage() {
                                 <p className="text-gray-700 mb-2"><strong>CNPJ:</strong> XX.XXX.XXX/0001-XX</p>
                                 <p className="text-gray-700 mb-2"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
                                 <p className="text-gray-700 mb-2"><strong>E-mail:</strong> atendimento@cortgeneticabrasil.com</p>
-                                <p className="text-gray-700"><strong>Telefone:</strong> (55) 3414-0164</p>
+                                <p className="text-gray-700"><strong>Telefone:</strong> (55) 3414-0198</p>
                             </div>
 
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Definições</h2>
@@ -245,7 +245,7 @@ export default function TermosUsoPage() {
                             </p>
                             <div className="bg-amber-50 border-l-4 border-earth-brown p-6">
                                 <p className="text-gray-700 mb-2"><strong>E-mail:</strong> juridico@cortgeneticabrasil.com</p>
-                                <p className="text-gray-700 mb-2"><strong>Telefone:</strong> (55) 3414-0164</p>
+                                <p className="text-gray-700 mb-2"><strong>Telefone:</strong> (55) 3414-0198</p>
                                 <p className="text-gray-700"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
                             </div>
                         </div>
