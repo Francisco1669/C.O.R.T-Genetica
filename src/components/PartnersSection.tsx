@@ -175,17 +175,17 @@ const PartnersSection = () => {
                     className="grid grid-cols-1 md:grid-cols-3 gap-8 text-center"
                 >
                     <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="text-4xl font-bold text-red-800 mb-2">15+</div>
-                        <div className="text-gray-600 text-lg">Anos de Parcerias</div>
+                        <div className="text-4xl font-bold text-red-800 mb-2">30+</div>
+                        <div className="text-gray-600 text-lg">Anos de Experiência</div>
                         <div className="text-sm text-gray-500 mt-2">Relacionamentos sólidos e duradouros</div>
                     </div>
                     <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="text-4xl font-bold text-red-800 mb-2">50+</div>
+                        <div className="text-4xl font-bold text-red-800 mb-2">10+</div>
                         <div className="text-gray-600 text-lg">Empresas Parceiras</div>
                         <div className="text-sm text-gray-500 mt-2">Rede nacional de colaboradores</div>
                     </div>
                     <div className="bg-white rounded-2xl p-8 shadow-sm hover:shadow-md transition-shadow duration-300">
-                        <div className="text-4xl font-bold text-red-800 mb-2">1000+</div>
+                        <div className="text-4xl font-bold text-red-800 mb-2">100+</div>
                         <div className="text-gray-600 text-lg">Projetos Conjuntos</div>
                         <div className="text-sm text-gray-500 mt-2">Soluções integradas e inovadoras</div>
                     </div>
