@@ -28,7 +28,7 @@ const bulls: Bull[] = [
         raca: 'Angus',
         categoria: 'corte',
         imagem: '/stories/angus/dynamo0.jpg',
-        selos: ['pelagem', 'maciez'],
+        selos: ['homozigoto_preto', 'maciez'],
         destaque: 'Linhagem superior Angus',
         descricao: 'Reprodutor Angus voltado para cortes de alta qualidade, com excelente desempenho e valorização no mercado de carne premium.',
         caracteristicas: [
@@ -76,7 +76,7 @@ const bulls: Bull[] = [
         raca: 'Brangus',
         categoria: 'corte',
         imagem: '/stories/brangus/tornado.jpg',
-        selos: ['pelagem', 'maciez', 'iatf'],
+        selos: ['homozigoto_preto', 'maciez', 'iatf'],
         destaque: 'Força e adaptabilidade',
         descricao: 'Reprodutor Brangus que combina o melhor do Brahman e do Angus, garantindo rusticidade com qualidade de carne.',
         caracteristicas: [
