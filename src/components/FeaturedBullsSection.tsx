@@ -160,7 +160,7 @@ const FeaturedBullsSection = () => {
                                                                 }`}
                                                         >
                                                             <Award className="w-3 h-3 inline mr-1" />
-                                                            {selo === 'pelagem' ? 'Pelagem' : selo === 'maciez' ? 'Maciez' : 'IATF'}
+                                                            {selo === 'homozigoto_preto' ? 'Homozigoto Preto' : selo === 'homozigoto_vermelho' ? 'Homozigoto Vermelho' : selo === 'maciez' ? 'Maciez' : 'IATF'}
                                                         </span>
                                                     ))}
                                                     {bull.selos.length > 2 && (

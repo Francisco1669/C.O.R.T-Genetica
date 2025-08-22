@@ -3,7 +3,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import Link from 'next/link';
-import { Search, Filter, Award, Palette, Beef, Heart, Eye, ArrowRight, Download, FileText, CheckCircle, Clock, Users, Loader2 } from 'lucide-react';
+import { Search, Filter, Award, Palette, Beef, Heart, Eye, ArrowRight, Download, FileText, CheckCircle, Clock, Users, Loader2, Droplet, Shield, Sun } from 'lucide-react';
 
 const CatalogoTourosPage = () => {
     const [isDownloading, setIsDownloading] = useState(false);
@@ -21,7 +21,7 @@ const CatalogoTourosPage = () => {
             raca: 'Angus',
             categoria: 'corte',
             imagem: '/api/placeholder/300/200',
-            selos: ['homozigoto_preto', 'maciez'],
+            selos: ['homozigoto_preto', 'maciez', 'iatf'],
             pedigree: 'PAI: Champion CG x MÃE: Elite CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 45,00'
@@ -32,7 +32,7 @@ const CatalogoTourosPage = () => {
             raca: 'Nelore',
             categoria: 'corte',
             imagem: '/api/placeholder/300/200',
-            selos: ['pelagem', 'iatf'],
+            selos: ['iatf', 'rusticidade'],
             pedigree: 'PAI: Líder CG x MÃE: Suprema CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 38,00'
@@ -43,7 +43,7 @@ const CatalogoTourosPage = () => {
             raca: 'Holandês',
             categoria: 'leite',
             imagem: '/api/placeholder/300/200',
-            selos: ['maciez', 'iatf'],
+            selos: ['qualidade_leite'],
             pedigree: 'PAI: Master CG x MÃE: Princess CG',
             disponibilidade: 'Limitado',
             preco: 'R$ 52,00'
@@ -54,7 +54,7 @@ const CatalogoTourosPage = () => {
             raca: 'Brahman',
             categoria: 'corte',
             imagem: '/api/placeholder/300/200',
-            selos: ['pelagem', 'maciez', 'iatf'],
+            selos: ['iatf', 'adaptacao_tropical', 'rusticidade'],
             pedigree: 'PAI: Royal CG x MÃE: Nobre CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 48,00'
@@ -65,7 +65,7 @@ const CatalogoTourosPage = () => {
             raca: 'Jersey',
             categoria: 'leite',
             imagem: '/api/placeholder/300/200',
-            selos: ['maciez'],
+            selos: ['qualidade_leite'],
             pedigree: 'PAI: Noble CG x MÃE: Grace CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 42,00'
@@ -76,21 +76,24 @@ const CatalogoTourosPage = () => {
             raca: 'Angus',
             categoria: 'corte',
             imagem: '/api/placeholder/300/200',
-            selos: ['homozigoto_preto', 'iatf'],
+            selos: ['homozigoto_preto', 'maciez', 'iatf'],
             pedigree: 'PAI: Power CG x MÃE: Victory CG',
             disponibilidade: 'Disponível',
             preco: 'R$ 50,00'
         }
     ];
 
-
     const selosInfo = [
         { id: 'pelagem', nome: 'Homozigose de Pelagem', icon: Palette, color: 'purple' },
         { id: 'homozigoto_preto', nome: 'Homozigoto Preto', icon: Palette, color: 'black' },
         { id: 'homozigoto_vermelho', nome: 'Homozigoto Vermelho', icon: Palette, color: 'red' },
         { id: 'maciez', nome: 'Maciez da Carne', icon: Beef, color: 'red' },
-        { id: 'iatf', nome: 'IATF Assistida', icon: Heart, color: 'pink' }
+        { id: 'iatf', nome: 'IATF Assistida', icon: Heart, color: 'pink' },
+        { id: 'rusticidade', nome: 'Alta Rusticidade', icon: Shield, color: 'brown' },
+        { id: 'adaptacao_tropical', nome: 'Adaptação Tropical', icon: Sun, color: 'orange' },
+        { id: 'qualidade_leite', nome: 'Qualidade do Leite', icon: Droplet, color: 'blue' }
     ];
+
 
     // Filtrar touros
     const filteredTouros = touros.filter(touro => {
