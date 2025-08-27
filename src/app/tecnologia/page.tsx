@@ -148,7 +148,7 @@ const TecnologiaPage = () => {
                                                     <div className="text-sm opacity-90">Cobertura</div>
                                                 </div>
                                                 <div className="text-center">
-                                                    <div className="text-3xl font-bold text-white mb-2">25+</div>
+                                                    <div className="text-3xl font-bold text-white mb-2">30+</div>
                                                     <div className="text-sm opacity-90">Anos</div>
                                                 </div>
                                                 <div className="text-center">

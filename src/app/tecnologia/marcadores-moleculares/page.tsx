@@ -263,7 +263,7 @@ const MarcadoresMolecularesPage = () => {
                                 <div className="text-green-100">Marcadores Analisados</div>
                             </div>
                             <div>
-                                <div className="text-3xl font-bold text-white mb-2">25+</div>
+                                <div className="text-3xl font-bold text-white mb-2">30+</div>
                                 <div className="text-green-100">Anos de Experiência</div>
                             </div>
                         </div>

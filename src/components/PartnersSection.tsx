@@ -22,7 +22,13 @@ const PartnersSection = () => {
             name: 'Sicredi',
             logo: '/sicredilogo.png',
             alt: 'Logo Sicredi',
-            website: 'https://www.sicredi.com.br'
+            website: 'https://www.sicredi.com.br/home'
+        },
+        {
+            name: 'MSD Saúde Animal',
+            logo: '/mdslogo.jpeg',
+            alt: 'Logo MSD Saúde Animal',
+            website: 'https://www.msd-saude-animal.com.br'
         },
         {
             name: 'Tecnoforte',
@@ -34,13 +40,19 @@ const PartnersSection = () => {
             name: 'WTA',
             logo: '/wtalogo.png',
             alt: 'Logo WTA',
-            website: 'https://www.lojawtavet.com.br'
+            website: 'https://www.wtavet.com.br'
         },
         {
             name: 'DIUB Turin',
             logo: '/diubturinlog.png',
             alt: 'Logo DIUB Turin',
             website: 'https://diubturin.com.br'
+        },
+        {
+            name: 'Gallagher',
+            logo: '/gallagher.jpeg',
+            alt: 'Logo Gallagher',
+            website: 'https://www.am.gallagher.com.br/pt-BR'
         }
     ];
 
@@ -106,7 +118,7 @@ const PartnersSection = () => {
                     </h2>
                     <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                         Trabalhamos com as melhores empresas do setor para oferecer soluções completas
-                        e de qualidade superior para o agronegócio brasileiro.
+                        e de qualidade superior para a pecuária brasileira.
                     </p>
                 </motion.div>
             </div>
