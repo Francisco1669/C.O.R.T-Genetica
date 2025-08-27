@@ -291,7 +291,7 @@ const TesteTTRPage = () => {
                                 <div className="text-green-100">Partidas Testadas</div>
                             </div>
                             <div className="text-center">
-                                <div className="text-4xl font-bold text-white mb-2">25+</div>
+                                <div className="text-4xl font-bold text-white mb-2">30+</div>
                                 <div className="text-green-100">Anos de Pesquisa</div>
                             </div>
                             <div className="text-center">

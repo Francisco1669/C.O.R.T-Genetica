@@ -73,7 +73,7 @@ export default function ContatoPage() {
 
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-center">
                             <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
-                                <div className="text-2xl font-bold text-white mb-1">25+</div>
+                                <div className="text-2xl font-bold text-white mb-1">30+</div>
                                 <div className="text-green-100 text-sm">Anos de Experiência</div>
                             </div>
                             <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
@@ -114,7 +114,12 @@ export default function ContatoPage() {
                                         <h3 className="font-semibold mb-2">Telefones</h3>
                                         <p className="text-gray-600">
                                             <a href="tel:+555534140164" className="hover:text-earth-brown transition-colors">
-                                                (55) 3414-0198
+                                                Atendimento:  (55) 99682-9820
+                                            </a>
+                                        </p>
+                                        <p className="text-gray-600">
+                                            <a href="tel:+555534140164" className="hover:text-earth-brown transition-colors">
+                                                Financeiro:  (55) 99682-9822
                                             </a>
                                         </p>
                                         <p className="text-gray-600">
@@ -352,7 +357,7 @@ export default function ContatoPage() {
                             Nossa Localização
                         </h2>
                         <p className="text-xl text-gray-600">
-                            Visite nossa sede em Uruguaiana, RS - Portão de entrada do agronegócio brasileiro
+                            Visite nossa sede em Uruguaiana, RS - Portão de entrada da pecuária brasileira.
                         </p>
                     </motion.div>
 

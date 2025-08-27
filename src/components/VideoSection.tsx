@@ -63,7 +63,7 @@ const VideoSection = () => {
                                     alt="CORT Genética Brasil - Logotipo"
                                     width={320}
                                     height={320}
-                                    className="object-contain"
+                                    className="object-contain rounded-full"
                                     priority
                                 />
                             </div>
@@ -91,15 +91,14 @@ const VideoSection = () => {
                                 avançadas tecnologias do setor.
                             </p>
                             <p className="text-lg text-gray-600 leading-relaxed">
-                                Nossa missão é transformar a pecuária brasileira através da genética de excelência,
-                                oferecendo soluções completas e personalizadas para cada produtor.
+                                Nossa missão é desenvolver e aplicar tecnologias para melhorar a produtividade da pecuária, gerando emprego e riqueza para todos
                             </p>
                         </div>
 
                         {/* Stats */}
                         <div className="grid grid-cols-2 gap-6">
                             <div className="text-center p-4 bg-red-50 rounded-lg">
-                                <div className="text-3xl font-bold text-red-800 mb-1">25+</div>
+                                <div className="text-3xl font-bold text-red-800 mb-1">30+</div>
                                 <div className="text-sm text-gray-600">Anos de Experiência</div>
                             </div>
                             <div className="text-center p-4 bg-red-50 rounded-lg">

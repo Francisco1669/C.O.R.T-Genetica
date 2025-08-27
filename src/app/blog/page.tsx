@@ -113,7 +113,7 @@ export default function BlogPage() {
                                 <div className="text-green-100 text-sm">Artigos Técnicos</div>
                             </div>
                             <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">
-                                <div className="text-2xl font-bold text-white mb-1">25+</div>
+                                <div className="text-2xl font-bold text-white mb-1">30+</div>
                                 <div className="text-green-100 text-sm">Especialistas</div>
                             </div>
                             <div className="bg-red-900 bg-opacity-80 rounded-lg p-4 backdrop-blur-sm">

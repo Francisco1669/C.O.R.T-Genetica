@@ -8,13 +8,13 @@ const SobrePage = () => {
     const values = [
         {
             icon: Award,
-            title: 'Excelência',
-            description: 'Buscamos constantemente a perfeição em nossos processos e resultados, garantindo a mais alta qualidade genética.'
+            title: 'Ética',
+            description: 'Conduzimos nossos negócios com integridade, transparência e respeito em todas as nossas relações.'
         },
         {
             icon: Target,
             title: 'Inovação',
-            description: 'Pioneiros no uso de marcadores moleculares, sempre investindo em tecnologias de ponta para o agronegócio.'
+            description: 'Pioneiros no uso de marcadores moleculares, sempre investindo em tecnologias de ponta para a pecuária brasileira.'
         },
         {
             icon: Users,
@@ -22,9 +22,19 @@ const SobrePage = () => {
             description: 'Dedicação total com nossos clientes, oferecendo suporte técnico especializado e resultados comprovados.'
         },
         {
-            icon: Heart,
-            title: 'Sustentabilidade',
-            description: 'Práticas responsáveis que contribuem para o desenvolvimento sustentável da pecuária brasileira.'
+            icon: Award,
+            title: 'Responsabilidade',
+            description: 'Assumimos nossas obrigações com seriedade, contribuindo para o desenvolvimento do setor.'
+        },
+        {
+            icon: Target,
+            title: 'Lealdade',
+            description: 'Construímos relacionamentos duradouros baseados na confiança e no respeito mútuo.'
+        },
+        {
+            icon: Users,
+            title: 'Gratidão',
+            description: 'Valorizamos nossos parceiros, colaboradores e clientes, reconhecendo sua contribuição para nosso sucesso.'
         }
     ];
 
@@ -72,7 +82,7 @@ const SobrePage = () => {
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
                             Pioneira em genética bovina no Brasil, combinando tradição, inovação e tecnologia
-                            para transformar o agronegócio há mais de 25 anos.
+                            para transformar a pecuária brasileira há mais de 30 anos.
                         </p>
                     </motion.div>
                 </div>
@@ -119,12 +129,17 @@ const SobrePage = () => {
                             <div className="bg-red-800 rounded-2xl p-8 text-white">
                                 <h3 className="text-2xl font-bold mb-6">Nossa Missão</h3>
                                 <p className="text-lg leading-relaxed mb-6">
-                                    Fornecer genética bovina de excelência através de tecnologias inovadoras,
-                                    contribuindo para o desenvolvimento sustentável da pecuária brasileira.
+                                    Desenvolver e aplicar tecnologias para melhorar a produtividade da pecuária, gerando emprego e riqueza para todos.
                                 </p>
-                                <div className="grid grid-cols-2 gap-4 text-center">
+                                <div className="border-t border-red-700 pt-6 mt-6">
+                                    <h4 className="text-xl font-semibold mb-4">Nossa Visão</h4>
+                                    <p className="text-green-100 leading-relaxed">
+                                        Garantir resultados aos nossos clientes com sustentabilidade e crescimento em nosso segmento.
+                                    </p>
+                                </div>
+                                <div className="grid grid-cols-2 gap-4 text-center mt-6">
                                     <div>
-                                        <div className="text-3xl font-bold">25+</div>
+                                        <div className="text-3xl font-bold">30</div>
                                         <div className="text-green-100">Anos de Experiência</div>
                                     </div>
                                     <div>
@@ -138,7 +153,7 @@ const SobrePage = () => {
                 </div>
             </section>
 
-            {/* Timeline */}
+            {/* Galeria de Marcos */}
             <section className="py-20 bg-gray-50">
                 <div className="container mx-auto px-4">
                     <motion.div
@@ -156,6 +171,88 @@ const SobrePage = () => {
                         </p>
                     </motion.div>
 
+                    {/* Galeria de Fotos */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-20">
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6 }}
+                            viewport={{ once: true }}
+                            className="group"
+                        >
+                            <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                                <img
+                                    src="/stories/braford/milionario antigo.jpg"
+                                    alt="Primeiros Marcadores Moleculares - 2005"
+                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 className="text-xl font-bold mb-2">2005 - Primeiros Marcadores</h3>
+                                    <p className="text-sm opacity-90">Implementação pioneira de marcadores moleculares na seleção</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: 0.1 }}
+                            viewport={{ once: true }}
+                            className="group"
+                        >
+                            <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                                <img
+                                    src="/stories/braford/selo.jpg"
+                                    alt="Selo de Qualidade - 2015"
+                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 className="text-xl font-bold mb-2">2015 - Selo de Qualidade</h3>
+                                    <p className="text-sm opacity-90">Sistema exclusivo de certificação genética</p>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, scale: 0.9 }}
+                            whileInView={{ opacity: 1, scale: 1 }}
+                            transition={{ duration: 0.6, delay: 0.2 }}
+                            viewport={{ once: true }}
+                            className="group md:col-span-2 lg:col-span-1"
+                        >
+                            <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                                <img
+                                    src="/stories/braford/show antigo.jpg"
+                                    alt="Evolução Tecnológica - Décadas de Inovação"
+                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
+                                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                                    <h3 className="text-xl font-bold mb-2">Tradição & Inovação</h3>
+                                    <p className="text-sm opacity-90">30 anos combinando tradição familiar com tecnologia de ponta</p>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Timeline Detalhada */}
+                    <motion.div
+                        initial={{ opacity: 0, y: 20 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.6 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-12"
+                    >
+                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                            Linha do <span className="text-earth-brown">Tempo</span>
+                        </h3>
+                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+                            Nossa evolução tecnológica e conquistas ao longo dos anos
+                        </p>
+                    </motion.div>
+
                     <div className="max-w-4xl mx-auto">
                         {timeline.map((item, index) => (
                             <motion.div
@@ -166,15 +263,72 @@ const SobrePage = () => {
                                 viewport={{ once: true }}
                                 className="flex items-center mb-12 last:mb-0"
                             >
-                                <div className="flex-shrink-0 w-24 h-24 bg-red-800 rounded-full flex items-center justify-center text-white font-bold text-lg mr-8">
+                                <div className="flex-shrink-0 w-24 h-24 bg-red-800 rounded-full flex items-center justify-center text-white font-bold text-lg mr-8 shadow-lg">
                                     {item.year}
                                 </div>
-                                <div className="flex-1">
+                                <div className="flex-1 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
                                     <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
                                     <p className="text-gray-600 leading-relaxed">{item.description}</p>
                                 </div>
                             </motion.div>
                         ))}
+                    </div>
+                </div>
+            </section>
+
+            {/* Teste TTR Section */}
+            <section className="py-20 bg-white">
+                <div className="container mx-auto px-4">
+                    <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                        <motion.div
+                            initial={{ opacity: 0, x: -30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                        >
+                            <div className="relative">
+                                <img
+                                    src="/stories/braford/vaqueano.jpg"
+                                    alt="Teste TTR - Tecnologia de Ponta"
+                                    className="w-full h-96 object-cover rounded-2xl shadow-2xl"
+                                />
+                                <div className="absolute -bottom-4 -right-4 bg-red-800 text-white p-4 rounded-2xl">
+                                    <div className="text-2xl font-bold">TTR</div>
+                                    <div className="text-sm">Teste de Termo Resistência Rápido</div>
+                                </div>
+                            </div>
+                        </motion.div>
+
+                        <motion.div
+                            initial={{ opacity: 0, x: 30 }}
+                            whileInView={{ opacity: 1, x: 0 }}
+                            transition={{ duration: 0.8 }}
+                            viewport={{ once: true }}
+                        >
+                            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                                Teste <span className="text-earth-brown">TTR</span>
+                            </h2>
+                            <p className="text-lg text-gray-600 leading-relaxed mb-6">
+                                Desenvolvido em 2010, o Teste de Termo Resistência Rápido revolucionou
+                                a avaliação da qualidade seminal na pecuária brasileira. Esta tecnologia
+                                exclusiva permite identificar touros com maior resistência térmica,
+                                garantindo resultados superiores na reprodução.
+                            </p>
+                            <div className="grid grid-cols-2 gap-6 mb-6">
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold text-earth-brown">2010</div>
+                                    <div className="text-gray-600">Ano de Desenvolvimento</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold text-earth-brown">100%</div>
+                                    <div className="text-gray-600">Precisão na Avaliação</div>
+                                </div>
+                            </div>
+                            <p className="text-gray-600 leading-relaxed">
+                                O TTR representa nosso compromisso com a inovação e a busca constante
+                                por tecnologias que elevam o padrão da pecuária nacional.
+                            </p>
+                        </motion.div>
                     </div>
                 </div>
             </section>
@@ -190,14 +344,14 @@ const SobrePage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Nossos <span className="text-earth-brown">Valores</span>
+                            Princípios <span className="text-earth-brown">Fundamentais</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Princípios que guiam cada decisão e ação em nossa empresa
+                            Os pilares que sustentam nossa cultura e guiam nossas ações diárias
                         </p>
                     </motion.div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                         {values.map((value, index) => {
                             const IconComponent = value.icon;
                             return (
