@@ -1,0 +1,410 @@
+{
+  "146": {
+    "nome": "TORNADO",
+    "raca": "Brangus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "154": {
+    "nome": "CHARUTO",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "156": {
+    "nome": "PROMOTOR",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "157": {
+    "nome": "CACAU",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "160": {
+    "nome": "PRODUCT",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "161": {
+    "nome": "CERNE",
+    "raca": "Hereford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "162": {
+    "nome": "SABRE",
+    "raca": "Brahman",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "163": {
+    "nome": "OBJETO",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "164": {
+    "nome": "NOBRE",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "165": {
+    "nome": "CAIRO 3",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "166": {
+    "nome": "CAIRO 2",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "167": {
+    "nome": "SOMBRA",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "168": {
+    "nome": "CONFUSÃO",
+    "raca": "Brangus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "169": {
+    "nome": "BREU",
+    "raca": "Brahman",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "170": {
+    "nome": "BALA",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "171": {
+    "nome": "EURO",
+    "raca": "Hereford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "172": {
+    "nome": "GAP PARCEIRO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "173": {
+    "nome": "UMBÚ",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "174": {
+    "nome": "MASTER",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "175": {
+    "nome": "MÍSTICO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "176": {
+    "nome": "FORC BOOMER",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "177": {
+    "nome": "MAX",
+    "raca": "Hereford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "178": {
+    "nome": "MAMÃO",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "179": {
+    "nome": "PIRATA",
+    "raca": "Brahman",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "180": {
+    "nome": "CHIVAS",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "181": {
+    "nome": "TOTAL",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "182": {
+    "nome": "TARUGO",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "183": {
+    "nome": "TANGO",
+    "raca": "Hereford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "184": {
+    "nome": "CHICÃO",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "185": {
+    "nome": "RESOLVE",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "186": {
+    "nome": "TAURA",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "187": {
+    "nome": "PAYSANO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "188": {
+    "nome": "TORRESMO",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "189": {
+    "nome": "GURI",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "190": {
+    "nome": "TOP 10",
+    "raca": "Hereford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "191": {
+    "nome": "CASANOVA",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "192": {
+    "nome": "VAQUEANO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "193": {
+    "nome": "GAP MILIONÁRIO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "194": {
+    "nome": "SHOW",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "195": {
+    "nome": "SIWARD",
+    "raca": "Nelore",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "196": {
+    "nome": "CACIQUE",
+    "raca": "Brahman",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "197": {
+    "nome": "CADUCO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "198": {
+    "nome": "BELO",
+    "raca": "Hereford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "199": {
+    "nome": "MONEY",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "200": {
+    "nome": "C.P.I.",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo1"
+  },
+  "201": {
+    "nome": "MAGNATA",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "217": {
+    "nome": "DON LEO",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "239": {
+    "nome": "LUCHO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "264": {
+    "nome": "BIG BEN",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "287": {
+    "nome": "ANAMÃ",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "301": {
+    "nome": "JATOBA",
+    "raca": "Guzera",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "314": {
+    "nome": "DOBLE CHAPA",
+    "raca": "Angus",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "339": {
+    "nome": "TARUMÃ",
+    "raca": "Charolês Mocho",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "341": {
+    "nome": "MIDAS FVC",
+    "raca": "Nelore Mocho",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "344": {
+    "nome": "FERDINANDO",
+    "raca": "Jersey",
+    "categoria": "leite",
+    "catalogo": "catalogo2"
+  },
+  "356": {
+    "nome": "INDHU DA RIBALTA",
+    "raca": "Nelore Mocho",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "357": {
+    "nome": "IMPECÁVEL DA RIBALTA",
+    "raca": "Nelore Mocho",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "358": {
+    "nome": "ÍNDICE",
+    "raca": "Nelore Mocho",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "363": {
+    "nome": "TUPI",
+    "raca": "Indubrasil",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "368": {
+    "nome": "KING",
+    "raca": "Nelore Mocho",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "369": {
+    "nome": "KARIMO",
+    "raca": "Tabapuã",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "370": {
+    "nome": "MACANUDO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "374": {
+    "nome": "BEST FIV DA RIB",
+    "raca": "Nelore Padrao",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "376": {
+    "nome": "BENGALA",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "378": {
+    "nome": "GARDEL",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "381": {
+    "nome": "PARAISO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "382": {
+    "nome": "RETORNO",
+    "raca": "Braford",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  },
+  "385": {
+    "nome": "CRIOULO",
+    "raca": "Ultra Black",
+    "categoria": "corte",
+    "catalogo": "catalogo2"
+  }
+}
