@@ -7,8 +7,18 @@ import { ChevronDown } from 'lucide-react';
 const HeroSection = () => {
     return (
         <section className="relative min-h-screen flex items-center justify-center bg-red-50 overflow-hidden">
-            {/* Background pattern - Gradiente profissional */}
-            <div className="absolute inset-0 bg-gradient-to-br from-green-50 via-blue-50 to-purple-50 opacity-30"></div>
+            {/* Background image */}
+            <div className="absolute inset-0">
+                <img
+                    src="/fotos_sobre/frente_cort_visao_de_Cima.PNG"
+                    alt="Frente da CORT Genética - Visão Superior"
+                    className="w-full h-full object-cover"
+                />
+                {/* Overlay escuro para melhor legibilidade do texto */}
+                <div className="absolute inset-0 bg-black/50"></div>
+                {/* Gradiente profissional sobreposto */}
+                <div className="absolute inset-0 bg-gradient-to-br from-green-50/80 via-blue-50/60 to-purple-50/40 opacity-50"></div>
+            </div>
 
             <div className="container mx-auto px-4 text-center relative z-10">
                 <motion.div
@@ -24,7 +34,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.6, delay: 0.2 }}
                         className="inline-block"
                     >
-                        <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-red-50 text-red-900 border border-red-300 mb-6">
+                        <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/90 text-red-900 border border-white/50 mb-6 backdrop-blur-sm">
                             Pioneira em Genética Bovina no Brasil
                         </span>
                     </motion.div>
@@ -34,10 +44,10 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.3 }}
-                        className="text-4xl md:text-6xl lg:text-7xl font-bold text-gray-900 mb-6 leading-tight"
+                        className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
                     >
                         Excelência em <br />
-                        <span className="text-red-800">Genética Bovina</span>
+                        <span className="text-red-300 drop-shadow-lg">Genética Bovina</span>
                     </motion.h1>
 
                     {/* Subtitle */}
@@ -45,7 +55,7 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 20 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.4 }}
-                        className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
+                        className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg"
                     >
                         Somos especialistas em melhoramento genético de bovinos,
                         oferecendo as melhores soluções para seu rebanho
@@ -66,7 +76,7 @@ const HeroSection = () => {
                         </Link>
                         <Link
                             href="/sobre"
-                            className="btn-secondary text-lg px-8 py-4 inline-block hover:scale-105 transition-transform duration-200"
+                            className="bg-white text-red-800 border-2 border-white px-6 py-3 rounded-lg inline-block hover:bg-gray-100 hover:scale-105 transition-all duration-200 font-semibold"
                         >
                             Conheça Nossa História
                         </Link>
@@ -80,12 +90,12 @@ const HeroSection = () => {
                         className="max-w-4xl mx-auto"
                     >
                         <div className="text-center mb-6">
-                            <h3 className="text-lg font-semibold text-red-800 uppercase tracking-wide">Nossos Selos de Qualidade</h3>
+                            <h3 className="text-lg font-semibold text-white uppercase tracking-wide drop-shadow-lg">Nossos Selos de Qualidade</h3>
                         </div>
 
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             {/* GENÔMICA 100% PURA */}
-                            <div className="bg-white rounded-2xl p-6 shadow-md text-center border border-red-100">
+                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md text-center border border-white/50">
                                 <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-red-100 rounded-xl">
                                     <svg className="w-6 h-6 text-red-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M6.267 3.455a3.066 3.066 0 001.745-.723 3.066 3.066 0 013.976 0 3.066 3.066 0 001.745.723 3.066 3.066 0 012.812 2.812c.051.643.304 1.254.723 1.745a3.066 3.066 0 010 3.976 3.066 3.066 0 00-.723 1.745 3.066 3.066 0 01-2.812 2.812 3.066 3.066 0 00-1.745.723 3.066 3.066 0 01-3.976 0 3.066 3.066 0 00-1.745-.723 3.066 3.066 0 01-2.812-2.812 3.066 3.066 0 00-.723-1.745 3.066 3.066 0 010-3.976 3.066 3.066 0 00.723-1.745 3.066 3.066 0 012.812-2.812zm7.44 5.252a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -96,7 +106,7 @@ const HeroSection = () => {
                             </div>
 
                             {/* TTR IATF */}
-                            <div className="bg-white rounded-2xl p-6 shadow-md text-center border border-red-100">
+                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md text-center border border-white/50">
                                 <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-red-100 rounded-xl">
                                     <svg className="w-6 h-6 text-red-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clipRule="evenodd" />
@@ -107,7 +117,7 @@ const HeroSection = () => {
                             </div>
 
                             {/* HOMOZIGOTO 100% MACIEZ */}
-                            <div className="bg-white rounded-2xl p-6 shadow-md text-center border border-red-100">
+                            <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md text-center border border-white/50">
                                 <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-red-100 rounded-xl">
                                     <svg className="w-6 h-6 text-red-800" fill="currentColor" viewBox="0 0 20 20">
                                         <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
@@ -130,7 +140,7 @@ const HeroSection = () => {
                     <motion.div
                         animate={{ y: [0, 10, 0] }}
                         transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
-                        className="text-gray-400"
+                        className="text-white/70"
                     >
                         <ChevronDown size={24} />
                     </motion.div>

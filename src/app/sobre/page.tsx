@@ -38,34 +38,6 @@ const SobrePage = () => {
         }
     ];
 
-    const timeline = [
-        {
-            year: '1995',
-            title: 'Fundação',
-            description: 'Início das atividades com foco em genética bovina de alta qualidade.'
-        },
-        {
-            year: '2005',
-            title: 'Primeiros Marcadores',
-            description: 'Implementação dos primeiros marcadores moleculares na seleção de reprodutores.'
-        },
-        {
-            year: '2010',
-            title: 'Teste TTR',
-            description: 'Desenvolvimento e implementação do Teste de Termo Resistência Rápido.'
-        },
-        {
-            year: '2015',
-            title: 'Selos de Qualidade',
-            description: 'Criação do sistema exclusivo de selos de qualidade genética.'
-        },
-        {
-            year: '2020',
-            title: '100% Marcadores',
-            description: 'Atingimos 100% de cobertura com marcadores moleculares em nossa bateria.'
-        }
-    ];
-
     return (
         <div className="min-h-screen">
             {/* Hero Section */}
@@ -182,13 +154,13 @@ const SobrePage = () => {
                         >
                             <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                                 <img
-                                    src="/stories/braford/milionario antigo.jpg"
-                                    alt="Primeiros Marcadores Moleculares - 2005"
-                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                    src="/fotos_sobre/foto_laboratorio_com_atendente.jpeg"
+                                    alt="Primeiros Marcadores Moleculares"
+                                    className="w-full h-90 object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 className="text-xl font-bold mb-2">2005 - Primeiros Marcadores</h3>
+                                    <h3 className="text-xl font-bold mb-2">Primeiros Marcadores</h3>
                                     <p className="text-sm opacity-90">Implementação pioneira de marcadores moleculares na seleção</p>
                                 </div>
                             </div>
@@ -203,13 +175,13 @@ const SobrePage = () => {
                         >
                             <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                                 <img
-                                    src="/stories/braford/selo.jpg"
+                                    src="/fotos_sobre/espermas_debois_guardados.jpeg"
                                     alt="Selo de Qualidade - 2015"
-                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                    className="w-full h-90 object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                                    <h3 className="text-xl font-bold mb-2">2015 - Selo de Qualidade</h3>
+                                    <h3 className="text-xl font-bold mb-2"> Selo de Qualidade</h3>
                                     <p className="text-sm opacity-90">Sistema exclusivo de certificação genética</p>
                                 </div>
                             </div>
@@ -224,54 +196,17 @@ const SobrePage = () => {
                         >
                             <div className="relative overflow-hidden rounded-2xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
                                 <img
-                                    src="/stories/braford/show antigo.jpg"
+                                    src="/fotos_sobre/dono_cort_e_sua_filha.jpeg"
                                     alt="Evolução Tecnológica - Décadas de Inovação"
-                                    className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                                    className="w-full h-90 object-cover group-hover:scale-110 transition-transform duration-300"
                                 />
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent"></div>
                                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
                                     <h3 className="text-xl font-bold mb-2">Tradição & Inovação</h3>
-                                    <p className="text-sm opacity-90">30 anos combinando tradição familiar com tecnologia de ponta</p>
+                                    <p className="text-sm opacity-90">Mais de 30 anos combinando tradição familiar com tecnologia de ponta</p>
                                 </div>
                             </div>
                         </motion.div>
-                    </div>
-
-                    {/* Timeline Detalhada */}
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                        className="text-center mb-12"
-                    >
-                        <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
-                            Linha do <span className="text-earth-brown">Tempo</span>
-                        </h3>
-                        <p className="text-lg text-gray-600 max-w-2xl mx-auto">
-                            Nossa evolução tecnológica e conquistas ao longo dos anos
-                        </p>
-                    </motion.div>
-
-                    <div className="max-w-4xl mx-auto">
-                        {timeline.map((item, index) => (
-                            <motion.div
-                                key={index}
-                                initial={{ opacity: 0, y: 30 }}
-                                whileInView={{ opacity: 1, y: 0 }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
-                                viewport={{ once: true }}
-                                className="flex items-center mb-12 last:mb-0"
-                            >
-                                <div className="flex-shrink-0 w-24 h-24 bg-red-800 rounded-full flex items-center justify-center text-white font-bold text-lg mr-8 shadow-lg">
-                                    {item.year}
-                                </div>
-                                <div className="flex-1 bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-shadow duration-300">
-                                    <h3 className="text-xl font-bold text-gray-900 mb-2">{item.title}</h3>
-                                    <p className="text-gray-600 leading-relaxed">{item.description}</p>
-                                </div>
-                            </motion.div>
-                        ))}
                     </div>
                 </div>
             </section>
@@ -288,7 +223,7 @@ const SobrePage = () => {
                         >
                             <div className="relative">
                                 <img
-                                    src="/stories/braford/vaqueano.jpg"
+                                    src="/fotos_sobre/frente_cort_visao_de_Cima.PNG"
                                     alt="Teste TTR - Tecnologia de Ponta"
                                     className="w-full h-96 object-cover rounded-2xl shadow-2xl"
                                 />
@@ -309,19 +244,19 @@ const SobrePage = () => {
                                 Teste <span className="text-earth-brown">TTR</span>
                             </h2>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                Desenvolvido em 2010, o Teste de Termo Resistência Rápido revolucionou
-                                a avaliação da qualidade seminal na pecuária brasileira. Esta tecnologia
-                                exclusiva permite identificar touros com maior resistência térmica,
-                                garantindo resultados superiores na reprodução.
+                                O Teste de Termo Resistência Rápido revolucionou a avaliação da qualidade
+                                seminal na pecuária brasileira. Esta tecnologia exclusiva permite identificar
+                                touros com maior resistência térmica, garantindo resultados superiores na
+                                reprodução e maior eficiência reprodutiva.
                             </p>
                             <div className="grid grid-cols-2 gap-6 mb-6">
                                 <div className="text-center">
-                                    <div className="text-3xl font-bold text-earth-brown">2010</div>
-                                    <div className="text-gray-600">Ano de Desenvolvimento</div>
-                                </div>
-                                <div className="text-center">
                                     <div className="text-3xl font-bold text-earth-brown">100%</div>
                                     <div className="text-gray-600">Precisão na Avaliação</div>
+                                </div>
+                                <div className="text-center">
+                                    <div className="text-3xl font-bold text-earth-brown">Alta</div>
+                                    <div className="text-gray-600">Resistência Térmica</div>
                                 </div>
                             </div>
                             <p className="text-gray-600 leading-relaxed">

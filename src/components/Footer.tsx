@@ -44,11 +44,11 @@ const Footer = () => {
                                     Produtos e Serviços
                                 </Link>
                             </li>
-                            <li>
+                            {/* <li>
                                 <Link href="/blog" className="text-gray-400 hover:text-white transition-colors duration-200">
                                     Notícias
                                 </Link>
-                            </li>
+                            </li> */}
                             <li>
                                 <Link href="/contato" className="text-gray-400 hover:text-white transition-colors duration-200">
                                     Contato

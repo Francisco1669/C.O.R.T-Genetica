@@ -13,75 +13,21 @@ const CatalogoTourosPage = () => {
     const [selectedRace, setSelectedRace] = useState('todas');
     const [selectedSeals, setSelectedSeals] = useState<string[]>([]);
 
-    // Dados mockados dos touros
-    const touros = [
-        {
-            id: '001',
-            nome: 'Forte CG',
-            raca: 'Angus',
-            categoria: 'corte',
-            imagem: '/api/placeholder/300/200',
-            selos: ['homozigoto_preto', 'maciez', 'iatf'],
-            pedigree: 'PAI: Champion CG x MÃE: Elite CG',
-            disponibilidade: 'Disponível',
-            preco: 'R$ 45,00'
-        },
-        {
-            id: '002',
-            nome: 'Campeão CG',
-            raca: 'Nelore',
-            categoria: 'corte',
-            imagem: '/api/placeholder/300/200',
-            selos: ['iatf', 'rusticidade'],
-            pedigree: 'PAI: Líder CG x MÃE: Suprema CG',
-            disponibilidade: 'Disponível',
-            preco: 'R$ 38,00'
-        },
-        {
-            id: '003',
-            nome: 'Premium CG',
-            raca: 'Holandês',
-            categoria: 'leite',
-            imagem: '/api/placeholder/300/200',
-            selos: ['qualidade_leite'],
-            pedigree: 'PAI: Master CG x MÃE: Princess CG',
-            disponibilidade: 'Limitado',
-            preco: 'R$ 52,00'
-        },
-        {
-            id: '004',
-            nome: 'Supremo CG',
-            raca: 'Brahman',
-            categoria: 'corte',
-            imagem: '/api/placeholder/300/200',
-            selos: ['iatf', 'adaptacao_tropical', 'rusticidade'],
-            pedigree: 'PAI: Royal CG x MÃE: Nobre CG',
-            disponibilidade: 'Disponível',
-            preco: 'R$ 48,00'
-        },
-        {
-            id: '005',
-            nome: 'Élite CG',
-            raca: 'Jersey',
-            categoria: 'leite',
-            imagem: '/api/placeholder/300/200',
-            selos: ['qualidade_leite'],
-            pedigree: 'PAI: Noble CG x MÃE: Grace CG',
-            disponibilidade: 'Disponível',
-            preco: 'R$ 42,00'
-        },
-        {
-            id: '006',
-            nome: 'Dominador CG',
-            raca: 'Angus',
-            categoria: 'corte',
-            imagem: '/api/placeholder/300/200',
-            selos: ['homozigoto_preto', 'maciez', 'iatf'],
-            pedigree: 'PAI: Power CG x MÃE: Victory CG',
-            disponibilidade: 'Disponível',
-            preco: 'R$ 50,00'
-        }
-    ];
+    // Importar touros do sistema organizado
+    const { tourosPorId } = require('../../data/tourosPorId');
+
+    // Converter para array e pegar apenas alguns para exibição
+    const touros = Object.values(tourosPorId).slice(0, 12).map((touro: any) => ({
+        id: touro.id.toString(),
+        nome: touro.nome,
+        raca: touro.raca,
+        categoria: touro.categoria,
+        imagem: touro.imagem,
+        selos: touro.selos || [],
+        pedigree: 'Informações completas no site oficial',
+        disponibilidade: 'Disponível',
+        preco: 'Consulte preço'
+    }));
 
     const selosInfo = [
         { id: 'pelagem', nome: 'Homozigose de Pelagem', icon: Palette, color: 'purple' },
@@ -371,6 +317,88 @@ const CatalogoTourosPage = () => {
                             </Link>
                         </div>
                     </motion.div>
+                </div>
+            </section>
+
+            {/* Seção especial: Touros por ID */}
+            <section className="py-20 bg-green-50">
+                <div className="container mx-auto px-4">
+                    <motion.div
+                        initial={{ opacity: 0, y: 30 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="text-center mb-16"
+                    >
+                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+                            Sistema de URLs por ID
+                        </h2>
+                        <p className="text-xl text-gray-600 mb-8">
+                            Agora você pode acessar qualquer touro diretamente pela URL com seu ID numérico
+                        </p>
+                        <div className="bg-white rounded-lg p-6 shadow-lg inline-block">
+                            <p className="text-lg font-semibold text-gray-900 mb-2">Formato da URL:</p>
+                            <code className="text-green-600 text-xl bg-gray-100 px-4 py-2 rounded">
+                                /site/cort/home/exibe/{'{ID}'}
+                            </code>
+                            <p className="text-sm text-gray-600 mt-2">
+                                Exemplo: <Link href="/site/cort/home/exibe/176" className="text-green-600 hover:underline">/site/cort/home/exibe/176</Link>
+                            </p>
+                        </div>
+                    </motion.div>
+
+                    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        {/* Exemplos de touros organizados */}
+                        {[
+                            { id: 176, nome: 'FORC BOOMER', raca: 'Angus' },
+                            { id: 154, nome: 'CHARUTO', raca: 'Angus' },
+                            { id: 217, nome: 'DON LEO', raca: 'Angus' },
+                            { id: 287, nome: 'ANAMÃ', raca: 'Braford' },
+                            { id: 301, nome: 'JATOBA', raca: 'Guzera' },
+                            { id: 339, nome: 'TARUMÃ', raca: 'Charolês Mocho' }
+                        ].map((exemplo, index) => (
+                            <motion.div
+                                key={exemplo.id}
+                                initial={{ opacity: 0, y: 30 }}
+                                whileInView={{ opacity: 1, y: 0 }}
+                                transition={{ duration: 0.6, delay: index * 0.1 }}
+                                viewport={{ once: true }}
+                                className="bg-white rounded-xl shadow-lg p-6 text-center hover:shadow-xl transition-shadow duration-300"
+                            >
+                                <div className="mb-4">
+                                    <span className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm font-semibold">
+                                        ID: {exemplo.id}
+                                    </span>
+                                </div>
+                                <h3 className="text-xl font-bold text-gray-900 mb-2">{exemplo.nome}</h3>
+                                <p className="text-gray-600 mb-4">{exemplo.raca}</p>
+                                <Link
+                                    href={`/site/cort/home/exibe/${exemplo.id}`}
+                                    className="inline-flex items-center bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
+                                >
+                                    <Eye className="w-4 h-4 mr-2" />
+                                    Ver Touro
+                                </Link>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    <div className="text-center mt-12">
+                        <p className="text-lg text-gray-700 mb-6">
+                            🎯 <strong>Total organizado:</strong> 70 touros com IDs mapeados
+                        </p>
+                        <p className="text-gray-600 mb-8">
+                            Todos os touros podem ser acessados diretamente pela URL /site/cort/home/exibe/{'{ID}'}
+                        </p>
+                        <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 inline-block">
+                            <h3 className="text-lg font-bold text-blue-900 mb-2">URLs de Exemplo:</h3>
+                            <div className="space-y-1 text-blue-700">
+                                <p><Link href="/site/cort/home/exibe/176" className="hover:underline">/site/cort/home/exibe/176</Link> → FORC BOOMER</p>
+                                <p><Link href="/site/cort/home/exibe/154" className="hover:underline">/site/cort/home/exibe/154</Link> → CHARUTO</p>
+                                <p><Link href="/site/cort/home/exibe/217" className="hover:underline">/site/cort/home/exibe/217</Link> → DON LEO</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
 
