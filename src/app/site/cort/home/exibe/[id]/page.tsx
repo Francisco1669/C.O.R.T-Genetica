@@ -3,7 +3,8 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Award, ArrowLeft, Phone, Mail, Eye, ExternalLink } from 'lucide-react';
+import { useState, useEffect } from 'react';
+import { Award, ArrowLeft, Phone, Mail, Eye, ExternalLink, X } from 'lucide-react';
 import { notFound, useParams } from 'next/navigation';
 import { use } from 'react';
 import { tourosPorId } from '../../../../../../data/tourosPorId';
@@ -50,11 +51,37 @@ export default function BullDetailPage({ params }: PageProps) {
         notFound();
     }
 
+    // Estado para controlar o modal de imagem expandida
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+
     // Verificar se é um touro fora de estoque baseado na descrição
     const isOutOfStock = bull.descricao && bull.descricao.includes("fora de estoque");
 
     // Verificar se o touro tem imagem disponível
     const hasImage = bull.temImagem !== false;
+
+    // Funções para controlar o modal
+    const openImageModal = () => setIsImageModalOpen(true);
+    const closeImageModal = () => setIsImageModalOpen(false);
+
+    // Efeito para lidar com tecla ESC
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape' && isImageModalOpen) {
+                closeImageModal();
+            }
+        };
+
+        if (isImageModalOpen) {
+            document.addEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'hidden'; // Previne scroll da página
+        }
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'unset'; // Restaura scroll da página
+        };
+    }, [isImageModalOpen]);
 
     // URL externa do site oficial
     const urlExterna = `https://www.cortgeneticabrasil.com/site/cort/home/exibe/${bullId}`;
@@ -107,13 +134,25 @@ export default function BullDetailPage({ params }: PageProps) {
                     </div>
                 ) : (
                     // Mostrar imagem normal quando disponível
-                    <Image
-                        src={bull.imagem}
-                        alt={`Touro ${bull.nome} da raça ${bull.raca}`}
-                        fill
-                        className="object-contain object-center"
-                        priority
-                    />
+                    <div
+                        className="cursor-pointer hover:opacity-90 transition-opacity"
+                        onClick={openImageModal}
+                        title="Clique para expandir a imagem"
+                    >
+                        <Image
+                            src={bull.imagem}
+                            alt={`Touro ${bull.nome} da raça ${bull.raca}`}
+                            fill
+                            className="object-contain object-center"
+                            priority
+                        />
+                        {/* Overlay de clique */}
+                        <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 hover:opacity-100 transition-opacity">
+                                <Eye className="w-6 h-6 text-gray-700" />
+                            </div>
+                        </div>
+                    </div>
                 )}
 
                 {/* Overlay gradient */}
@@ -128,19 +167,6 @@ export default function BullDetailPage({ params }: PageProps) {
                         <ArrowLeft className="w-5 h-5 mr-2" />
                         Voltar ao Catálogo
                     </Link>
-                </div>
-
-                {/* Link para o site oficial */}
-                <div className="absolute top-8 right-8 z-10">
-                    <a
-                        href={urlExterna}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center bg-green-600/90 backdrop-blur-sm hover:bg-green-700 text-white px-4 py-2 rounded-lg transition-colors duration-200"
-                    >
-                        <ExternalLink className="w-5 h-5 mr-2" />
-                        Ver no Site Oficial
-                    </a>
                 </div>
 
                 {/* Conteúdo sobreposto */}
@@ -232,26 +258,6 @@ export default function BullDetailPage({ params }: PageProps) {
                                     </div>
                                 </div>
 
-                                <div className="mb-8">
-                                    <h3 className="text-2xl font-bold text-gray-900 mb-4">Sobre o {bull.nome}</h3>
-                                    <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                                        {bull.descricao}
-                                    </p>
-                                    {isOutOfStock && (
-                                        <div className="bg-red-50 border border-red-200 rounded-lg p-4 mb-6">
-                                            <div className="flex items-center">
-                                                <svg className="w-6 h-6 text-red-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-2.5L13.732 4c-.77-.833-1.964-.833-2.732 0L4.082 16.5c-.77.833.192 2.5 1.732 2.5z" />
-                                                </svg>
-                                                <div>
-                                                    <p className="font-semibold text-red-800">Status: Fora de Estoque</p>
-                                                    <p className="text-red-600 text-sm">Este touro não está disponível para comercialização no momento.</p>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    )}
-                                </div>
-
                                 {bull.caracteristicas && bull.caracteristicas.length > 0 && (
                                     <div>
                                         <h3 className="text-2xl font-bold text-gray-900 mb-4">Características</h3>
@@ -275,26 +281,7 @@ export default function BullDetailPage({ params }: PageProps) {
                                 viewport={{ once: true }}
                                 className="space-y-8"
                             >
-                                {/* Link para o site oficial */}
-                                <div className="bg-green-50 rounded-xl p-6 border border-green-100">
-                                    <h3 className="text-2xl font-bold text-green-800 mb-4 flex items-center">
-                                        <ExternalLink className="w-6 h-6 mr-3" />
-                                        Site Oficial
-                                    </h3>
-                                    <p className="text-gray-600 mb-6">
-                                        Veja todas as informações completas deste touro no site oficial da CORT Genética Brasil.
-                                    </p>
 
-                                    <a
-                                        href={urlExterna}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        className="inline-flex items-center w-full bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
-                                    >
-                                        <Eye className="w-5 h-5 mr-3" />
-                                        Ver no Site Oficial
-                                    </a>
-                                </div>
 
                                 {/* Card de contato */}
                                 <div className="bg-red-50 rounded-xl p-6 border border-red-100">
@@ -386,6 +373,68 @@ export default function BullDetailPage({ params }: PageProps) {
                     </div>
                 </div>
             </section>
+
+            {/* Modal de imagem expandida */}
+            {isImageModalOpen && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+                    onClick={closeImageModal}
+                >
+                    {/* Botão fechar */}
+                    <button
+                        onClick={closeImageModal}
+                        className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-colors"
+                    >
+                        <X className="w-6 h-6 text-white" />
+                    </button>
+
+                    {/* Container da imagem */}
+                    <div className="relative max-w-5xl max-h-screen p-4">
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.3 }}
+                            className="relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <Image
+                                src={bull.imagem}
+                                alt={`Touro ${bull.nome} da raça ${bull.raca} - Expandida`}
+                                width={1200}
+                                height={800}
+                                className="object-contain max-w-full max-h-[90vh] rounded-lg shadow-2xl"
+                                priority
+                            />
+
+                            {/* Informações do touro no modal */}
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
+                                <div className="text-white">
+                                    <h2 className="text-2xl font-bold mb-2">{bull.nome}</h2>
+                                    <p className="text-lg text-gray-200 mb-1">{bull.raca}</p>
+                                    <div className="flex items-center gap-4 text-sm text-gray-300">
+                                        <span>ID: {bullId}</span>
+                                        <span>Catálogo: {bull.catalogo === 'catalogo1' ? '1' : '2'}</span>
+                                        <span className={`px-2 py-1 rounded-full text-xs font-semibold ${bull.categoria === 'corte'
+                                            ? 'bg-red-600 text-white'
+                                            : 'bg-blue-600 text-white'
+                                            }`}>
+                                            {bull.categoria.charAt(0).toUpperCase() + bull.categoria.slice(1)}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Instruções para fechar */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/70 text-sm">
+                        Clique fora da imagem ou pressione ESC para fechar
+                    </div>
+                </motion.div>
+            )}
         </div>
     );
 }

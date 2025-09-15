@@ -8,48 +8,51 @@ const SelosQualidadePage = () => {
     const selos = [
         {
             icon: Palette,
-            title: 'Selo de Homozigose para Pelagem',
+            title: 'Selo Homozigoto Preto',
             subtitle: 'Garantia de Transmissão de Cor',
-            description: 'Certificação que garante 100% de transmissão da pelagem preta ou vermelha pelos touros portadores deste selo.',
+            description: 'Certificação que garante 100% de transmissão da pelagem preta pelos touros portadores deste selo. Elimina surpresas na coloração dos bezerros.',
             details: [
                 'Análise genética completa dos genes de pelagem',
                 'Garantia de 100% de uniformidade na descendência',
                 'Eliminação de surpresas na coloração dos bezerros',
                 'Valorização comercial do rebanho'
             ],
-            color: 'from-purple-600 to-purple-800',
-            bgColor: 'bg-purple-100',
-            textColor: 'text-purple-800'
+            color: 'from-gray-800 to-gray-900',
+            bgColor: 'bg-gray-100',
+            textColor: 'text-gray-800',
+            image: '/selos/PRETO.png'
         },
         {
             icon: Beef,
-            title: 'Selo de Maciez',
-            subtitle: 'Qualidade Superior da Carne',
-            description: 'Identifica touros que possuem as quatro enzimas responsáveis pela maciez da carne em seu DNA.',
+            title: 'Selo Homozigoto Vermelho',
+            subtitle: 'Garantia de Transmissão de Cor',
+            description: 'Certificação que garante 100% de transmissão da pelagem vermelha pelos touros portadores deste selo. Uniformidade total na descendência.',
             details: [
-                'Presença das 4 enzimas de maciez (Calpaína, Calpastatina, etc.)',
-                'Garantia de carne mais macia na descendência',
-                'Diferenciação no mercado de carne premium',
-                'Agregação de valor ao produto final'
+                'Análise genética completa dos genes de pelagem',
+                'Garantia de 100% de uniformidade na descendência',
+                'Eliminação de surpresas na coloração dos bezerros',
+                'Valorização comercial do rebanho'
             ],
             color: 'from-red-600 to-red-800',
             bgColor: 'bg-red-100',
-            textColor: 'text-red-800'
+            textColor: 'text-red-800',
+            image: '/selos/VERMELHO.png'
         },
         {
             icon: Heart,
-            title: 'Selo de IATF',
-            subtitle: 'Inseminação Artificial em Tempo Fixo',
-            description: 'Controle rigoroso sobre fazendas assistidas no programa de IATF, garantindo resultados superiores.',
+            title: 'Selo 100% Mocho',
+            subtitle: 'Garantia de Ausência de Chifres',
+            description: 'Certificação que garante 100% de touros mochos (sem chifres) na descendência. Elimina a necessidade de descorna.',
             details: [
-                'Acompanhamento técnico especializado',
-                'Protocolos otimizados para cada situação',
-                'Maior taxa de prenhez comprovada',
-                'Suporte completo durante todo o processo'
+                'Análise genética completa dos genes de chifres',
+                'Garantia de 100% de touros mochos na descendência',
+                'Eliminação da necessidade de descorna',
+                'Redução de estresse e custos de manejo'
             ],
-            color: 'from-pink-600 to-pink-800',
-            bgColor: 'bg-pink-100',
-            textColor: 'text-pink-800'
+            color: 'from-amber-600 to-amber-800',
+            bgColor: 'bg-amber-100',
+            textColor: 'text-amber-800',
+            image: '/selos/MOCHO selo.png'
         }
     ];
 
@@ -96,17 +99,17 @@ const SelosQualidadePage = () => {
                             para os produtores.
                         </p>
                         <div className="flex flex-wrap justify-center gap-4 text-sm font-medium">
-                            <span className="bg-purple-100 text-purple-800 px-4 py-2 rounded-full flex items-center">
+                            <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full flex items-center">
                                 <Palette className="w-4 h-4 mr-2" />
-                                Homozigose de Pelagem
+                                Homozigoto Preto
                             </span>
-                            <span className="bg-red-200text-red-800 px-4 py-2 rounded-full flex items-center">
+                            <span className="bg-red-100 text-red-800 px-4 py-2 rounded-full flex items-center">
                                 <Beef className="w-4 h-4 mr-2" />
-                                Maciez da Carne
+                                Homozigoto Vermelho
                             </span>
-                            <span className="bg-pink-100 text-pink-800 px-4 py-2 rounded-full flex items-center">
+                            <span className="bg-amber-100 text-amber-800 px-4 py-2 rounded-full flex items-center">
                                 <Heart className="w-4 h-4 mr-2" />
-                                IATF Assistida
+                                100% Mocho
                             </span>
                         </div>
                     </motion.div>
@@ -127,7 +130,7 @@ const SelosQualidadePage = () => {
                             Nossos <span className="text-amber-800">Três Selos</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Cada selo representa anos de pesquisa e desenvolvimento, garantindo características específicas
+                            Cada selo representa anos de pesquisa e desenvolvimento, garantindo características específicas de pelagem e ausência de chifres
                         </p>
                     </motion.div>
 
@@ -172,28 +175,29 @@ const SelosQualidadePage = () => {
                                         </div>
                                     </div>
 
-                                    {/* Visual Card */}
+                                    {/* Visual Card com Imagem Real do Selo */}
                                     <div className={isEven ? 'lg:col-start-2' : ''}>
-                                        <div className={`${selo.color === 'from-purple-600 to-purple-800' ? 'bg-purple-800' : selo.color === 'from-red-600 to-red-800' ? 'bg-red-800' : 'bg-pink-800'} rounded-2xl p-8 text-white relative overflow-hidden`}>
-                                            <div className="absolute top-0 right-0 w-32 h-32 bg-white bg-opacity-10 rounded-full transform translate-x-8 -translate-y-8"></div>
-                                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-white bg-opacity-5 rounded-full transform -translate-x-4 translate-y-4"></div>
+                                        <div className="bg-white rounded-2xl p-8 shadow-xl relative overflow-hidden border-2 border-gray-200">
+                                            <div className="absolute top-0 right-0 w-32 h-32 bg-gradient-to-br from-gray-100 to-gray-200 rounded-full transform translate-x-8 -translate-y-8 opacity-30"></div>
+                                            <div className="absolute bottom-0 left-0 w-24 h-24 bg-gradient-to-tr from-gray-100 to-gray-200 rounded-full transform -translate-x-4 translate-y-4 opacity-30"></div>
 
-                                            <div className="relative z-10">
-                                                <div className="flex items-center mb-6">
-                                                    <div className="w-12 h-12 bg-white bg-opacity-20 rounded-lg flex items-center justify-center mr-4">
-                                                        <IconComponent className="w-6 h-6 text-white" />
-                                                    </div>
-                                                    <div className="text-2xl font-bold">Selo Oficial</div>
+                                            <div className="relative z-10 text-center">
+                                                <div className="mb-6">
+                                                    <img
+                                                        src={selo.image}
+                                                        alt={`Selo ${selo.title}`}
+                                                        className="w-32 h-32 mx-auto object-contain drop-shadow-lg"
+                                                    />
                                                 </div>
 
-                                                <h4 className="text-xl font-bold mb-4">{selo.title.replace('Selo de ', '')}</h4>
-                                                <p className="text-white text-opacity-90 mb-6">
-                                                    Certificado pela Cort Genética Brasil através de análise genética rigorosa.
+                                                <h4 className="text-2xl font-bold text-gray-900 mb-4">{selo.title}</h4>
+                                                <p className="text-gray-600 mb-6 leading-relaxed">
+                                                    Certificado oficial pela Cort Genética Brasil através de análise genética rigorosa e validação científica.
                                                 </p>
 
-                                                <div className="bg-white bg-opacity-20 rounded-lg p-4">
-                                                    <div className="text-sm font-medium mb-1">Garantia de Qualidade</div>
-                                                    <div className="text-2xl font-bold">100%</div>
+                                                <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 border border-gray-200">
+                                                    <div className="text-sm font-medium text-gray-700 mb-1">Garantia de Qualidade</div>
+                                                    <div className="text-3xl font-bold text-gray-900">100%</div>
                                                 </div>
                                             </div>
                                         </div>
@@ -219,7 +223,7 @@ const SelosQualidadePage = () => {
                             Vantagens dos <span className="text-amber-800">Selos de Qualidade</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Benefícios práticos que os selos oferecem para produtores e consumidores
+                            Benefícios práticos que os selos de homozigose e mocho oferecem para produtores e consumidores
                         </p>
                     </motion.div>
 

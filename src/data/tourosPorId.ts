@@ -362,7 +362,7 @@ export const tourosPorId = {
     nome: "MAX",
     raca: "Hereford",
     categoria: "corte",
-    imagem: "/touros_organizados/catalogo2/177.png",
+    imagem: "/catalogo2/MAX.jpg",
     catalogo: "catalogo2",
     temImagem: true,
     selos: [], // Adicionar selos conforme disponível
@@ -379,7 +379,7 @@ export const tourosPorId = {
     nome: "MAMÃO",
     raca: "Nelore",
     categoria: "corte",
-    imagem: "/touros_organizados/catalogo2/178.png",
+    imagem: "/catalogo2/MAMAO.jpg",
     catalogo: "catalogo2",
     temImagem: true,
     selos: [], // Adicionar selos conforme disponível
