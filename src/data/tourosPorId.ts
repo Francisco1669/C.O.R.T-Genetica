@@ -8,7 +8,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/146.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Brangus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -25,7 +25,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/154.png",
     catalogo: "catalogo1",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -42,7 +42,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/156.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -59,7 +59,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/157.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -76,7 +76,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/160.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -93,7 +93,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/161.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Hereford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -110,7 +110,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/162.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Brahman de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -127,7 +127,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/163.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -144,7 +144,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/164.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -161,7 +161,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/165.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -178,7 +178,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/166.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -195,7 +195,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/167.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -212,7 +212,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/168.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Brangus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -229,7 +229,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/169.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Brahman de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -246,7 +246,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/170.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -263,7 +263,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/171.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Hereford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -280,7 +280,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/172.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -297,7 +297,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/173.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -314,7 +314,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/174.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -331,7 +331,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/175.png",
     catalogo: "catalogo1",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -348,7 +348,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/176.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Este touro está fora de estoque no momento.",
     caracteristicas: [
@@ -365,7 +365,7 @@ export const tourosPorId = {
     imagem: "/catalogo2/MAX.jpg",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Hereford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -382,7 +382,7 @@ export const tourosPorId = {
     imagem: "/catalogo2/MAMAO.jpg",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -399,7 +399,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/179.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Brahman de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -416,7 +416,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/180.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -433,7 +433,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/181.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -450,7 +450,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/182.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -467,7 +467,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/183.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Hereford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -484,7 +484,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/184.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -501,7 +501,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/185.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -518,7 +518,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/186.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -535,7 +535,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/187.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -552,7 +552,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/188.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -569,7 +569,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/189.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -586,7 +586,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/190.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Hereford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -603,7 +603,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/191.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -620,7 +620,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/192.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -637,7 +637,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/193.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -654,7 +654,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/194.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -671,7 +671,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/195.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -688,7 +688,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/196.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Brahman de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -705,7 +705,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/197.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -722,7 +722,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/198.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Hereford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -739,7 +739,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/199.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -756,7 +756,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/200.png",
     catalogo: "catalogo1",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -773,7 +773,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/201.png",
     catalogo: "catalogo2",
     temImagem: false,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -790,7 +790,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/217.png",
     catalogo: "catalogo1",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -798,6 +798,17 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  230: {
+    id: 230,
+    nome: "Paiol",
+    raca: "Red Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/paiol.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Red Brangus de alta quality",
   },
   239: {
     id: 239,
@@ -807,7 +818,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/239.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -815,6 +826,92 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  245: {
+    id: 245,
+    nome: "Champi",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/champi.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  247: {
+    id: 247,
+    nome: "Ébano",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/ebano.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+  },
+  248: {
+    id: 248,
+    nome: "Lucky",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/lucky.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  250: {
+    id: 250,
+    nome: "Nico",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/nico.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  259: {
+    id: 259,
+    nome: "Ninja",
+    raca: "Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/ninja.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  260: {
+    id: 260,
+    nome: "Bagual",
+    raca: "Red Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/bagual.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Red Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
   264: {
     id: 264,
@@ -824,7 +921,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/264.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -832,6 +929,18 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  278: {
+    id: 278,
+    nome: "Moreno",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/moreno.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
   287: {
     id: 287,
@@ -841,7 +950,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/287.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -858,8 +967,72 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/301.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Guzera de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  304: {
+    id: 304,
+    nome: "Atalho - 3/4",
+    raca: "Red Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/atalho34.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Red Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  307: {
+    id: 307,
+    nome: "Soberano",
+    raca: "Polled Hereford",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/soberano.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Polled Hereford de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  315: {
+    id: 315,
+    nome: "Repecho",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/repecho.png",
+
+    catalogo: "catalogo1",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  331: {
+    id: 331,
+    nome: "Pai de fogo",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/paidefogo.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
       "Genética superior",
@@ -875,7 +1048,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/314.png",
     catalogo: "catalogo1",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -883,6 +1056,46 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  327: {
+    id: 327,
+    nome: "Mano",
+    raca: "Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/mano.png",
+    catalogo: "catalogo1",
+    selos: [],
+    destaque: "Reprodutor Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  317: {
+    id: 317,
+    nome: "Taco",
+    raca: "Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/taco.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  333: {
+    id: 333,
+    nome: "Guapo",
+    raca: "Belted Galloway",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/guapo.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Belted Galloway de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
   339: {
     id: 339,
@@ -892,7 +1105,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/339.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Charolês Mocho de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -909,7 +1122,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/341.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore Mocho de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -926,7 +1139,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/344.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Jersey de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -934,6 +1147,76 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  345: {
+    id: 345,
+    nome: "Paulada",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/paulada.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  346: {
+    id: 346,
+    nome: "Taludo",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/taludo.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  348: {
+    id: 348,
+    nome: "Rancho",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/rancho.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  349: {
+    id: 349,
+    nome: "Marreta",
+    raca: "Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/marreta.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  351: {
+    id: 351,
+    nome: "Gaulês",
+    raca: "Belted Galloway",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/gaules.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Belted Galloway de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
   356: {
     id: 356,
@@ -943,7 +1226,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/356.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore Mocho de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -960,7 +1243,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/357.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore Mocho de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -977,7 +1260,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/358.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore Mocho de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -994,8 +1277,25 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/363.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Indubrasil de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  365: {
+    id: 365,
+    nome: "Silvestre",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/silvestre.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
       "Genética superior",
@@ -1011,7 +1311,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/368.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore Mocho de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1028,7 +1328,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/369.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Tabapuã de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1045,8 +1345,37 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/370.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  371: {
+    id: 371,
+    nome: "Almirante",
+    raca: "Polled Hereford",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/almirante.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Polled Hereford de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  373: {
+    id: 373,
+    nome: "Aragano",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/aragano.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
       "Genética superior",
@@ -1062,7 +1391,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/374.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Nelore Padrao de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1070,6 +1399,18 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  375: {
+    id: 375,
+    nome: "Floreio",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/floreio.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
   376: {
     id: 376,
@@ -1079,7 +1420,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/376.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1096,7 +1437,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/378.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1104,6 +1445,17 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  379: {
+    id: 379,
+    nome: "Manso",
+    raca: "Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/manso.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Angus de alta qualidade",
   },
   381: {
     id: 381,
@@ -1113,7 +1465,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/381.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1130,7 +1482,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo2/382.png",
     catalogo: "catalogo2",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Braford de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1138,6 +1490,18 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  384: {
+    id: 384,
+    nome: "Urucum",
+    raca: "Red Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/urucum.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Red Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
   385: {
     id: 385,
@@ -1147,7 +1511,7 @@ export const tourosPorId = {
     imagem: "/touros_organizados/catalogo1/385.png",
     catalogo: "catalogo1",
     temImagem: true,
-    selos: [], // Adicionar selos conforme disponível
+    selos: [],
     destaque: "Reprodutor Ultra Black de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
     caracteristicas: [
@@ -1155,5 +1519,97 @@ export const tourosPorId = {
       "Qualidade comprovada",
       "Adaptado ao Sul do Brasil",
     ],
+  },
+  401: {
+    id: 401,
+    nome: "Drex",
+    raca: "Red Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/drex.png ",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Nelore de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  405: {
+    id: 405,
+    nome: "Jumbo",
+    raca: "Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/jumbo.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Nelore de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  406: {
+    id: 406,
+    nome: "MAMÃO",
+    raca: "Nelore",
+    categoria: "corte",
+    imagem: "/catalogo2/MAMAO.jpg",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Nelore de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  407: {
+    id: 407,
+    nome: "Malagueta",
+    raca: "Red Brangus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/malagueta.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Red Brangus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+  },
+  408: {
+    id: 408,
+    nome: "Matrero",
+    raca: "Red Angus",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/matrero.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Red Angus de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
+  409: {
+    id: 409,
+    nome: "MAX",
+    raca: "Polled Hereford",
+    categoria: "corte",
+    imagem: "pdf_atualizado_2025/max.png",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Polled Hereford de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
   },
 };
