@@ -9,7 +9,7 @@ const VideoSection = () => {
         {
             icon: Award,
             title: 'Excelência Genética',
-            description: 'Mais de 25 anos de experiência em melhoramento genético bovino, com resultados comprovados em todo o Brasil.'
+            description: 'Mais de 35 anos de experiência em melhoramento genético bovino, com resultados comprovados em todo o Brasil.'
         },
         {
             icon: Target,
@@ -86,7 +86,7 @@ const VideoSection = () => {
                                 Tradição e <span className="text-red-800">Inovação</span>
                             </h3>
                             <p className="text-lg text-gray-600 leading-relaxed mb-6">
-                                Há mais de 25 anos no mercado, a CORT Genética Brasil é referência nacional em
+                                Há mais de 35 anos no mercado, a CORT Genética Brasil é referência nacional em
                                 melhoramento genético bovino, combinando expertise tradicional com as mais
                                 avançadas tecnologias do setor.
                             </p>

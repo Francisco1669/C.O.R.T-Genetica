@@ -4,6 +4,7 @@ import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Award, ArrowRight } from 'lucide-react';
+import { tourosPorId } from '@/data/tourosPorId';
 
 // Tipagem para os touros destacados
 interface FeaturedBull {
@@ -16,63 +17,39 @@ interface FeaturedBull {
     destaque: string;
 }
 
-// Base de dados simples dos touros destacados
-const featuredBulls: FeaturedBull[] = [
-    {
-        id: 'dynamo',
-        nome: 'Dynamo',
-        raca: 'Angus',
-        categoria: 'corte',
-        imagem: '/stories/angus/dynamo0.jpg',
-        selos: ['homozigoto_preto', 'maciez'],
-        destaque: 'Linhagem superior Angus'
-    },
-    {
-        id: 'milionario',
-        nome: 'Milionário',
-        raca: 'Braford',
-        categoria: 'corte',
-        imagem: '/stories/braford/milionario.jpg',
-        selos: ['homozigoto_vermelho', 'iatf'],
-        destaque: 'Cruzamento de elite'
-    },
-    {
-        id: 'nostradamus',
-        nome: 'Nostradamus',
-        raca: 'Red Angus',
-        categoria: 'corte',
-        imagem: '/stories/red_angus/nostradamus.jpg',
-        selos: ['homozigoto_vermelho', 'maciez', 'iatf'],
-        destaque: 'Genética excepcional'
-    },
-    {
-        id: 'tornado',
-        nome: 'Tornado',
-        raca: 'Brangus',
-        categoria: 'corte',
-        imagem: '/stories/brangus/tornado.jpg',
-        selos: ['homozigoto_preto', 'maciez', 'iatf'],
-        destaque: 'Força e adaptabilidade'
-    },
-    {
-        id: 'fogonazo',
-        nome: 'Fogonazo',
-        raca: 'Angus',
-        categoria: 'corte',
-        imagem: '/stories/angus/fogonazo0.jpg',
-        selos: ['homozigoto_preto', 'maciez'],
-        destaque: 'Tradição e qualidade'
-    },
-    {
-        id: 'marlim',
-        nome: 'Marlim',
-        raca: 'Brahman',
-        categoria: 'corte',
-        imagem: '/stories/brahman/marlim.jpg',
-        selos: ['iatf'],
-        destaque: 'Adaptação tropical'
+// Constrói os touros em destaque dinamicamente a partir dos que estão em /saldo
+const featuredBulls: FeaturedBull[] = (() => {
+    const allSaldo = Object.values(tourosPorId)
+        .filter((t: any) => typeof t.imagem === 'string' && t.imagem.startsWith('/saldo/'))
+        // ordena por id asc para previsibilidade
+        .sort((a: any, b: any) => (a.id || 0) - (b.id || 0));
+
+    const seenRacas = new Set<string>();
+    const firstPass: any[] = [];
+    const leftovers: any[] = [];
+
+    for (const t of allSaldo) {
+        const raca = String(t.raca || '').trim();
+        if (raca && !seenRacas.has(raca)) {
+            seenRacas.add(raca);
+            firstPass.push(t);
+        } else {
+            leftovers.push(t);
+        }
     }
-];
+
+    const selected = [...firstPass, ...leftovers].slice(0, 6);
+
+    return selected.map((t: any) => ({
+        id: String(t.id),
+        nome: t.nome,
+        raca: t.raca,
+        categoria: t.categoria,
+        imagem: t.imagem,
+        selos: Array.isArray(t.selos) ? t.selos : [],
+        destaque: t.destaque || ''
+    }));
+})();
 
 const selosInfo = {
     pelagem: { nome: 'Homozigose de Pelagem', color: 'bg-purple-100 text-purple-800' },

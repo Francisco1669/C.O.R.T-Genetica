@@ -6,119 +6,51 @@ import Link from 'next/link';
 import { Award, ArrowLeft, Phone, Mail } from 'lucide-react';
 import { notFound } from 'next/navigation';
 import { use } from 'react';
+import { tourosPorId } from '@/data/tourosPorId';
+
+// Normaliza URLs do YouTube para formato embed (evita bloqueio em iframes)
+function getYouTubeEmbedUrl(url?: string): string | undefined {
+    if (!url) return undefined;
+    try {
+        const original = new URL(url);
+        // Já é embed
+        if (original.pathname.startsWith('/embed/')) {
+            return `https://www.youtube-nocookie.com${original.pathname}${original.search}`;
+        }
+        let videoId = '';
+        if (original.hostname.includes('youtu.be')) {
+            videoId = original.pathname.replace('/', '');
+        } else if (original.hostname.includes('youtube.com')) {
+            const v = original.searchParams.get('v');
+            if (v) videoId = v;
+        }
+        if (videoId) {
+            const params = new URLSearchParams({ rel: '0', modestbranding: '1' });
+            return `https://www.youtube-nocookie.com/embed/${videoId}?${params.toString()}`;
+        }
+        return url;
+    } catch {
+        return url;
+    }
+}
 
 // Tipagem para os touros
 interface Bull {
-    id: string;
+    id: number;
     nome: string;
     raca: string;
     categoria: 'corte' | 'leite';
     imagem: string;
+    catalogo: string;
+    temImagem: boolean;
     selos: string[];
     destaque: string;
     descricao?: string;
     caracteristicas?: string[];
+    videoUrl?: string;
 }
 
-// Base de dados dos touros
-const bulls: Bull[] = [
-    {
-        id: 'dynamo',
-        nome: 'Dynamo',
-        raca: 'Angus',
-        categoria: 'corte',
-        imagem: '/stories/angus/dynamo0.jpg',
-        selos: ['homozigoto_preto', 'maciez'],
-        destaque: 'Linhagem superior Angus',
-        descricao: 'Reprodutor Angus voltado para cortes de alta qualidade, com excelente desempenho e valorização no mercado de carne premium.',
-        caracteristicas: [
-            'Carne macia e marmorizada',
-            'Alta eficiência alimentar',
-            'Facilidade de adaptação ao Sul do Brasil',
-            'Precocidade reprodutiva'
-        ]
-    },
-    {
-        id: 'milionario',
-        nome: 'Milionário',
-        raca: 'Braford',
-        categoria: 'corte',
-        imagem: '/stories/braford/milionario.jpg',
-        selos: ['homozigoto_vermelho', 'iatf'],
-        destaque: 'Cruzamento de elite',
-        descricao: 'Reprodutor Braford que une rusticidade e qualidade de carne, ideal para cruzamentos em sistemas de corte no Sul do Brasil.',
-        caracteristicas: [
-            'Rusticidade e resistência',
-            'Bom desempenho em cruzamentos',
-            'Adaptado a pastagens naturais',
-            'Produção de carne com bom rendimento'
-        ]
-    },
-    {
-        id: 'nostradamus',
-        nome: 'Nostradamus',
-        raca: 'Red Angus',
-        categoria: 'corte',
-        imagem: '/stories/red_angus/nostradamus.jpg',
-        selos: ['homozigoto_vermelho', 'maciez', 'iatf'],
-        destaque: 'Genética excepcional',
-        descricao: 'Reprodutor Red Angus com excelente qualidade genética, mantendo as características do Angus com foco em rusticidade e fertilidade.',
-        caracteristicas: [
-            'Carne de alta maciez',
-            'Ótimo desempenho em sistemas de pasto',
-            'Fertilidade elevada',
-            'Adaptabilidade ao clima do Sul do Brasil'
-        ]
-    },
-    {
-        id: 'tornado',
-        nome: 'Tornado',
-        raca: 'Brangus',
-        categoria: 'corte',
-        imagem: '/stories/brangus/tornado.jpg',
-        selos: ['homozigoto_preto', 'maciez', 'iatf'],
-        destaque: 'Força e adaptabilidade',
-        descricao: 'Reprodutor Brangus que combina o melhor do Brahman e do Angus, garantindo rusticidade com qualidade de carne.',
-        caracteristicas: [
-            'Alta adaptabilidade climática',
-            'Boa conversão alimentar',
-            'Carne de qualidade superior',
-            'Resistência e rusticidade'
-        ]
-    },
-    {
-        id: 'fogonazo',
-        nome: 'Fogonazo',
-        raca: 'Angus',
-        categoria: 'corte',
-        imagem: '/stories/angus/fogonazo0.jpg',
-        selos: ['homozigoto_preto', 'maciez'],
-        destaque: 'Tradição e qualidade',
-        descricao: 'Angus de destaque, referência em qualidade de carne e performance, voltado para produtores que buscam tradição e confiança.',
-        caracteristicas: [
-            'Carne marmorizada e valorizada',
-            'Alta taxa de prenhez em IATF',
-            'Precocidade sexual e de acabamento',
-            'Excelente desempenho a pasto'
-        ]
-    },
-    {
-        id: 'marlim',
-        nome: 'Marlim',
-        raca: 'Brahman',
-        categoria: 'corte',
-        imagem: '/stories/brahman/marlim.jpg',
-        selos: ['iatf'],
-        destaque: 'Adaptação tropical',
-        descricao: 'Reprodutor Brahman com excelente adaptação ao clima tropical brasileiro, oferecendo rusticidade e resistência para sistemas extensivos.',
-        caracteristicas: [
-            'Máxima adaptação tropical',
-            'Resistência a doenças',
-            'Tolerância ao calor',
-            'Eficiência em pastagens'
-        ]
-    }
-];
+type BullData = Bull;
 
 
 const selosInfo = {
@@ -129,15 +61,14 @@ const selosInfo = {
     iatf: { nome: 'IATF Assistida', color: 'bg-pink-100 text-pink-800' }
 };
 
-interface PageProps {
-    params: Promise<{
-        id: string;
-    }>;
+interface PageParams {
+    id: string;
 }
 
-export default function BullDetailPage({ params }: PageProps) {
+export default function BullDetailPage({ params }: { params: Promise<PageParams> }) {
     const { id } = use(params);
-    const bull = bulls.find(b => b.id === id);
+    const bullId = parseInt(id);
+    const bull = tourosPorId[bullId as keyof typeof tourosPorId] as BullData;
 
     if (!bull) {
         notFound();
@@ -240,11 +171,26 @@ export default function BullDetailPage({ params }: PageProps) {
                                         </>
                                     )}
 
+                                    {bull.videoUrl && (
+                                        <div className="mb-10">
+                                            <h3 className="text-2xl font-bold text-gray-900 mb-4">Vídeo</h3>
+                                            <div className="aspect-video w-full rounded-xl overflow-hidden shadow">
+                                                <iframe
+                                                    src={getYouTubeEmbedUrl(bull.videoUrl)}
+                                                    title={`Vídeo do touro ${bull.nome}`}
+                                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                                                    allowFullScreen
+                                                    className="w-full h-full"
+                                                />
+                                            </div>
+                                        </div>
+                                    )}
+
                                     {bull.caracteristicas && bull.caracteristicas.length > 0 && (
                                         <>
                                             <h3 className="text-2xl font-bold text-gray-900 mb-4">Características</h3>
                                             <ul className="space-y-3">
-                                                {bull.caracteristicas.map((caracteristica, index) => (
+                                                {bull.caracteristicas.map((caracteristica: string, index: number) => (
                                                     <li key={index} className="flex items-start">
                                                         <div className="w-2 h-2 bg-red-600 rounded-full mt-2 mr-3 flex-shrink-0" />
                                                         <span className="text-gray-700">{caracteristica}</span>
@@ -313,7 +259,7 @@ export default function BullDetailPage({ params }: PageProps) {
                     </motion.div>
 
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-                        {bulls
+                        {Object.values(tourosPorId)
                             .filter(b => b.id !== bull.id)
                             .slice(0, 3)
                             .map((otherBull, index) => (
