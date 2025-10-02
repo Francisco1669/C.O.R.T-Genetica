@@ -70,7 +70,7 @@ const HeroSection = () => {
                         className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
                     >
                         <Link
-                            href="/catalogo-touros"
+                            href="/catalogo"
                             className="btn-primary text-lg px-8 py-4 inline-block hover:scale-105 transition-transform duration-200"
                         >
                             Ver Catálogo de Touros
