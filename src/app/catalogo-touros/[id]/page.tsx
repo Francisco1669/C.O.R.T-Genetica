@@ -284,7 +284,6 @@ export default function BullDetailPage({ params }: { params: Promise<PageParams>
                                             <div className="p-6">
                                                 <h3 className="text-xl font-bold text-gray-900 mb-2">{otherBull.nome}</h3>
                                                 <p className="text-gray-600 mb-2">{otherBull.raca}</p>
-                                                <p className="text-sm text-gray-500">{otherBull.destaque}</p>
                                             </div>
                                         </div>
                                     </Link>
