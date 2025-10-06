@@ -36,7 +36,7 @@ const HeroSection = () => {
                         className="inline-block"
                     >
                         <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-white/90 text-red-900 border border-white/50 mb-6 backdrop-blur-sm">
-                            Pioneira em Genética Bovina no Brasil
+                            Pioneira em genômica no Brasil - desde 1991
                         </span>
                     </motion.div>
 
@@ -48,7 +48,7 @@ const HeroSection = () => {
                         className="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 leading-tight drop-shadow-lg"
                     >
                         Excelência em <br />
-                        <span className="text-red-300 drop-shadow-lg">Genética Bovina</span>
+                        <span className="text-red-300 drop-shadow-lg">Genética Bovina e Ovina</span>
                     </motion.h1>
 
                     {/* Subtitle */}
@@ -58,8 +58,7 @@ const HeroSection = () => {
                         transition={{ duration: 0.8, delay: 0.4 }}
                         className="text-xl md:text-2xl text-white/90 mb-12 max-w-3xl mx-auto leading-relaxed drop-shadow-lg"
                     >
-                        Somos especialistas em melhoramento genético de bovinos,
-                        oferecendo as melhores soluções para seu rebanho
+                        Somos especialistas em melhoramento genético e reprodução de bovinos e ovinos, oferecendo as melhores soluções.
                     </motion.p>
 
                     {/* CTA Buttons */}
