@@ -9,7 +9,6 @@ import { notFound, useParams } from 'next/navigation';
 import { use } from 'react';
 import { tourosPorId } from '../../../../../../data/tourosPorId';
 
-// Tipagem para os touros
 interface Bull {
     id: number;
     nome: string;
@@ -51,20 +50,11 @@ export default function BullDetailPage({ params }: PageProps) {
         notFound();
     }
 
-    // Estado para controlar o modal de imagem expandida
     const [isImageModalOpen, setIsImageModalOpen] = useState(false);
-
-    // Verificar se é um touro fora de estoque baseado na descrição
     const isOutOfStock = bull.descricao && bull.descricao.includes("fora de estoque");
-
-    // Verificar se o touro tem imagem disponível
     const hasImage = bull.temImagem !== false;
-
-    // Funções para controlar o modal
     const openImageModal = () => setIsImageModalOpen(true);
     const closeImageModal = () => setIsImageModalOpen(false);
-
-    // Efeito para lidar com tecla ESC
     useEffect(() => {
         const handleKeyDown = (event: KeyboardEvent) => {
             if (event.key === 'Escape' && isImageModalOpen) {
@@ -133,7 +123,6 @@ export default function BullDetailPage({ params }: PageProps) {
                         </div>
                     </div>
                 ) : (
-                    // Mostrar imagem normal quando disponível
                     <div
                         className="cursor-pointer hover:opacity-90 transition-opacity"
                         onClick={openImageModal}
@@ -156,7 +145,7 @@ export default function BullDetailPage({ params }: PageProps) {
                 )}
 
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
 
                 {/* Botão voltar */}
                 <div className="absolute top-8 left-8 z-10">
@@ -170,7 +159,7 @@ export default function BullDetailPage({ params }: PageProps) {
                 </div>
 
                 {/* Conteúdo sobreposto */}
-                <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="absolute bottom-0 left-0 right-0 p-8 pointer-events-none">
                     <div className="container mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}

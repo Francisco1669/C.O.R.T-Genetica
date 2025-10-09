@@ -38,16 +38,13 @@ export default function CatalogoPage() {
     const [selectedRace, setSelectedRace] = useState('todas');
     const [selectedCategory, setSelectedCategory] = useState('todas');
 
-    // Converter tourosPorId para array e filtrar apenas os que têm imagens
     const allBulls = Object.values(tourosPorId).filter((bull: any) =>
         bull.temImagem !== false &&
         !bull.descricao?.includes("fora de estoque")
     );
 
-    // Obter raças únicas para o filtro
     const uniqueRaces = Array.from(new Set(allBulls.map((bull: any) => bull.raca))).sort();
 
-    // Filtrar touros baseado nos critérios
     const filteredBulls = allBulls.filter((bull: any) => {
         const matchesSearch = bull.nome.toLowerCase().includes(searchTerm.toLowerCase()) ||
             bull.raca.toLowerCase().includes(searchTerm.toLowerCase());
@@ -58,9 +55,6 @@ export default function CatalogoPage() {
     });
     return (
         <div className="min-h-screen bg-gray-50">
-
-
-            {/* Catálogo Completo */}
             <section className="py-20 bg-white">
                 <div className="container mx-auto px-4">
                     <motion.div
