@@ -192,7 +192,7 @@ const SelosQualidadePage = () => {
 
                                                 <h4 className="text-2xl font-bold text-gray-900 mb-4">{selo.title}</h4>
                                                 <p className="text-gray-600 mb-6 leading-relaxed">
-                                                    Certificado oficial pela Cort Genética Brasil através de análise genética rigorosa e validação científica.
+                                                    Certificado oficial pela C.O.R.T Genética Brasil através de análise genética rigorosa e validação científica.
                                                 </p>
 
                                                 <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-lg p-4 border border-gray-200">

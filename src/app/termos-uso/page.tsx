@@ -76,7 +76,7 @@ export default function TermosUsoPage() {
                         <div className="prose prose-lg max-w-none">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Aceitação dos Termos</h2>
                             <p className="text-gray-700 mb-6">
-                                Ao acessar e usar o site da Cort Genética Brasil (www.cortgeneticabrasil.com) e nossos
+                                Ao acessar e usar o site da C.O.R.T Genética Brasil (www.cortgeneticabrasil.com) e nossos
                                 serviços, você concorda em cumprir e estar sujeito aos seguintes termos e condições de uso.
                             </p>
                             <p className="text-gray-700 mb-8">
@@ -85,7 +85,7 @@ export default function TermosUsoPage() {
 
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">2. Informações da Empresa</h2>
                             <div className="bg-amber-50 border-l-4 border-earth-brown p-6 mb-8">
-                                <p className="text-gray-700 mb-2"><strong>Razão Social:</strong> Cort Genética Brasil Ltda.</p>
+                                <p className="text-gray-700 mb-2"><strong>Razão Social:</strong> C.O.R.T Genética Brasil Ltda.</p>
                                 <p className="text-gray-700 mb-2"><strong>CNPJ:</strong> XX.XXX.XXX/0001-XX</p>
                                 <p className="text-gray-700 mb-2"><strong>Endereço:</strong> BR 472 - KM 581, Uruguaiana - RS - Brasil</p>
                                 <p className="text-gray-700 mb-2"><strong>E-mail:</strong> atendimento@cortgeneticabrasil.com</p>
@@ -95,7 +95,7 @@ export default function TermosUsoPage() {
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">3. Definições</h2>
                             <ul className="list-disc pl-6 text-gray-700 mb-8">
                                 <li><strong>"Usuário":</strong> Qualquer pessoa que acesse ou utilize nossos serviços</li>
-                                <li><strong>"Serviços":</strong> Todos os produtos, serviços e funcionalidades oferecidas pela Cort Genética Brasil</li>
+                                <li><strong>"Serviços":</strong> Todos os produtos, serviços e funcionalidades oferecidas pela C.O.R.T Genética Brasil</li>
                                 <li><strong>"Conteúdo":</strong> Todas as informações, textos, imagens, vídeos e dados disponibilizados</li>
                                 <li><strong>"Conta":</strong> Registro do usuário em nossos sistemas</li>
                             </ul>
@@ -172,7 +172,7 @@ export default function TermosUsoPage() {
                                 <li>Bases de dados e informações genéticas</li>
                             </ul>
                             <p className="text-gray-700 mb-8">
-                                São de propriedade exclusiva da Cort Genética Brasil ou licenciados por terceiros,
+                                São de propriedade exclusiva da C.O.R.T Genética Brasil ou licenciados por terceiros,
                                 protegidos por leis de direitos autorais e propriedade intelectual.
                             </p>
 

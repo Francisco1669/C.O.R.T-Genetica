@@ -7,9 +7,9 @@ import { Palette, Beef, Heart, FlaskConical, Dna } from 'lucide-react';
 const PartnersSection = () => {
     const partners = [
         {
-            name: 'Cort Genética',
+            name: 'C.O.R.T Genética',
             logo: '/CORTlogo.png',
-            alt: 'Logo Cort Genética',
+            alt: 'Logo C.O.R.T Genética',
             website: 'https://cortgenetica.com.br'
         },
         {

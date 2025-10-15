@@ -16,10 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Cort Genética Brasil - Pioneira em Genética Bovina",
+  title: "C.O.R.T Genética Brasil - Pioneira em Genética Bovina",
   description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho. Localizada em Uruguaiana, RS.",
   keywords: "genética bovina, marcadores moleculares, teste TTR, selos qualidade, inseminação artificial, touros, gado de corte, gado leiteiro, Uruguaiana",
-  authors: [{ name: "Cort Genética Brasil" }],
+  authors: [{ name: "C.O.R.T Genética Brasil" }],
   robots: "index, follow",
 };
 

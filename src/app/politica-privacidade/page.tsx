@@ -76,7 +76,7 @@ export default function PoliticaPrivacidadePage() {
                         <div className="prose prose-lg max-w-none">
                             <h2 className="text-2xl font-bold text-gray-900 mb-6">1. Informações Gerais</h2>
                             <p className="text-gray-700 mb-6">
-                                A Cort Genética Brasil, inscrita no CNPJ XX.XXX.XXX/0001-XX, com sede na BR 472 - KM 581,
+                                A C.O.R.T Genética Brasil, inscrita no CNPJ XX.XXX.XXX/0001-XX, com sede na BR 472 - KM 581,
                                 Uruguaiana - RS - Brasil, está comprometida com a proteção da privacidade e dos dados pessoais
                                 de nossos clientes, parceiros e visitantes do site.
                             </p>

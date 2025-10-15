@@ -54,14 +54,14 @@ const Header = () => {
                         <div className="w-12 h-12 flex items-center justify-center">
                             <Image
                                 src="/CORTlogo.png"
-                                alt="Logo Cort Genética Brasil"
+                                alt="Logo C.O.R.T Genética Brasil"
                                 width={48}
                                 height={48}
                                 className="object-contain"
                             />
                         </div>
                         <div>
-                            <h1 className="text-xl font-bold text-gray-800">Cort Genética</h1>
+                            <h1 className="text-xl font-bold text-gray-800">C.O.R.T Genética</h1>
                             <p className="text-sm text-gray-600">Brasil</p>
                         </div>
                     </Link>

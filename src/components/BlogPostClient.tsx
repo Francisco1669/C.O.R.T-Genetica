@@ -242,7 +242,7 @@ const BlogPostClient = ({ post }: BlogPostClientProps) => {
                             Mantenha-se Atualizado
                         </h2>
                         <p className="text-red-100 mb-8">
-                            Receba as últimas novidades sobre genética bovina e inovações da Cort Genética Brasil.
+                            Receba as últimas novidades sobre genética bovina e inovações da C.O.R.T Genética Brasil.
                         </p>
                         <div className="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
                             <input

@@ -277,7 +277,7 @@ const TesteTTRPage = () => {
                             Nosso Diferencial Técnico
                         </h2>
                         <p className="text-xl text-green-100 mb-8 leading-relaxed">
-                            O Teste TTR da Cort Genética Brasil é único no mercado, desenvolvido
+                            O Teste TTR da C.O.R.T Genética Brasil é único no mercado, desenvolvido
                             após anos de pesquisa e correlação com resultados de campo.
                         </p>
 

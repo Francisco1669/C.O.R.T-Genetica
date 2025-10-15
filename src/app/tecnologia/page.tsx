@@ -180,7 +180,7 @@ const TecnologiaPage = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            O Diferencial da <span className="text-earth-brown">Cort Genética</span>
+                            O Diferencial da <span className="text-earth-brown">C.O.R.T Genética</span>
                         </h2>
                         <p className="text-xl text-gray-600 leading-relaxed mb-12">
                             Somos os únicos no Brasil a combinar essas três tecnologias de forma integrada,
@@ -237,7 +237,7 @@ const TecnologiaPage = () => {
                                 href="/catalogo-touros"
                                 className="bg-white text-earth-brown px-8 py-4 rounded-lg font-semibold hover:bg-gray-100 transition-colors duration-200 inline-flex items-center justify-center"
                             >
-                                Ver Catálogo de Touros
+                                Ver touros
                                 <ArrowRight className="w-5 h-5 ml-2" />
                             </Link>
                             <Link

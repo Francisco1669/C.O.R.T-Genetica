@@ -50,7 +50,7 @@ const SobrePage = () => {
                         className="max-w-4xl mx-auto text-center"
                     >
                         <h1 className="text-4xl md:text-6xl font-bold text-gray-900 mb-6">
-                            Sobre a <span className="text-earth-brown">Cort Genética</span>
+                            Sobre a <span className="text-earth-brown">C.O.R.T Genética</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
                             Pioneira em genética bovina no Brasil, combinando tradição, inovação e tecnologia
@@ -75,7 +75,7 @@ const SobrePage = () => {
                             </h2>
                             <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
                                 <p>
-                                    A Cort Genética Brasil nasceu da visão de revolucionar a pecuária nacional
+                                    A C.O.R.T Genética Brasil nasceu da visão de revolucionar a pecuária nacional
                                     através da genética de excelência. Fundada em Uruguaiana, RS, rapidamente
                                     se estabeleceu como referência no setor.
                                 </p>

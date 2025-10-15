@@ -3,9 +3,9 @@
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Award, ArrowLeft, Phone, Mail } from 'lucide-react';
+import { use, useState, useEffect } from 'react';
+import { Award, ArrowLeft, Phone, Mail, Eye, X } from 'lucide-react';
 import { notFound } from 'next/navigation';
-import { use } from 'react';
 import { tourosPorId } from '@/data/tourosPorId';
 
 // Normaliza URLs do YouTube para formato embed (evita bloqueio em iframes)
@@ -74,20 +74,54 @@ export default function BullDetailPage({ params }: { params: Promise<PageParams>
         notFound();
     }
 
+    const [isImageModalOpen, setIsImageModalOpen] = useState(false);
+    const openImageModal = () => setIsImageModalOpen(true);
+    const closeImageModal = () => setIsImageModalOpen(false);
+    useEffect(() => {
+        const handleKeyDown = (event: KeyboardEvent) => {
+            if (event.key === 'Escape' && isImageModalOpen) {
+                closeImageModal();
+            }
+        };
+
+        if (isImageModalOpen) {
+            document.addEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'hidden'; // Previne scroll da página
+        }
+
+        return () => {
+            document.removeEventListener('keydown', handleKeyDown);
+            document.body.style.overflow = 'unset'; // Restaura scroll da página
+        };
+    }, [isImageModalOpen]);
+
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section com imagem em tamanho completo */}
             <section className="relative h-[80vh] min-h-[600px] max-h-[800px]">
-                <Image
-                    src={bull.imagem}
-                    alt={`Touro ${bull.nome} da raça ${bull.raca}`}
-                    fill
-                    className="object-contain object-center"
-                    priority
-                />
+                <div
+                    className="cursor-pointer hover:opacity-90 transition-opacity"
+                    onClick={openImageModal}
+                    title="Clique para expandir a imagem"
+                >
+                    <Image
+                        src={bull.imagem}
+                        alt={`Touro ${bull.nome} da raça ${bull.raca}`}
+                        fill
+                        className="object-contain object-center"
+                        priority
+                    />
+                    {/* Overlay de clique */}
+                    <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors flex items-center justify-center">
+                        <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 hover:opacity-100 transition-opacity">
+                            <Eye className="w-6 h-6 text-gray-700" />
+                        </div>
+                    </div>
+                </div>
+
 
                 {/* Overlay gradient */}
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
 
                 {/* Botão voltar */}
                 <div className="absolute top-8 left-8 z-10">
@@ -101,7 +135,7 @@ export default function BullDetailPage({ params }: { params: Promise<PageParams>
                 </div>
 
                 {/* Conteúdo sobreposto */}
-                <div className="absolute bottom-0 left-0 right-0 p-8">
+                <div className="absolute bottom-0 left-0 right-0 p-8 pointer-events-none">
                     <div className="container mx-auto">
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
@@ -292,6 +326,68 @@ export default function BullDetailPage({ params }: { params: Promise<PageParams>
                     </div>
                 </div>
             </section>
+            
+            {/* Modal de imagem expandida */}
+            {isImageModalOpen && (
+                <motion.div
+                    initial={{ opacity: 0 }}
+                    animate={{ opacity: 1 }}
+                    exit={{ opacity: 0 }}
+                    className="fixed inset-0 z-50 flex items-center justify-center bg-black/90 backdrop-blur-sm"
+                    onClick={closeImageModal}
+                >
+                    {/* Botão fechar */}
+                    <button
+                        onClick={closeImageModal}
+                        className="absolute top-4 right-4 z-10 bg-white/10 hover:bg-white/20 backdrop-blur-sm rounded-full p-2 transition-colors"
+                    >
+                        <X className="w-6 h-6 text-white" />
+                    </button>
+
+                    {/* Container da imagem */}
+                    <div className="relative max-w-5xl max-h-screen p-4">
+                        <motion.div
+                            initial={{ scale: 0.8, opacity: 0 }}
+                            animate={{ scale: 1, opacity: 1 }}
+                            transition={{ duration: 0.3 }}
+                            className="relative"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <Image
+                                src={bull.imagem}
+                                alt={`Touro ${bull.nome} da raça ${bull.raca} - Expandida`}
+                                width={1200}
+                                height={800}
+                                className="object-contain max-w-full max-h-[90vh] rounded-lg shadow-2xl"
+                                priority
+                            />
+
+                            {/* Informações do touro no modal */}
+                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
+                                <div className="text-white">
+                                    <h2 className="text-2xl font-bold mb-2">{bull.nome}</h2>
+                                    <p className="text-lg text-gray-200 mb-1">{bull.raca}</p>
+                                    <div className="flex items-center gap-4 text-sm text-gray-300">
+                                        <span>ID: {bullId}</span>
+                                        <span>Catálogo: {bull.catalogo === 'catalogo1' ? 'Catálogo 1' : 'Catálogo 2'}</span>
+                                        <span className={`px-2 py-1 rounded-full text-xs font-semibold ${bull.categoria === 'corte'
+                                            ? 'bg-red-600 text-white'
+                                            : 'bg-blue-600 text-white'
+                                            }`}>
+                                            {bull.categoria.charAt(0).toUpperCase() + bull.categoria.slice(1)}
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                        </motion.div>
+                    </div>
+
+                    {/* Instruções para fechar */}
+                    <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-white/70 text-sm">
+                        Clique fora da imagem ou pressione ESC para fechar
+                    </div>
+                </motion.div>
+            )}
         </div>
     );
 }

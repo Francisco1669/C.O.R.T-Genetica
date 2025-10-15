@@ -72,7 +72,7 @@ const HeroSection = () => {
                             href="/catalogo"
                             className="btn-primary text-lg px-8 py-4 inline-block hover:scale-105 transition-transform duration-200"
                         >
-                            Ver Catálogo de Touros
+                            Ver touros
                         </Link>
                         <Link
                             href="/sobre"

@@ -25,9 +25,9 @@ Os marcadores moleculares são sequências de DNA que servem como "marcas" ou "s
 3. **Redução de Custos**: Menor necessidade de testes de progênie extensivos
 4. **Maior Confiabilidade**: Resultados baseados em análise genética direta
 
-## Aplicações na Cort Genética Brasil
+## Aplicações na C.O.R.T Genética Brasil
 
-Na Cort Genética Brasil, utilizamos marcadores moleculares em 100% dos nossos touros para:
+Na C.O.R.T Genética Brasil, utilizamos marcadores moleculares em 100% dos nossos touros para:
 
 ### 1. Maciez da Carne
 - Identificação dos genes CAPN1 e CAST
@@ -66,7 +66,7 @@ Nossos clientes têm relatado:
 
 ## Futuro da Genética Bovina
 
-A tecnologia de marcadores moleculares continua evoluindo, com novas descobertas sendo feitas constantemente. Na Cort Genética Brasil, estamos sempre na vanguarda dessas inovações.
+A tecnologia de marcadores moleculares continua evoluindo, com novas descobertas sendo feitas constantemente. Na C.O.R.T Genética Brasil, estamos sempre na vanguarda dessas inovações.
 
 ### Perspectivas:
 
@@ -79,7 +79,7 @@ A tecnologia de marcadores moleculares continua evoluindo, com novas descobertas
 
 Os marcadores moleculares são uma ferramenta fundamental para o futuro da pecuária brasileira. Com eles, conseguimos oferecer touros superiores, com características genéticas comprovadas e garantidas.
 
-A Cort Genética Brasil permanece comprometida com a inovação e a excelência, proporcionando aos nossos clientes acesso às mais avançadas tecnologias em genética bovina.
+A C.O.R.T Genética Brasil permanece comprometida com a inovação e a excelência, proporcionando aos nossos clientes acesso às mais avançadas tecnologias em genética bovina.
         `,
         author: 'Dr. Carlos Silva',
         date: '2024-01-15',
@@ -96,7 +96,7 @@ A Cort Genética Brasil permanece comprometida com a inovação e a excelência,
         content: `
 # Teste TTR: Garantindo a Qualidade do Sêmen Bovino
 
-O Teste de Termo Resistência Rápido (TTR) é uma metodologia exclusiva desenvolvida pela Cort Genética Brasil para garantir a máxima qualidade do sêmen bovino.
+O Teste de Termo Resistência Rápido (TTR) é uma metodologia exclusiva desenvolvida pela C.O.R.T Genética Brasil para garantir a máxima qualidade do sêmen bovino.
 
 ## O que é o Teste TTR?
 
@@ -123,7 +123,7 @@ Nossos estudos demonstram uma correlação de 85% entre os resultados do TTR e a
 - **Otimização do Tempo**: Melhor planejamento reprodutivo
 - **Maior Confiabilidade**: Resultados previsíveis
 
-## Protocolo Exclusivo da Cort Genética
+## Protocolo Exclusivo da C.O.R.T Genética
 
 Nosso protocolo TTR foi desenvolvido através de:
 
@@ -162,7 +162,7 @@ Fazendas que utilizam sêmen com certificação TTR relatam:
 
 ## Investimento em Pesquisa
 
-A Cort Genética Brasil investe continuamente no aprimoramento do TTR:
+A C.O.R.T Genética Brasil investe continuamente no aprimoramento do TTR:
 
 - **Laboratório de última geração**
 - **Equipamentos de alta precisão**
@@ -211,12 +211,12 @@ export async function generateMetadata({ params }: BlogPostPageProps) {
 
     if (!post) {
         return {
-            title: 'Post não encontrado - Cort Genética Brasil',
+            title: 'Post não encontrado - C.O.R.T Genética Brasil',
         };
     }
 
     return {
-        title: `${post.title} - Blog Cort Genética Brasil`,
+        title: `${post.title} - Blog C.O.R.T Genética Brasil`,
         description: post.excerpt,
         keywords: post.tags.join(', '),
         authors: [{ name: post.author }],

@@ -15,7 +15,7 @@ const Footer = () => {
                                 <span className="text-white font-bold">CG</span>
                             </div>
                             <div>
-                                <h3 className="text-lg font-bold text-white">Cort Genética</h3>
+                                <h3 className="text-lg font-bold text-white">C.O.R.T Genética</h3>
                                 <p className="text-sm text-gray-400">Brasil</p>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ const Footer = () => {
                 <div className="container mx-auto px-4 py-4">
                     <div className="flex flex-col md:flex-row justify-between items-center text-sm text-gray-400">
                         <p>
-                            © 2024 Cort Genética Brasil. Todos os direitos reservados.
+                            © 2024 C.O.R.T Genética Brasil. Todos os direitos reservados.
                         </p>
                         <div className="flex space-x-6 mt-2 md:mt-0">
                             <Link href="/politica-privacidade" className="hover:text-white transition-colors duration-200">

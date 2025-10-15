@@ -23,7 +23,7 @@ const blogPosts = [
         slug: 'teste-ttr-qualidade-semen',
         title: 'Teste TTR: Garantindo a Qualidade do Sêmen Bovino',
         excerpt: 'Entenda como o Teste de Termo Resistência Rápido garante a viabilidade e qualidade do sêmen antes da inseminação artificial.',
-        content: 'O Teste TTR é uma metodologia exclusiva desenvolvida pela Cort Genética...',
+        content: 'O Teste TTR é uma metodologia exclusiva desenvolvida pela C.O.R.T Genética...',
         author: 'Dra. Maria Santos',
         date: '2024-01-10',
         category: 'Tecnologia',
@@ -35,8 +35,8 @@ const blogPosts = [
         id: '3',
         slug: 'selos-qualidade-garantia-genetica',
         title: 'Selos de Qualidade: Sua Garantia Genética',
-        excerpt: 'Conheça os três selos de qualidade da Cort Genética e como eles garantem características específicas na sua criação.',
-        content: 'Os selos de qualidade da Cort Genética são certificações que garantem...',
+        excerpt: 'Conheça os três selos de qualidade da C.O.R.T Genética e como eles garantem características específicas na sua criação.',
+        content: 'Os selos de qualidade da C.O.R.T Genética são certificações que garantem...',
         author: 'Equipe Técnica',
         date: '2024-01-05',
         category: 'Qualidade',
@@ -100,7 +100,7 @@ export default function BlogPage() {
                         className="text-center"
                     >
                         <h1 className="text-4xl md:text-5xl font-bold text-white mb-6">
-                            Blog Cort Genética
+                            Blog C.O.R.T Genética
                         </h1>
                         <p className="text-xl text-green-100 mb-8 max-w-3xl mx-auto">
                             Acompanhe as últimas novidades em genética bovina, tecnologia e manejo.

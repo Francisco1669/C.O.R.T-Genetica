@@ -314,7 +314,7 @@ const ProdutosServicosPage = () => {
                             Ferramenta Saldo de Banco
                         </h2>
                         <p className="text-xl text-red-100 mb-8 leading-relaxed">
-                            Sistema exclusivo da Cort Genética para controle financeiro e gestão de créditos.
+                            Sistema exclusivo da C.O.R.T Genética para controle financeiro e gestão de créditos.
                             Acesse online a qualquer momento e tenha total controle sobre suas transações.
                         </p>
 
