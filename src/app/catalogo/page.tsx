@@ -40,6 +40,7 @@ export default function CatalogoPage() {
 
     const allBulls = Object.values(tourosPorId).filter((bull: any) =>
         bull.temImagem !== false &&
+        typeof bull.imagem === 'string' && bull.imagem.trim() !== '' &&
         !bull.descricao?.includes("fora de estoque")
     );
 
