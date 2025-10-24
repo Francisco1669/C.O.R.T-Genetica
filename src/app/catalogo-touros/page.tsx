@@ -82,11 +82,12 @@ const CatalogoTourosPage = () => {
         setIsDownloading(true);
         setDownloadProgress(0);
 
+        // Simula o tempo real de processamento de um arquivo de 68MB
         const steps = [
             { progress: 15, message: "Preparando download...", delay: 800 },
             { progress: 35, message: "Verificando arquivo...", delay: 1200 },
             { progress: 60, message: "Iniciando transferência...", delay: 1500 },
-            { progress: 85, message: "Processando (144MB)...", delay: 2000 },
+            { progress: 85, message: "Processando (68MB)...", delay: 2000 },
             { progress: 100, message: "Download iniciado!", delay: 500 }
         ];
 
@@ -95,24 +96,19 @@ const CatalogoTourosPage = () => {
                 setDownloadProgress(step.progress);
             }, step.delay);
         }
-
-        // Link direto do Google Drive
-        const link = document.createElement("a");
-        link.href = "https://drive.google.com/uc?export=download&id=1fu9yW84dAfp3QHORtS-yI2UL-r7j0RxD";
-        link.target = "_blank";
-        link.rel = "noopener noreferrer";
-        link.download = "Catalogo_CORT_2023.pdf";
-
+        const link = document.createElement('a');
+        link.href = '/Catalogo_CORT_2023.pdf';
+        link.download = 'Catalogo_CORT_2023.pdf';
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
 
+        // Reset após o download
         setTimeout(() => {
             setIsDownloading(false);
             setDownloadProgress(0);
         }, 1000);
     };
-
 
     return (
         <div className="min-h-screen bg-gray-50">

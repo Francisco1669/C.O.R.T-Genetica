@@ -1109,7 +1109,6 @@ export const tourosPorId = {
     destaque: "Reprodutor Braunvieh de alta qualidade",
     descricao: "Informações completas disponíveis em breve.",
   },
-
   301: {
     id: 301,
     nome: "JATOBA",

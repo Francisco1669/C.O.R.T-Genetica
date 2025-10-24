@@ -1,12 +1,11 @@
-'use client';
+''''use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { use, useState } from 'react';
-import { Award, Search } from 'lucide-react';
+import { useState } from 'react';
+import { Award, Home, AlertCircle, ArrowRight, Search, Filter } from 'lucide-react';
 import { tourosPorId } from '../../../data/tourosPorId';
-import { ArrowRight } from 'lucide-react';
 
 // Tipagem para os touros
 interface Bull {
@@ -34,23 +33,21 @@ const selosInfo = {
     qualidade_leite: { nome: 'Qualidade do Leite', color: 'bg-blue-100 text-blue-800' }
 };
 
-export default function RacaPage({ params }: { params: Promise<{ raca: string }> }) {
+export default function RacaPage({ params }: { params: { raca: string } }) {
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('todas');
 
-    const { raca } = use(params);
-    const decodedRace = decodeURIComponent(raca);
+    const decodedRace = decodeURIComponent(params.raca);
 
-    const bullsOfRace: Bull[] = (Object.values(tourosPorId) as Bull[]).filter(bull =>
-        bull &&
+    const bullsOfRace = Object.values(tourosPorId).filter((bull: any) =>
         bull.raca === decodedRace &&
         bull.temImagem !== false &&
         typeof bull.imagem === 'string' && bull.imagem.trim() !== '' &&
         !bull.descricao?.includes("fora de estoque")
     );
 
-    const filteredBulls = bullsOfRace.filter(bull => {
-        const matchesSearch = typeof bull.nome === 'string' && bull.nome.toLowerCase().includes(searchTerm.toLowerCase());
+    const filteredBulls = bullsOfRace.filter((bull: any) => {
+        const matchesSearch = bull.nome.toLowerCase().includes(searchTerm.toLowerCase());
         const matchesCategory = selectedCategory === 'todas' || bull.categoria === selectedCategory;
 
         return matchesSearch && matchesCategory;
@@ -75,6 +72,7 @@ export default function RacaPage({ params }: { params: Promise<{ raca: string }>
                         </p>
                     </motion.div>
 
+                    {/* Filtros */}
                     <motion.div
                         initial={{ opacity: 0, y: 20 }}
                         whileInView={{ opacity: 1, y: 0 }}
@@ -84,6 +82,7 @@ export default function RacaPage({ params }: { params: Promise<{ raca: string }>
                     >
                         <div className="bg-gray-50 rounded-2xl p-6 shadow-sm">
                             <div className="flex flex-col md:flex-row gap-4 items-center justify-between">
+                                {/* Barra de pesquisa */}
                                 <div className="relative flex-1 max-w-md">
                                     <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 w-5 h-5" />
                                     <input
@@ -95,6 +94,7 @@ export default function RacaPage({ params }: { params: Promise<{ raca: string }>
                                     />
                                 </div>
 
+                                {/* Filtro por categoria */}
                                 <select
                                     value={selectedCategory}
                                     onChange={(e) => setSelectedCategory(e.target.value)}
@@ -108,8 +108,9 @@ export default function RacaPage({ params }: { params: Promise<{ raca: string }>
                         </div>
                     </motion.div>
 
+                    {/* Grid de Touros Filtrados */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                        {filteredBulls.map((bull, index) => (
+                        {filteredBulls.map((bull: any, index: number) => (
                             <motion.div
                                 key={bull.id}
                                 initial={{ opacity: 0, y: 30 }}
@@ -213,3 +214,4 @@ export default function RacaPage({ params }: { params: Promise<{ raca: string }>
         </div>
     );
 }
+'''

@@ -6,6 +6,7 @@ import Link from 'next/link';
 import { Award, ArrowRight } from 'lucide-react';
 import { tourosPorId } from '@/data/tourosPorId';
 
+// Tipagem para os touros destacados
 interface FeaturedBull {
     id: string;
     nome: string;
@@ -16,21 +17,38 @@ interface FeaturedBull {
     destaque: string;
 }
 
+// Constrói os touros em destaque dinamicamente a partir dos que estão em /saldo
 const featuredBulls: FeaturedBull[] = (() => {
-    const featuredIds = [409, 410, 365, 408, 349, 407];
+    const allSaldo = Object.values(tourosPorId)
+        .filter((t: any) => typeof t.imagem === 'string' && t.imagem.startsWith('/saldo/'))
+        // ordena por id asc para previsibilidade
+        .sort((a: any, b: any) => (a.id || 0) - (b.id || 0));
 
-    return featuredIds
-        .map(id => tourosPorId[id as keyof typeof tourosPorId])
-        .filter(t => t)
-        .map((t: any) => ({
-            id: String(t.id),
-            nome: t.nome,
-            raca: t.raca,
-            categoria: t.categoria,
-            imagem: t.imagem,
-            selos: Array.isArray(t.selos) ? t.selos : [],
-            destaque: t.destaque || ''
-        }));
+    const seenRacas = new Set<string>();
+    const firstPass: any[] = [];
+    const leftovers: any[] = [];
+
+    for (const t of allSaldo) {
+        const raca = String(t.raca || '').trim();
+        if (raca && !seenRacas.has(raca)) {
+            seenRacas.add(raca);
+            firstPass.push(t);
+        } else {
+            leftovers.push(t);
+        }
+    }
+
+    const selected = [...firstPass, ...leftovers].slice(0, 6);
+
+    return selected.map((t: any) => ({
+        id: String(t.id),
+        nome: t.nome,
+        raca: t.raca,
+        categoria: t.categoria,
+        imagem: t.imagem,
+        selos: Array.isArray(t.selos) ? t.selos : [],
+        destaque: t.destaque || ''
+    }));
 })();
 
 const selosInfo = {
