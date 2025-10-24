@@ -1,9 +1,9 @@
-''''use client';
+'use client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
 import Link from 'next/link';
-import { useState } from 'react';
+import { use, useState } from 'react';
 import { Award, Home, AlertCircle, ArrowRight, Search, Filter } from 'lucide-react';
 import { tourosPorId } from '../../../data/tourosPorId';
 
@@ -33,11 +33,12 @@ const selosInfo = {
     qualidade_leite: { nome: 'Qualidade do Leite', color: 'bg-blue-100 text-blue-800' }
 };
 
-export default function RacaPage({ params }: { params: { raca: string } }) {
+export default function RacaPage({ params }: { params: Promise<{ raca: string }> }) {
+    const { raca } = use(params);
     const [searchTerm, setSearchTerm] = useState('');
     const [selectedCategory, setSelectedCategory] = useState('todas');
 
-    const decodedRace = decodeURIComponent(params.raca);
+    const decodedRace = decodeURIComponent(raca);
 
     const bullsOfRace = Object.values(tourosPorId).filter((bull: any) =>
         bull.raca === decodedRace &&
@@ -214,4 +215,3 @@ export default function RacaPage({ params }: { params: { raca: string } }) {
         </div>
     );
 }
-'''

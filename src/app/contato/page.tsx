@@ -167,7 +167,7 @@ export default function ContatoPage() {
                                         <h3 className="font-semibold mb-2">Horário de Funcionamento</h3>
                                         <p className="text-gray-600">
                                             Segunda a Sexta: 8h às 18h<br />
-                                            Sábado: 8h às 12h<br />
+                                            Sábado: Fechado<br />
                                             Domingo: Fechado
                                         </p>
                                         <p className="text-sm text-earth-brown mt-2">
