@@ -361,24 +361,6 @@ export default function BullDetailPage({ params }: { params: Promise<PageParams>
                                 className="object-contain max-w-full max-h-[90vh] rounded-lg shadow-2xl"
                                 priority
                             />
-
-                            {/* Informações do touro no modal */}
-                            <div className="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black/80 to-transparent p-6 rounded-b-lg">
-                                <div className="text-white">
-                                    <h2 className="text-2xl font-bold mb-2">{bull.nome}</h2>
-                                    <p className="text-lg text-gray-200 mb-1">{bull.raca}</p>
-                                    <div className="flex items-center gap-4 text-sm text-gray-300">
-                                        <span>ID: {bullId}</span>
-                                        <span>Catálogo: {bull.catalogo === 'catalogo1' ? 'Catálogo 1' : 'Catálogo 2'}</span>
-                                        <span className={`px-2 py-1 rounded-full text-xs font-semibold ${bull.categoria === 'corte'
-                                            ? 'bg-red-600 text-white'
-                                            : 'bg-blue-600 text-white'
-                                            }`}>
-                                            {bull.categoria.charAt(0).toUpperCase() + bull.categoria.slice(1)}
-                                        </span>
-                                    </div>
-                                </div>
-                            </div>
                         </motion.div>
                     </div>
 
