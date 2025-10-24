@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { Award, ArrowRight } from 'lucide-react';
 import { tourosPorId } from '@/data/tourosPorId';
 
-// Tipagem para os touros destacados
 interface FeaturedBull {
     id: string;
     nome: string;
@@ -17,11 +16,9 @@ interface FeaturedBull {
     destaque: string;
 }
 
-// Constrói os touros em destaque dinamicamente a partir dos que estão em /saldo
 const featuredBulls: FeaturedBull[] = (() => {
     const allSaldo = Object.values(tourosPorId)
         .filter((t: any) => typeof t.imagem === 'string' && t.imagem.startsWith('/saldo/'))
-        // ordena por id asc para previsibilidade
         .sort((a: any, b: any) => (a.id || 0) - (b.id || 0));
 
     const seenRacas = new Set<string>();

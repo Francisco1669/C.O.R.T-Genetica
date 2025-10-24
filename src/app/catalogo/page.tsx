@@ -49,29 +49,34 @@ const representativeBullNames: { [key: string]: string } = {
 };
 
 export default function CatalogoRacasPage() {
-    const allBulls = Object.values(tourosPorId).filter((bull: any) =>
+    const allBulls: Bull[] = (Object.values(tourosPorId) as Bull[]).filter(bull =>
+        bull &&
         bull.temImagem !== false &&
         typeof bull.imagem === 'string' && bull.imagem.trim() !== '' &&
         !bull.descricao?.includes("fora de estoque")
     );
 
-    const uniqueRaces = Array.from(new Set(allBulls.map((bull: any) => bull.raca))).sort();
+    const uniqueRaces: string[] = Array.from(new Set(allBulls.map(bull => bull.raca))).sort();
 
     const representativeBulls = uniqueRaces.map(race => {
         const representativeName = representativeBullNames[race];
-        let bullForRace = null;
+        let bullForRace: Bull | undefined = undefined;
 
         if (representativeName) {
-            bullForRace = allBulls.find((bull: any) => bull.nome.toUpperCase() === representativeName.toUpperCase() && bull.raca === race);
+            bullForRace = allBulls.find(bull =>
+                typeof bull.nome === 'string' &&
+                bull.nome.toUpperCase() === representativeName.toUpperCase() &&
+                bull.raca === race
+            );
         }
 
         if (!bullForRace) {
-            bullForRace = allBulls.find((bull: any) => bull.raca === race);
+            bullForRace = allBulls.find(bull => bull.raca === race);
         }
 
         return {
             raca: race,
-            imagem: bullForRace ? bullForRace.imagem : '/public/CORT_GenéticaBrasil_logotipo.png', // Imagem padrão
+            imagem: bullForRace ? bullForRace.imagem : '/public/CORT_GenéticaBrasil_logotipo.png',
             nome: bullForRace ? bullForRace.nome : 'Touro Representante',
         };
     });
@@ -95,7 +100,6 @@ export default function CatalogoRacasPage() {
                         </p>
                     </motion.div>
 
-                    {/* Grid de Raças */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
                         {representativeBulls.map((bull, index) => (
                             <motion.div

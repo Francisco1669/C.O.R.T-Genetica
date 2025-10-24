@@ -111,7 +111,7 @@ const SobrePage = () => {
                                 </div>
                                 <div className="grid grid-cols-2 gap-4 text-center mt-6">
                                     <div>
-                                        <div className="text-3xl font-bold">30</div>
+                                        <div className="text-3xl font-bold">+30</div>
                                         <div className="text-green-100">Anos de Experiência</div>
                                     </div>
                                     <div>

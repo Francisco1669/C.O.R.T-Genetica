@@ -13,6 +13,8 @@
 # pdf
 /public/Catalogo_CORT_2023.pdf
 /public/stories
+public/Catalogo_CORT_2023.pdf
+.public/Catalogo_CORT_2023.pdf
 
 # testing
 /coverage
