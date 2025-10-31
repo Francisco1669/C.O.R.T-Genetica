@@ -10,7 +10,8 @@ const PartnersSection = () => {
             name: 'C.O.R.T Genética',
             logo: '/CORTlogo.png',
             alt: 'Logo C.O.R.T Genética',
-            website: 'https://cortgenetica.com.br'
+            website: 'https://cortgenetica.com.br',
+            customScale: 1.65
         },
         {
             name: 'Banco do Brasil',
@@ -22,13 +23,15 @@ const PartnersSection = () => {
             name: 'Sicredi',
             logo: '/sicredilogo.png',
             alt: 'Logo Sicredi',
-            website: 'https://www.sicredi.com.br/home'
+            website: 'https://www.sicredi.com.br/home',
+            customScale: 1.7
         },
         {
             name: 'MSD Saúde Animal',
             logo: '/mdslogo.jpeg',
             alt: 'Logo MSD Saúde Animal',
-            website: 'https://www.msd-saude-animal.com.br'
+            website: 'https://www.msd-saude-animal.com.br',
+            customScale: 1.65
         },
         {
             name: 'Tecnoforte',
@@ -142,7 +145,7 @@ const PartnersSection = () => {
                         },
                     }}
                     className="flex items-center gap-16"
-                    style={{ width: `${duplicatedPartners.length * 200}px` }}
+                    style={{ width: `${duplicatedPartners.length * 320}px` }}
                 >
                     {duplicatedPartners.map((partner, index) => (
                         <div
@@ -166,7 +169,8 @@ const PartnersSection = () => {
                                         width: 'auto',
                                         height: 'auto',
                                         maxWidth: '100%',
-                                        maxHeight: '100%'
+                                        maxHeight: '100%',
+                                        transform: partner.customScale ? `scale(${partner.customScale})` : undefined
                                     }}
                                 />
                             </a>

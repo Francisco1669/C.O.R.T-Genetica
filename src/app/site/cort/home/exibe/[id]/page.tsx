@@ -1,4 +1,4 @@
-'use client';
+'u  e client';
 
 import { motion } from 'framer-motion';
 import Image from 'next/image';
@@ -79,7 +79,7 @@ export default function BullDetailPage({ params }: PageProps) {
     return (
         <div className="min-h-screen bg-gray-50">
             {/* Hero Section com imagem em tamanho completo */}
-            <section className="relative h-[80vh] min-h-[600px] max-h-[800px]">
+            <section className="relative h-[80vh] min-h-[600px] max-h-[800px] bg-white">
                 {isOutOfStock ? (
                     // Mostrar mensagem quando fora de estoque
                     <div className="w-full h-full bg-gradient-to-br from-red-100 to-red-200 flex items-center justify-center">
@@ -124,7 +124,7 @@ export default function BullDetailPage({ params }: PageProps) {
                     </div>
                 ) : (
                     <div
-                        className="cursor-pointer hover:opacity-90 transition-opacity"
+                        className="cursor-pointer hover:opacity-90 transition-opacity w-full h-full"
                         onClick={openImageModal}
                         title="Clique para expandir a imagem"
                     >
@@ -136,13 +136,21 @@ export default function BullDetailPage({ params }: PageProps) {
                             priority
                         />
                         {/* Overlay de clique */}
-                        <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors flex items-center justify-center">
+                        <div className="absolute inset-0 bg-black/0 hover:bg-black/10 transition-colors flex items-center justify-center pointer-events-none">
                             <div className="bg-white/90 backdrop-blur-sm rounded-full p-3 opacity-0 hover:opacity-100 transition-opacity">
                                 <Eye className="w-6 h-6 text-gray-700" />
                             </div>
                         </div>
                     </div>
                 )}
+
+                {/* Indicação de clique sempre visível */}
+                <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-20 pointer-events-none">
+                    <div className="bg-red-600 text-white px-6 py-3 rounded-lg shadow-lg flex items-center gap-2 animate-pulse">
+                        <Eye className="w-5 h-5" />
+                        <span className="font-semibold">Clique na imagem para ampliar</span>
+                    </div>
+                </div>
 
                 {/* Overlay gradient */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none" />
