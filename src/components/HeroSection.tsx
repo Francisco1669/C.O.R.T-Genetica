@@ -66,19 +66,27 @@ const HeroSection = () => {
                         initial={{ opacity: 0, y: 30 }}
                         animate={{ opacity: 1, y: 0 }}
                         transition={{ duration: 0.8, delay: 0.5 }}
-                        className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12"
+                        className="flex flex-col gap-4 justify-center items-center mb-12"
                     >
+                        <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                            <Link
+                                href="/catalogo"
+                                className="btn-primary text-lg px-8 py-4 inline-block hover:scale-105 transition-transform duration-200"
+                            >
+                                Ver touros
+                            </Link>
+                            <Link
+                                href="/sobre"
+                                className="bg-white text-red-800 border-2 border-white px-6 py-3 rounded-lg inline-block hover:bg-gray-100 hover:scale-105 transition-all duration-200 font-semibold"
+                            >
+                                Conheça Nossa História
+                            </Link>
+                        </div>
                         <Link
-                            href="/catalogo"
-                            className="btn-primary text-lg px-8 py-4 inline-block hover:scale-105 transition-transform duration-200"
+                            href="/saldo-banco"
+                            className="bg-green-700 text-white border-2 border-green-700 px-6 py-3 rounded-lg inline-block hover:bg-green-800 hover:scale-105 transition-all duration-200 font-semibold"
                         >
-                            Ver touros
-                        </Link>
-                        <Link
-                            href="/sobre"
-                            className="bg-white text-red-800 border-2 border-white px-6 py-3 rounded-lg inline-block hover:bg-gray-100 hover:scale-105 transition-all duration-200 font-semibold"
-                        >
-                            Conheça Nossa História
+                            Ver Saldo de Banco
                         </Link>
                     </motion.div>
 

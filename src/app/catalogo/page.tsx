@@ -91,7 +91,7 @@ export default function CatalogoRacasPage() {
                             Nossas <span className="text-red-800">Raças</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-                            Selecione uma raça para ver os touros disponíveis.
+                            Clique na raça para ver todos os touros da raça selecionada.
                         </p>
                     </motion.div>
 
