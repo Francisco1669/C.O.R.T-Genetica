@@ -21,7 +21,7 @@ const PartnersSection = () => {
         },
         {
             name: 'Sicredi',
-            logo: '/sicredilogo.png',
+            logo: '/SicrediLogo.png',
             alt: 'Logo Sicredi',
             website: 'https://www.sicredi.com.br/home',
             customScale: 1.7
@@ -103,8 +103,8 @@ const PartnersSection = () => {
         }
     ];
 
-    // Duplicar o array para criar o efeito infinito
-    const duplicatedPartners = [...partners, ...partners, ...partners];
+    // Duplicar o array para criar o efeito infinito contínuo
+    const duplicatedPartners = [...partners, ...partners];
 
     return (
         <section className="py-20 bg-gray-50 border-b border-gray-100 overflow-hidden">
@@ -134,7 +134,7 @@ const PartnersSection = () => {
 
                 <motion.div
                     animate={{
-                        x: [0, -100 * partners.length]
+                        x: [-100 * partners.length, 0]
                     }}
                     transition={{
                         x: {
