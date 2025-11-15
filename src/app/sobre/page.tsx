@@ -53,7 +53,7 @@ const SobrePage = () => {
                             Sobre a <span className="text-earth-brown">C.O.R.T Genética</span>
                         </h1>
                         <p className="text-xl text-gray-600 leading-relaxed">
-                            Pioneira em genética bovina no Brasil, combinando tradição, inovação e tecnologia
+                            Pioneira em marcadores moleculares no Brasil, combinando tradição, inovação e tecnologia
                             para transformar a pecuária brasileira há mais de 30 anos.
                         </p>
                     </motion.div>

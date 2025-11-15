@@ -1,10 +1,13 @@
 'use client';
 
-import { motion } from 'framer-motion';
+import { motion, AnimatePresence } from 'framer-motion';
 import Image from 'next/image';
-import { Palette, Beef, Heart, FlaskConical, Dna } from 'lucide-react';
+import { Palette, Beef, Heart, FlaskConical, Dna, ChevronLeft, ChevronRight } from 'lucide-react';
+import { useState, useEffect } from 'react';
 
 const PartnersSection = () => {
+    const [currentIndex, setCurrentIndex] = useState(0);
+    const [isAutoPlay, setIsAutoPlay] = useState(true);
     const partners = [
         {
             name: 'C.O.R.T Genética',
@@ -106,6 +109,48 @@ const PartnersSection = () => {
     // Duplicar o array para criar o efeito infinito contínuo
     const duplicatedPartners = [...partners, ...partners];
 
+    // Auto-play com intervalo
+    useEffect(() => {
+        if (!isAutoPlay) return;
+
+        const interval = setInterval(() => {
+            setCurrentIndex((prev) => (prev + 1) % partners.length);
+        }, 3000);
+
+        return () => clearInterval(interval);
+    }, [isAutoPlay, partners.length]);
+
+    const handlePrevious = () => {
+        setIsAutoPlay(false);
+        setCurrentIndex((prev) => (prev - 1 + partners.length) % partners.length);
+    };
+
+    const handleNext = () => {
+        setIsAutoPlay(false);
+        setCurrentIndex((prev) => (prev + 1) % partners.length);
+    };
+
+    // Calcular quantos logos mostrar por vez baseado no tamanho da tela
+    const getVisibleLogos = () => {
+        if (typeof window === 'undefined') return 4;
+        if (window.innerWidth < 640) return 1; // mobile
+        if (window.innerWidth < 768) return 2; // tablet pequeno
+        if (window.innerWidth < 1024) return 3; // tablet
+        return 4; // desktop
+    };
+
+    const [visibleLogos, setVisibleLogos] = useState(4);
+
+    useEffect(() => {
+        const handleResize = () => {
+            setVisibleLogos(getVisibleLogos());
+        };
+
+        handleResize();
+        window.addEventListener('resize', handleResize);
+        return () => window.removeEventListener('resize', handleResize);
+    }, []);
+
     return (
         <section className="py-20 bg-gray-50 border-b border-gray-100 overflow-hidden">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-16">
@@ -126,57 +171,90 @@ const PartnersSection = () => {
                 </motion.div>
             </div>
 
-            {/* Faixa Infinita de Logos */}
-            <div className="relative">
-                {/* Gradientes para efeito de fade nas bordas */}
-                <div className="absolute left-0 top-0 w-32 h-full bg-gradient-to-r from-gray-50 to-transparent z-10"></div>
-                <div className="absolute right-0 top-0 w-32 h-full bg-gradient-to-l from-gray-50 to-transparent z-10"></div>
+            {/* Carrossel Interativo de Logos */}
+            <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="relative overflow-hidden">
+                    {/* Botão Anterior */}
+                    <button
+                        onClick={handlePrevious}
+                        className="absolute left-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                        aria-label="Parceiro anterior"
+                    >
+                        <ChevronLeft className="w-6 h-6 text-red-800 group-hover:scale-110 transition-transform" />
+                    </button>
 
-                <motion.div
-                    animate={{
-                        x: [-100 * partners.length, 0]
-                    }}
-                    transition={{
-                        x: {
-                            repeat: Infinity,
-                            repeatType: "loop",
-                            duration: 30,
-                            ease: "linear",
-                        },
-                    }}
-                    className="flex items-center gap-16"
-                    style={{ width: `${duplicatedPartners.length * 320}px` }}
-                >
-                    {duplicatedPartners.map((partner, index) => (
-                        <div
-                            key={`${partner.name}-${index}`}
-                            className="flex items-center justify-center flex-shrink-0"
-                            style={{ width: '200px', height: '120px' }}
-                        >
-                            <a
-                                href={partner.website}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="relative w-full h-full flex items-center justify-center p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+                    {/* Botão Próximo */}
+                    <button
+                        onClick={handleNext}
+                        className="absolute right-0 top-1/2 -translate-y-1/2 z-20 bg-white/90 hover:bg-white p-3 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 group"
+                        aria-label="Próximo parceiro"
+                    >
+                        <ChevronRight className="w-6 h-6 text-red-800 group-hover:scale-110 transition-transform" />
+                    </button>
+
+                    {/* Container dos logos */}
+                    <div className="flex items-center justify-center gap-4 md:gap-8 py-8 px-12 md:px-16">
+                        {partners.slice(currentIndex, currentIndex + visibleLogos).concat(
+                            currentIndex + visibleLogos > partners.length
+                                ? partners.slice(0, (currentIndex + visibleLogos) - partners.length)
+                                : []
+                        ).map((partner, index) => (
+                            <motion.div
+                                key={`${partner.name}-${currentIndex}-${index}`}
+                                initial={{ opacity: 0, scale: 0.8 }}
+                                animate={{ opacity: 1, scale: 1 }}
+                                exit={{ opacity: 0, scale: 0.8 }}
+                                transition={{ duration: 0.5 }}
+                                className="flex items-center justify-center flex-shrink-0"
+                                style={{
+                                    width: visibleLogos === 1 ? '250px' : visibleLogos === 2 ? '200px' : '180px',
+                                    height: '120px'
+                                }}
                             >
-                                <Image
-                                    src={partner.logo}
-                                    alt={partner.alt}
-                                    width={160}
-                                    height={80}
-                                    className="max-w-full max-h-full object-contain transition-all duration-500 group-hover:scale-105"
-                                    style={{
-                                        width: 'auto',
-                                        height: 'auto',
-                                        maxWidth: '100%',
-                                        maxHeight: '100%',
-                                        transform: partner.customScale ? `scale(${partner.customScale})` : undefined
-                                    }}
-                                />
-                            </a>
-                        </div>
-                    ))}
-                </motion.div>
+                                <a
+                                    href={partner.website}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    className="relative w-full h-full flex items-center justify-center p-4 md:p-6 bg-white rounded-xl shadow-sm hover:shadow-md transition-all duration-300 group cursor-pointer"
+                                >
+                                    <Image
+                                        src={partner.logo}
+                                        alt={partner.alt}
+                                        width={160}
+                                        height={80}
+                                        className="max-w-full max-h-full object-contain transition-all duration-500 group-hover:scale-105"
+                                        style={{
+                                            width: 'auto',
+                                            height: 'auto',
+                                            maxWidth: '100%',
+                                            maxHeight: '100%',
+                                            transform: partner.customScale ? `scale(${partner.customScale})` : undefined
+                                        }}
+                                    />
+                                </a>
+                            </motion.div>
+                        ))}
+                    </div>
+
+                    {/* Indicadores de posição */}
+                    <div className="flex justify-center gap-2 mt-6">
+                        {partners.map((_, index) => (
+                            <button
+                                key={index}
+                                onClick={() => {
+                                    setIsAutoPlay(false);
+                                    setCurrentIndex(index);
+                                }}
+                                className={`h-2 rounded-full transition-all duration-300 ${
+                                    index === currentIndex
+                                        ? 'w-8 bg-red-800'
+                                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                                }`}
+                                aria-label={`Ir para parceiro ${index + 1}`}
+                            />
+                        ))}
+                    </div>
+                </div>
             </div>
 
 

@@ -20,7 +20,7 @@ const Footer = () => {
                             </div>
                         </div>
                         <p className="text-gray-400 text-sm leading-relaxed">
-                            Pioneira em genética bovina com marcadores moleculares em 100% dos touros de nossa bateria.
+                            Pioneira em marcadores moleculares com marcadores moleculares em 100% dos touros de nossa bateria.
                             Qualidade, inovação e resultados comprovados.
                         </p>
                     </div>
