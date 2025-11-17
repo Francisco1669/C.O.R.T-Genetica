@@ -3,7 +3,6 @@
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { ChevronDown } from 'lucide-react';
-import { GiCow, GiDna2, GiStarMedal } from 'react-icons/gi';
 
 const HeroSection = () => {
     return (
@@ -104,8 +103,12 @@ const HeroSection = () => {
                         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                             {/* GENÔMICA 100% PURA */}
                             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md text-center border border-white/50">
-                                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-red-100 rounded-xl">
-                                    <GiDna2 className="w-6 h-6 text-red-800" />
+                                <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                                    <img
+                                        src="/selos/genomica_pioneira.jpeg"
+                                        alt="Genômica 100% Pura"
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
                                 <h4 className="text-lg font-bold text-gray-900 mb-2">GENÔMICA 100% PURA</h4>
                                 <p className="text-sm text-gray-600">Genética testada e validada com rigor científico</p>
@@ -113,8 +116,12 @@ const HeroSection = () => {
 
                             {/* TTR IATF */}
                             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md text-center border border-white/50">
-                                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-red-100 rounded-xl">
-                                    <GiCow className="w-6 h-6 text-red-800" />
+                                <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                                    <img
+                                        src="/selos/ttr iatf.jpeg"
+                                        alt="TTR IATF"
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
                                 <h4 className="text-lg font-bold text-gray-900 mb-2">TTR IATF</h4>
                                 <p className="text-sm text-gray-600">Todas as partidas submetidas ao teste TTR</p>
@@ -122,8 +129,12 @@ const HeroSection = () => {
 
                             {/* HOMOZIGOTO 100% MACIEZ */}
                             <div className="bg-white/90 backdrop-blur-sm rounded-2xl p-6 shadow-md text-center border border-white/50">
-                                <div className="w-12 h-12 mx-auto mb-4 flex items-center justify-center bg-red-100 rounded-xl">
-                                    <GiStarMedal className="w-6 h-6 text-red-800" />
+                                <div className="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                                    <img
+                                        src="/selos/homozigoto_maciez.jpeg"
+                                        alt="Homozigoto 100% Maciez"
+                                        className="w-full h-full object-contain"
+                                    />
                                 </div>
                                 <h4 className="text-lg font-bold text-gray-900 mb-2">HOMOZIGOTO 100% MACIEZ</h4>
                                 <p className="text-sm text-gray-600">Touro com genética para máxima maciez de carne</p>
