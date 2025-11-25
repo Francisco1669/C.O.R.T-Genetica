@@ -59,7 +59,7 @@ const VideoSection = () => {
                         <div className="relative">
                             <div className="w-96 h-96 rounded-full bg-gradient-to-br from-red-50 to-red-100 flex items-center justify-center shadow-2xl">
                                 <Image
-                                    src="/CORT_GenéticaBrasil_logotipo.png"
+                                    src="/CORTlogo.png"
                                     alt="CORT Genética Brasil - Logotipo"
                                     width={320}
                                     height={320}

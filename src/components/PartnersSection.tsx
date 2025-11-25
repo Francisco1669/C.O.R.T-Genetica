@@ -24,7 +24,7 @@ const PartnersSection = () => {
         },
         {
             name: 'Sicredi',
-            logo: '/SicrediLogo.png',
+            logo: '/sicredilogo.png',
             alt: 'Logo Sicredi',
             website: 'https://www.sicredi.com.br/home',
             customScale: 1.7
@@ -246,8 +246,8 @@ const PartnersSection = () => {
                                     setCurrentIndex(index);
                                 }}
                                 className={`h-2 rounded-full transition-all duration-300 ${index === currentIndex
-                                        ? 'w-8 bg-red-800'
-                                        : 'w-2 bg-gray-300 hover:bg-gray-400'
+                                    ? 'w-8 bg-red-800'
+                                    : 'w-2 bg-gray-300 hover:bg-gray-400'
                                     }`}
                                 aria-label={`Ir para parceiro ${index + 1}`}
                             />

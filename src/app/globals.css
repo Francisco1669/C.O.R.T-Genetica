@@ -92,6 +92,10 @@ h6 {
   transition: all 0.2s ease;
   border: none;
   cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
 }
 
 .btn-primary:hover {
