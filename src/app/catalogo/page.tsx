@@ -55,7 +55,34 @@ export default function CatalogoRacasPage() {
         !bull.descricao?.includes("fora de estoque")
     );
 
-    const uniqueRaces = Array.from(new Set(allBulls.map((bull: any) => bull.raca))).sort();
+    // Ordem específica das raças
+    const racesOrder = [
+        'Angus',
+        'Red Angus',
+        'Ultra Black',
+        'Brangus',
+        'Red Brangus',
+        'Galloway',
+        'Polled Hereford',
+        'Braford',
+        'Simental',
+        'Charolês Mocho',
+        'Braunvieh',
+        'Normando',
+        'Nelore Padrao',
+        'Nelore Mocho',
+        'Tabapuã',
+        'Indubrasil',
+        'Guzerá',
+        'Saldo de Banco',
+        'Holandês',
+        'Jersey',
+        'Gir leiteiro',
+        'Girolando 3/4 Hol + 1/4 Gir'
+    ];
+
+    const allRacesSet = new Set(allBulls.map((bull: any) => bull.raca));
+    const uniqueRaces = racesOrder.filter(race => allRacesSet.has(race));
 
     const representativeBulls = uniqueRaces.map(race => {
         const representativeName = representativeBullNames[race];
