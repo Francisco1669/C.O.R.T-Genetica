@@ -31,7 +31,7 @@ const HeroSection = () => {
                             transition={{ duration: 0.6, delay: 0.2 }}
                             className="mb-6"
                         >
-                            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-red-100 text-red-900 border border-red-200">
+                            <span className="inline-flex items-center px-4 py-2 rounded-full text-sm font-medium bg-red-100/95 text-red-900 border border-red-200 shadow-lg backdrop-blur-sm">
                                 Pioneira em genômica no Brasil - desde 1991
                             </span>
                         </motion.div>
@@ -40,10 +40,15 @@ const HeroSection = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.3 }}
-                            className="text-4xl md:text-5xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight"
+                            className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 leading-tight"
                         >
-                            Excelência em <br />
-                            <span className="text-red">Genética Bovina e Ovina</span>
+                            <span className="inline-block bg-white/90 px-4 py-2 rounded-lg shadow-xl backdrop-blur-sm text-gray-900">
+                                Excelência em
+                            </span>
+                            <br />
+                            <span className="inline-block bg-red-800/95 px-4 py-2 rounded-lg shadow-xl backdrop-blur-sm text-white mt-2">
+                                Genética Bovina e Ovina
+                            </span>
                         </motion.h1>
 
                         {/* Subtitle */}
@@ -51,37 +56,61 @@ const HeroSection = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.4 }}
-                            className="text-lg md:text-xl text-gray-700 mb-8 leading-relaxed"
+                            className="text-lg md:text-xl mb-8 leading-relaxed"
                         >
-                            Somos especialistas em melhoramento genético e reprodução de bovinos e ovinos, oferecendo as melhores soluções.
+                            <span className="inline-block bg-white/90 px-4 py-3 rounded-lg shadow-lg backdrop-blur-sm text-gray-800">
+                                Somos especialistas em melhoramento genético e reprodução de bovinos e ovinos, oferecendo as melhores soluções.
+                            </span>
                         </motion.p>
 
-                        {/* CTA Buttons */}
+                        {/* CTA Cards - Similar to Quality Seals */}
                         <motion.div
                             initial={{ opacity: 0, y: 30 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.5 }}
-                            className="flex flex-col gap-4 mb-12 max-w-md"
+                            className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-12"
                         >
-                            <div className="flex flex-col sm:flex-row gap-4">
-                                <Link
-                                    href="/catalogo"
-                                    className="btn-primary text-lg px-8 py-4 rounded-lg hover:scale-105 transition-all duration-200 font-semibold text-center flex-1"
-                                >
-                                    VER TOUROS
-                                </Link>
-                                <Link
-                                    href="/sobre"
-                                    className="bg-white text-red-800 border-2 border-red-800 text-lg px-8 py-4 rounded-lg hover:bg-red-50 hover:scale-105 transition-all duration-200 font-semibold text-center flex-1"
-                                >
-                                    CONHEÇA NOSSA HISTÓRIA
-                                </Link>
-                            </div>
+                            {/* VER TOUROS */}
+                            <Link
+                                href="/catalogo"
+                                className="bg-white rounded-xl p-6 shadow-md text-center border-2 border-red-800 hover:shadow-lg hover:scale-105 transition-all duration-200 group"
+                            >
+                                <div className="w-16 h-16 mx-auto mb-4 bg-red-800 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-sm font-bold text-red-900 mb-2">VER TOUROS</h4>
+                                <p className="text-xs text-gray-600">Confira nosso catálogo completo</p>
+                            </Link>
+
+                            {/* CONHEÇA NOSSOS SELOS */}
+                            <Link
+                                href="/nossos-selos"
+                                className="bg-white rounded-xl p-6 shadow-md text-center border-2 border-red-800 hover:shadow-lg hover:scale-105 transition-all duration-200 group"
+                            >
+                                <div className="w-16 h-16 mx-auto mb-4 bg-red-800 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4M7.835 4.697a3.42 3.42 0 001.946-.806 3.42 3.42 0 014.438 0 3.42 3.42 0 001.946.806 3.42 3.42 0 013.138 3.138 3.42 3.42 0 00.806 1.946 3.42 3.42 0 010 4.438 3.42 3.42 0 00-.806 1.946 3.42 3.42 0 01-3.138 3.138 3.42 3.42 0 00-1.946.806 3.42 3.42 0 01-4.438 0 3.42 3.42 0 00-1.946-.806 3.42 3.42 0 01-3.138-3.138 3.42 3.42 0 00-.806-1.946 3.42 3.42 0 010-4.438 3.42 3.42 0 00.806-1.946 3.42 3.42 0 013.138-3.138z" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-sm font-bold text-red-900 mb-2">CONHEÇA NOSSOS SELOS</h4>
+                                <p className="text-xs text-gray-600">Certificações de qualidade</p>
+                            </Link>
+
+                            {/* VER SALDO DE BANCO */}
                             <Link
                                 href="/saldo-banco"
-                                className="bg-green-700 text-white border-2 border-green-700 text-lg px-8 py-4 rounded-lg hover:bg-green-800 hover:scale-105 transition-all duration-200 font-semibold text-center w-full"
+                                className="bg-white rounded-xl p-6 shadow-md text-center border-2 border-green-700 hover:shadow-lg hover:scale-105 transition-all duration-200 group"
                             >
-                                VER SALDO DE BANCO
+                                <div className="w-16 h-16 mx-auto mb-4 bg-green-700 rounded-full flex items-center justify-center group-hover:bg-green-800 transition-colors">
+                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 10h18M7 15h1m4 0h1m-7 4h12a3 3 0 003-3V8a3 3 0 00-3-3H6a3 3 0 00-3 3v8a3 3 0 003 3z" />
+                                    </svg>
+                                </div>
+                                <h4 className="text-sm font-bold text-green-900 mb-2">VER SALDO DE BANCO</h4>
+                                <p className="text-xs text-gray-600">Consulte disponibilidade</p>
                             </Link>
                         </motion.div>
 
@@ -92,7 +121,11 @@ const HeroSection = () => {
                             transition={{ duration: 0.8, delay: 0.6 }}
                         >
                             <div className="mb-6">
-                                <h3 className="text-lg font-semibold text-gray-900 uppercase tracking-wide">Nossos Selos de Qualidade</h3>
+                                <h3 className="text-lg font-semibold uppercase tracking-wide">
+                                    <span className="inline-block bg-white/90 px-4 py-2 rounded-lg shadow-lg backdrop-blur-sm text-gray-900">
+                                        Nossos Selos de Qualidade
+                                    </span>
+                                </h3>
                             </div>
 
                             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
