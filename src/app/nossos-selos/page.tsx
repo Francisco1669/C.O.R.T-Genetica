@@ -2,7 +2,7 @@
 
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { Award, Dna, FlaskConical, Beef, CheckCircle, ArrowRight, Star, Target } from 'lucide-react';
+import { Award, Dna, FlaskConical, Beef, CheckCircle, ArrowRight, Star, Target, Palette, Heart } from 'lucide-react';
 
 const NossosSelosPage = () => {
     const selos = [
@@ -28,7 +28,7 @@ const NossosSelosPage = () => {
             icon: FlaskConical,
             title: 'TTR IATF',
             subtitle: 'Todas as partidas testadas',
-            description: 'Certificação que garante que todas as partidas de sêmen passam por rigoroso teste de Taxa de Recuperação Total (TTR), garantindo máxima eficiência reprodutiva.',
+            description: 'Certificação que garante que todas as partidas de sêmen passam por rigoroso teste de termo resistência rápido (TTR), garantindo máxima eficiência reprodutiva.',
             details: [
                 'Teste de viabilidade em todas as partidas comercializadas',
                 'Avaliação de motilidade e vigor espermático',
@@ -59,6 +59,57 @@ const NossosSelosPage = () => {
             textColor: 'text-amber-800',
             image: '/selos/homozigoto_maciez.jpeg',
             link: '/tecnologia/marcadores-moleculares'
+        },
+        {
+            icon: Palette,
+            title: 'HOMOZIGOTO PRETO',
+            subtitle: 'Garantia de Transmissão de Cor',
+            description: 'Certificação que garante 100% de transmissão da pelagem preta pelos touros portadores deste selo. Elimina surpresas na coloração dos bezerros.',
+            details: [
+                'Análise genética completa dos genes de pelagem',
+                'Garantia de 100% de uniformidade na descendência',
+                'Eliminação de surpresas na coloração dos bezerros',
+                'Valorização comercial do rebanho'
+            ],
+            color: 'from-gray-800 to-gray-900',
+            bgColor: 'bg-gray-100',
+            textColor: 'text-gray-800',
+            image: '/selos/PRETO.png',
+            link: '/tecnologia/selos-qualidade'
+        },
+        {
+            icon: Beef,
+            title: 'HOMOZIGOTO VERMELHO',
+            subtitle: 'Garantia de Transmissão de Cor',
+            description: 'Certificação que garante 100% de transmissão da pelagem vermelha pelos touros portadores deste selo. Uniformidade total na descendência.',
+            details: [
+                'Análise genética completa dos genes de pelagem',
+                'Garantia de 100% de uniformidade na descendência',
+                'Eliminação de surpresas na coloração dos bezerros',
+                'Valorização comercial do rebanho'
+            ],
+            color: 'from-red-600 to-red-800',
+            bgColor: 'bg-red-100',
+            textColor: 'text-red-800',
+            image: '/selos/VERMELHO.png',
+            link: '/tecnologia/selos-qualidade'
+        },
+        {
+            icon: Heart,
+            title: '100% MOCHO',
+            subtitle: 'Garantia de Ausência de Chifres',
+            description: 'Certificação que garante 100% de touros mochos (sem chifres) na descendência. Elimina a necessidade de descorna.',
+            details: [
+                'Análise genética completa dos genes de chifres',
+                'Garantia de 100% de touros mochos na descendência',
+                'Eliminação da necessidade de descorna',
+                'Redução de estresse e custos de manejo'
+            ],
+            color: 'from-amber-600 to-amber-800',
+            bgColor: 'bg-amber-100',
+            textColor: 'text-amber-800',
+            image: '/selos/MOCHO selo.png',
+            link: '/tecnologia/selos-qualidade'
         }
     ];
 
@@ -114,7 +165,19 @@ const NossosSelosPage = () => {
                             </span>
                             <span className="bg-amber-100 text-amber-800 px-4 py-2 rounded-full flex items-center">
                                 <Beef className="w-4 h-4 mr-2" />
-                                Homozigoto 100% Maciez
+                                Homozigoto Maciez
+                            </span>
+                            <span className="bg-gray-100 text-gray-800 px-4 py-2 rounded-full flex items-center">
+                                <Palette className="w-4 h-4 mr-2" />
+                                Homozigoto Preto
+                            </span>
+                            <span className="bg-red-100 text-red-800 px-4 py-2 rounded-full flex items-center">
+                                <Beef className="w-4 h-4 mr-2" />
+                                Homozigoto Vermelho
+                            </span>
+                            <span className="bg-amber-100 text-amber-800 px-4 py-2 rounded-full flex items-center">
+                                <Heart className="w-4 h-4 mr-2" />
+                                100% Mocho
                             </span>
                         </div>
                     </motion.div>
@@ -155,7 +218,7 @@ const NossosSelosPage = () => {
                         className="text-center mb-16"
                     >
                         <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-                            Conheça nossos <span className="text-red-800">Três Selos</span>
+                            Conheça nossos <span className="text-red-800">Seis Selos</span>
                         </h2>
                         <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                             Cada selo representa o que há de mais avançado em genética e reprodução animal
@@ -174,9 +237,8 @@ const NossosSelosPage = () => {
                                     whileInView={{ opacity: 1, y: 0 }}
                                     transition={{ duration: 0.8, delay: 0.2 }}
                                     viewport={{ once: true }}
-                                    className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${
-                                        isEven ? '' : 'lg:grid-flow-col-dense'
-                                    }`}
+                                    className={`grid grid-cols-1 lg:grid-cols-2 gap-16 items-center ${isEven ? '' : 'lg:grid-flow-col-dense'
+                                        }`}
                                 >
                                     {/* Content */}
                                     <div className={isEven ? '' : 'lg:col-start-2'}>
@@ -187,6 +249,8 @@ const NossosSelosPage = () => {
                                                         ? 'bg-red-800'
                                                         : selo.textColor === 'text-blue-800'
                                                         ? 'bg-blue-800'
+                                                        : selo.textColor === 'text-gray-800'
+                                                        ? 'bg-gray-800'
                                                         : 'bg-amber-800'
                                                 }`}
                                             >
@@ -218,6 +282,8 @@ const NossosSelosPage = () => {
                                                     ? 'bg-red-800 text-white hover:bg-red-900'
                                                     : selo.textColor === 'text-blue-800'
                                                     ? 'bg-blue-800 text-white hover:bg-blue-900'
+                                                    : selo.textColor === 'text-gray-800'
+                                                    ? 'bg-gray-800 text-white hover:bg-gray-900'
                                                     : 'bg-amber-800 text-white hover:bg-amber-900'
                                             }`}
                                         >
@@ -302,35 +368,6 @@ const NossosSelosPage = () => {
                             );
                         })}
                     </div>
-                </div>
-            </section>
-
-            {/* Outros Selos - Link para página de selos de pelagem */}
-            <section className="py-20 bg-gray-50">
-                <div className="container mx-auto px-4">
-                    <motion.div
-                        initial={{ opacity: 0, y: 20 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.6 }}
-                        viewport={{ once: true }}
-                        className="max-w-4xl mx-auto text-center"
-                    >
-                        <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
-                            Também oferecemos <span className="text-red-800">Selos de Pelagem</span>
-                        </h2>
-                        <p className="text-lg text-gray-600 mb-8 leading-relaxed">
-                            Além dos nossos três selos principais, certificamos touros com garantia de
-                            transmissão de pelagem (Homozigoto Preto, Homozigoto Vermelho) e ausência
-                            de chifres (100% Mocho).
-                        </p>
-                        <Link
-                            href="/tecnologia/selos-qualidade"
-                            className="inline-flex items-center bg-red-800 text-white px-8 py-4 rounded-lg font-semibold hover:bg-red-900 transition-colors duration-200"
-                        >
-                            Conhecer Selos de Pelagem
-                            <ArrowRight className="w-5 h-5 ml-2" />
-                        </Link>
-                    </motion.div>
                 </div>
             </section>
 

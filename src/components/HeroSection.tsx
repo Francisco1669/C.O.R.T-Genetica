@@ -75,11 +75,12 @@ const HeroSection = () => {
                                 href="/catalogo"
                                 className="bg-white rounded-xl p-6 shadow-md text-center border-2 border-red-800 hover:shadow-lg hover:scale-105 transition-all duration-200 group"
                             >
-                                <div className="w-16 h-16 mx-auto mb-4 bg-red-800 rounded-full flex items-center justify-center group-hover:bg-red-900 transition-colors">
-                                    <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
-                                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
-                                    </svg>
+                                <div className="w-16 h-16 mx-auto mb-4 rounded-full overflow-hidden border-2 border-red-800 group-hover:border-red-900 transition-colors">
+                                    <img
+                                        src="/bois_amontoados.jpeg"
+                                        alt="Touros"
+                                        className="w-full h-full object-cover"
+                                    />
                                 </div>
                                 <h4 className="text-sm font-bold text-red-900 mb-2">VER TOUROS</h4>
                                 <p className="text-xs text-gray-600">Confira nosso catálogo completo</p>
@@ -128,9 +129,9 @@ const HeroSection = () => {
                                 </h3>
                             </div>
 
-                            <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+                            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4">
                                 {/* GENÔMICA 100% PURA */}
-                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200">
+                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                                     <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                                         <img
                                             src="/selos/genomica_pioneira.jpeg"
@@ -138,12 +139,12 @@ const HeroSection = () => {
                                             className="w-full h-full object-contain"
                                         />
                                     </div>
-                                    <h4 className="text-sm font-bold text-gray-900 mb-1">GENÔMICA 100% PURA</h4>
-                                    <p className="text-xs text-gray-600">Genética testada com rigor científico</p>
+                                    <h4 className="text-xs font-bold text-gray-900 mb-1">GENÔMICA 100% PURA</h4>
+                                    <p className="text-[10px] text-gray-600">Genética testada</p>
                                 </div>
 
                                 {/* TTR IATF */}
-                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200">
+                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                                     <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                                         <img
                                             src="/selos/ttr iatf.jpeg"
@@ -151,12 +152,12 @@ const HeroSection = () => {
                                             className="w-full h-full object-contain"
                                         />
                                     </div>
-                                    <h4 className="text-sm font-bold text-gray-900 mb-1">TTR IATF</h4>
-                                    <p className="text-xs text-gray-600">Todas as partidas testadas</p>
+                                    <h4 className="text-xs font-bold text-gray-900 mb-1">TTR IATF</h4>
+                                    <p className="text-[10px] text-gray-600">Partidas testadas</p>
                                 </div>
 
                                 {/* HOMOZIGOTO 100% MACIEZ */}
-                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200">
+                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-200">
                                     <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
                                         <img
                                             src="/selos/homozigoto_maciez.jpeg"
@@ -164,13 +165,51 @@ const HeroSection = () => {
                                             className="w-full h-full object-contain"
                                         />
                                     </div>
-                                    <h4 className="text-sm font-bold text-gray-900 mb-1">HOMOZIGOTO 100% MACIEZ</h4>
-                                    <p className="text-xs text-gray-600">Genética para máxima maciez</p>
+                                    <h4 className="text-xs font-bold text-gray-900 mb-1">HOMOZIGOTO MACIEZ</h4>
+                                    <p className="text-[10px] text-gray-600">Máxima maciez</p>
+                                </div>
+
+                                {/* HOMOZIGOTO PRETO */}
+                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                                    <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                                        <img
+                                            src="/selos/PRETO.png"
+                                            alt="Homozigoto Preto"
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                    <h4 className="text-xs font-bold text-gray-900 mb-1">HOMOZIGOTO PRETO</h4>
+                                    <p className="text-[10px] text-gray-600">Pelagem preta</p>
+                                </div>
+
+                                {/* HOMOZIGOTO VERMELHO */}
+                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                                    <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                                        <img
+                                            src="/selos/VERMELHO.png"
+                                            alt="Homozigoto Vermelho"
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                    <h4 className="text-xs font-bold text-gray-900 mb-1">HOMOZIGOTO VERMELHO</h4>
+                                    <p className="text-[10px] text-gray-600">Pelagem vermelha</p>
+                                </div>
+
+                                {/* 100% MOCHO */}
+                                <div className="bg-white rounded-xl p-4 shadow-md text-center border border-gray-200 hover:shadow-lg transition-shadow duration-200">
+                                    <div className="w-16 h-16 mx-auto mb-3 flex items-center justify-center">
+                                        <img
+                                            src="/selos/MOCHO selo.png"
+                                            alt="100% Mocho"
+                                            className="w-full h-full object-contain"
+                                        />
+                                    </div>
+                                    <h4 className="text-xs font-bold text-gray-900 mb-1">100% MOCHO</h4>
+                                    <p className="text-[10px] text-gray-600">Sem chifres</p>
                                 </div>
                             </div>
                         </motion.div>
                     </motion.div>
-
                 </div>
 
                 {/* Scroll indicator */}
