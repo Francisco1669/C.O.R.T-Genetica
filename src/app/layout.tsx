@@ -21,6 +21,23 @@ export const metadata: Metadata = {
   keywords: "genética bovina, marcadores moleculares, teste TTR, selos qualidade, inseminação artificial, touros, gado de corte, gado leiteiro, Uruguaiana",
   authors: [{ name: "C.O.R.T Genética Brasil" }],
   robots: "index, follow",
+  verification: {
+    google: "SyQwkKuzLlqZtWpvnwJkUPhXV4yW33rghbdBGsNZ0v8"
+  }
+  ,
+  openGraph: {
+    title: "C.O.R.T Genética Brasil - Pioneira em marcadores moleculares",
+    description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
+    url: "https://cortgenetica.com.br",
+    siteName: "C.O.R.T Genética Brasil",
+    locale: "pt_BR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "C.O.R.T Genética Brasil - Pioneira em marcadores moleculares",
+    description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
+  },
 };
 
 export default function RootLayout({
@@ -28,8 +45,38 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "C.O.R.T Genética Brasil",
+    url: "https://cortgenetica.com.br",
+    logo: "https://cortgenetica.com.br/CORTlogo.png",
+    description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
+    address: {
+      "@type": "PostalAddress",
+      addressLocality: "Uruguaiana",
+      addressRegion: "RS",
+      addressCountry: "BR",
+    },
+    contactPoint: {
+      "@type": "ContactPoint",
+      contactType: "customer service",
+      availableLanguage: ["Portuguese"],
+    },
+    sameAs: [
+      "https://www.instagram.com/cortgeneticabrasil/",
+      "https://www.facebook.com/cortgeneticabrasil/",
+    ],
+  };
+
   return (
     <html lang="pt-BR">
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
