@@ -2562,4 +2562,21 @@ export const tourosPorId = {
     imagem: "/saldo/tornado.jpg",
     catalogo: "catalogo1",
   },
+  457: {
+    id: 457,
+    nome: "VIKING",
+    raca: "Santa Gertrudes",
+    categoria: "corte",
+    imagem: "/pdf_atualizado_2025/viking.jpeg",
+    catalogo: "catalogo2",
+    temImagem: true,
+    selos: [],
+    destaque: "Reprodutor Santa Gertrudes de alta qualidade",
+    descricao: "Informações completas disponíveis em breve.",
+    caracteristicas: [
+      "Genética superior",
+      "Qualidade comprovada",
+      "Adaptado ao Sul do Brasil",
+    ],
+  },
 };
