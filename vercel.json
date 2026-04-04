@@ -1,9 +1,0 @@
-{
-    "redirects": [
-        {
-            "source": "/:path*",
-            "destination": "https://www.cortgeneticabrasil.com/:path*",
-            "permanent": true
-        }
-    ]
-}
