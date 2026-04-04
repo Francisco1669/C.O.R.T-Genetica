@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C.O.R.T Genética Brasil - Pioneira em marcadores moleculares",
     description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
-    url: "https://cortgenetica.com.br",
+    url: "https://cortgeneticabrasil.com.br",
     siteName: "C.O.R.T Genética Brasil",
     locale: "pt_BR",
     type: "website",
@@ -52,8 +52,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "C.O.R.T Genética Brasil",
-    url: "https://cortgenetica.com.br",
-    logo: "https://cortgenetica.com.br/CORTlogo.png",
+    url: "https://cortgeneticabrasil.com.br",
+    logo: "https://cortgeneticabrasil.com.br/CORTlogo.png",
     description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
     address: {
       "@type": "PostalAddress",

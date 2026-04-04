@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Teste TTR - C.O.R.T Genética Brasil",
     description: "Teste de Termo Resistência Rápido para avaliar qualidade seminal e garantir melhores resultados reprodutivos.",
-    url: "https://cortgenetica.com.br/tecnologia/teste-ttr",
+    url: "https://cortgeneticabrasil.com.br/tecnologia/teste-ttr",
     type: "website",
   },
 };

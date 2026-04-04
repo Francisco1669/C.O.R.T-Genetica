@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { tourosPorId } from "@/data/tourosPorId";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cortgenetica.com.br";
+  const baseUrl = "https://cortgeneticabrasil.com.br";
 
   // Posts do Blog (extraídos do arquivo do blog ou simulados conforme sua estrutura)
   // Nota: Idealmente os posts estariam em um arquivo data separado,

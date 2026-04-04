@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Selos de Qualidade - C.O.R.T Genética Brasil",
     description: "Sistema exclusivo de certificação genética com 7 selos de qualidade para garantir a melhor genética.",
-    url: "https://cortgenetica.com.br/tecnologia/selos-qualidade",
+    url: "https://cortgeneticabrasil.com.br/tecnologia/selos-qualidade",
     type: "website",
   },
 };

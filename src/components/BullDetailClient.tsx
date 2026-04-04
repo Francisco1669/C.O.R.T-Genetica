@@ -250,7 +250,7 @@ export default function BullDetailClient({ bull, otherBulls }: { bull: Bull, oth
                                         </Link>
 
                                         <Link
-                                            href="mailto:contato@cortgenetica.com.br"
+                                            href="mailto:contato@cortgeneticabrasil.com.br"
                                             className="inline-flex items-center w-full bg-white hover:bg-gray-50 text-red-800 border-2 border-red-800 px-6 py-3 rounded-lg font-semibold transition-colors duration-200"
                                         >
                                             <Mail className="w-5 h-5 mr-3" />

@@ -12,7 +12,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C.O.R.T Genética Brasil - Líder em Genética Bovina",
     description: "Empresa pioneira em marcadores moleculares aplicados à genética bovina. Teste TTR e selos de qualidade.",
-    url: "https://cortgenetica.com.br",
+    url: "https://cortgeneticabrasil.com.br",
     type: "website",
   },
 };
