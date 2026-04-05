@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contato - C.O.R.T Genética Brasil",
     description: "Entre em contato conosco. Uruguaiana, RS. Tire suas dúvidas sobre genética bovina e nossos produtos.",
-    url: "https://cortgeneticabrasil.com.br/contato",
+    url: "https://www.cortgeneticabrasil.com/contato",
     type: "website",
   },
 };

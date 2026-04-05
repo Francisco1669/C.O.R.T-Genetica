@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Catálogo de Touros - C.O.R.T Genética Brasil",
     description: "Catálogo completo com todos os touros disponíveis. Marcadores moleculares e teste TTR.",
-    url: "https://cortgeneticabrasil.com.br/catalogo-touros",
+    url: "https://www.cortgeneticabrasil.com/catalogo-touros",
     type: "website",
   },
 };

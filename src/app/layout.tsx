@@ -19,6 +19,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://www.cortgeneticabrasil.com"),
   title: "C.O.R.T Genética Brasil - Pioneira em marcadores moleculares",
   description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho. Localizada em Uruguaiana, RS.",
   keywords: "genética bovina, marcadores moleculares, teste TTR, selos qualidade, inseminação artificial, touros, gado de corte, gado leiteiro, Uruguaiana",
@@ -31,7 +32,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "C.O.R.T Genética Brasil - Pioneira em marcadores moleculares",
     description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
-    url: "https://cortgeneticabrasil.com.br",
+    url: "https://www.cortgeneticabrasil.com",
     siteName: "C.O.R.T Genética Brasil",
     locale: "pt_BR",
     type: "website",
@@ -52,8 +53,8 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "C.O.R.T Genética Brasil",
-    url: "https://cortgeneticabrasil.com.br",
-    logo: "https://cortgeneticabrasil.com.br/CORTlogo.png",
+    url: "https://www.cortgeneticabrasil.com",
+    logo: "https://www.cortgeneticabrasil.com/CORTlogo.png",
     description: "Líder em marcadores moleculares e genética bovina. Teste TTR, selos de qualidade e a melhor genética para seu rebanho.",
     address: {
       "@type": "PostalAddress",

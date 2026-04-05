@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Sobre a C.O.R.T Genética Brasil",
     description: "Pioneira em marcadores moleculares no Brasil há mais de 30 anos. Conheça nossa história de inovação.",
-    url: "https://cortgeneticabrasil.com.br/sobre",
+    url: "https://www.cortgeneticabrasil.com/sobre",
     type: "website",
   },
 };

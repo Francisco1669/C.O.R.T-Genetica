@@ -13,7 +13,7 @@ const PartnersSection = () => {
             name: 'C.O.R.T Genética',
             logo: '/CORTlogo.png',
             alt: 'Logo C.O.R.T Genética',
-            website: 'https://cortgeneticabrasil.com.br',
+            website: 'https://www.cortgeneticabrasil.com',
             customScale: 1.65
         },
         {

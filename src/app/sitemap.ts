@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { tourosPorId } from "@/data/tourosPorId";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://cortgeneticabrasil.com.br";
+  const baseUrl = "https://www.cortgeneticabrasil.com";
 
   // Posts do Blog (extraídos do arquivo do blog ou simulados conforme sua estrutura)
   // Nota: Idealmente os posts estariam em um arquivo data separado,
@@ -30,7 +30,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Touros na rota /site/cort/home/exibe/ (URL oficial)
   const exibeEntries = Object.keys(tourosPorId).map((id) => ({
-    url: `https://www.cortgeneticabrasil.com/site/cort/home/exibe/${id}`,
+    url: `${baseUrl}/site/cort/home/exibe/${id}`,
     lastModified: new Date(),
     changeFrequency: "weekly" as const,
     priority: 0.8,

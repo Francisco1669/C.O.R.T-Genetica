@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Tecnologias - C.O.R.T Genética Brasil",
     description: "Marcadores Moleculares, Teste TTR e Selos de Qualidade. Tecnologia de ponta para a pecuária.",
-    url: "https://cortgeneticabrasil.com.br/tecnologia",
+    url: "https://www.cortgeneticabrasil.com/tecnologia",
     type: "website",
   },
 };

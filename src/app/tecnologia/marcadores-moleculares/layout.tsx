@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Marcadores Moleculares - C.O.R.T Genética Brasil",
     description: "Tecnologia de DNA para seleção genética precisa. Identifique características desejáveis desde o nascimento.",
-    url: "https://cortgeneticabrasil.com.br/tecnologia/marcadores-moleculares",
+    url: "https://www.cortgeneticabrasil.com/tecnologia/marcadores-moleculares",
     type: "website",
   },
 };

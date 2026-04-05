@@ -7,7 +7,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Nossos Selos - C.O.R.T Genética Brasil",
     description: "Conheça nossos 6 selos de certificação genética que garantem a excelência dos nossos touros.",
-    url: "https://cortgeneticabrasil.com.br/nossos-selos",
+    url: "https://www.cortgeneticabrasil.com/nossos-selos",
     type: "website",
   },
 };
